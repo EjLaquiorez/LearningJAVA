@@ -1,7 +1,7 @@
-public class studentInfo {
+public class StudentInfo {
     public static void main(String[] args) {
         String name = "John Doe";
-        int age = 25;
+        int age = 27;
         String major = "Computer Science";
         String university = "XYZ University";
         String email = "johndoe@example.com";

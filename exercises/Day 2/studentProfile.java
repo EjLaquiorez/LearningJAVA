@@ -1,8 +1,8 @@
-public class studentProfile {
+public class StudentProfile {
    public static void main(String[] args) {
 
         String name = "Justine";
-        int age = 20;
+        int age = 27;
         double height = 5.6;
         float weight = 60.5f;
         float GPA = 1.5f;

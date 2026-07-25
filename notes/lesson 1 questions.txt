@@ -1,0 +1,210 @@
+
+---
+
+## Question 1
+
+### What is the difference between the JDK, JRE, and JVM?
+
+**Answer:**
+
+* **JDK (Java Development Kit)** is the complete toolkit for developing Java applications. It includes the **JRE**, the **JVM**, and development tools such as the **Java compiler (`javac`)**, debugger, and other utilities.
+* **JRE (Java Runtime Environment)** provides everything needed to **run** Java applications. It contains the **JVM** and the Java class libraries but does not include development tools like the compiler.
+* **JVM (Java Virtual Machine)** is the component that executes Java bytecode. It translates the bytecode into machine code that the operating system can understand, allowing Java programs to run on different platforms.
+
+**Simple summary:**
+
+> **JDK = Develop Java**
+> **JRE = Run Java**
+> **JVM = Execute Java bytecode**
+
+---
+
+# Question 2
+
+### When you type:
+
+```bash
+javac Hello.java
+```
+
+What file is created?
+
+**Answer:**
+
+The compiler creates a file named:
+
+```text
+Hello.class
+```
+
+This file contains **Java bytecode**, which is the platform-independent code generated from the source code.
+
+### Why is it created?
+
+The `.class` file is created because the JVM cannot execute `.java` source code directly.
+
+Instead:
+
+1. The Java compiler (`javac`) converts the source code into **bytecode**.
+2. The JVM reads the bytecode from the `.class` file.
+3. The JVM translates the bytecode into machine code and executes the program.
+
+---
+
+# Question 3
+
+### Why can the same Java program run on Windows, Linux, and macOS?
+
+Explain the role of the JVM.
+
+**Answer:**
+
+Java programs are compiled into **platform-independent bytecode**, not machine code.
+
+Each operating system has its own implementation of the **Java Virtual Machine (JVM)**. When the program runs, the JVM translates the same bytecode into native machine code for that specific operating system.
+
+Because only the JVM changes—not the Java program—the same `.class` file can run on Windows, Linux, and macOS.
+
+This is Java's famous principle:
+
+> **"Write Once, Run Anywhere (WORA)."**
+
+---
+
+# Question 4
+
+### What is the difference between
+
+```bash
+javac Hello.java
+```
+
+and
+
+```bash
+java Hello
+```
+
+**Answer:**
+
+```bash
+javac Hello.java
+```
+
+* Compiles the Java source code.
+* Converts `Hello.java` into `Hello.class`.
+* Does **not** run the program.
+
+```bash
+java Hello
+```
+
+* Starts the JVM.
+* Loads the `Hello.class` file.
+* Executes the bytecode.
+* Displays the program's output.
+
+In short:
+
+> **`javac` compiles the program.**
+> **`java` runs the program.**
+
+---
+
+# Question 5 (Most Important)
+
+### Explain the complete lifecycle of a Java program from the moment you write:
+
+```java
+System.out.println("Hello");
+```
+
+until it appears on your screen.
+
+**Interview Answer:**
+
+The lifecycle of a Java program consists of several steps:
+
+1. **Write the source code**
+
+   * I write the Java program in a file such as `Hello.java`, including the statement:
+
+     ```java
+     System.out.println("Hello");
+     ```
+
+2. **Compile the program**
+
+   * I run:
+
+     ```bash
+     javac Hello.java
+     ```
+   * The Java compiler checks for syntax errors.
+   * If there are no errors, it generates a `Hello.class` file containing Java bytecode.
+
+3. **Run the program**
+
+   * I execute:
+
+     ```bash
+     java Hello
+     ```
+   * This starts the Java Virtual Machine (JVM).
+
+4. **Class loading**
+
+   * The JVM loads the `Hello.class` file into memory using the Class Loader.
+
+5. **Bytecode verification**
+
+   * The JVM verifies that the bytecode is valid and secure before execution.
+
+6. **Execution**
+
+   * The JVM's Execution Engine interprets or JIT-compiles the bytecode into native machine code that the operating system can execute.
+
+7. **Output**
+
+   * When the execution reaches:
+
+     ```java
+     System.out.println("Hello");
+     ```
+   * The JVM writes the text **"Hello"** to the standard output (the console), and it appears on the screen.
+
+### One-line interview summary
+
+> "First, I write the Java source code. Then `javac` compiles it into platform-independent bytecode stored in a `.class` file. When I run `java Hello`, the JVM loads and verifies the bytecode, translates it into native machine code, executes it, and finally displays the output on the console."
+
+---
+
+## ⭐ Bonus Interview Diagram (Easy to Remember)
+
+```text
+Write Code
+     │
+     ▼
+Hello.java
+     │
+     │ javac Hello.java
+     ▼
+Hello.class (Bytecode)
+     │
+     │ java Hello
+     ▼
+JVM
+ ├── Class Loader
+ ├── Bytecode Verifier
+ ├── Execution Engine (Interpreter/JIT)
+     │
+     ▼
+Machine Code
+     │
+     ▼
+Operating System
+     │
+     ▼
+Console Output
+```
+

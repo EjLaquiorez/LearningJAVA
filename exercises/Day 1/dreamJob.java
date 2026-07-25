@@ -1,4 +1,4 @@
-public class dreamJob {
+public class DreamJob {
     public static void main(String[] args) {
         
         String title = "===== DREAM JOB =====";
