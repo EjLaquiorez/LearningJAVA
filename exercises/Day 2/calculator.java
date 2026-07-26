@@ -12,7 +12,7 @@ public class Calculator {
         int Snumber = scanner.nextInt();
 
         System.out.println("Sum: " + (Fnumber + Snumber));
-        System.out.println("Difference: " + (Fnumber - Snumber));           
+        System.out.println("Difference: " + (Fnumber - Snumber));
         System.out.println("Product: " + (Fnumber * Snumber));
         System.out.println("Quotient: " + (Fnumber / Snumber));
         System.out.println("Remainder: " + (Fnumber % Snumber));
