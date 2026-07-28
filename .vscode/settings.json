@@ -1,10 +1,11 @@
 {
     "java.project.sourcePaths": [
         "mini-projects/GuessingNumber.java",
+        "mini-projects/ATMMenuSystem",
         "exercises/Day 4",
         "exercises/Day 3",
         "exercises/Day 2",
         "exercises/Day 1",
-        "mini-projects/ATMMenuSystem"
+        "exercises/Day 5"
     ]
 }
