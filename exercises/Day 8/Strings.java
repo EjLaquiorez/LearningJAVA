@@ -1,141 +1,172 @@
 import java.util.Scanner;
+
 public class Strings {
-    private static final Scanner scanner = new Scanner(System.in);
-    private static final String [] names = new String[5];
-    private static final String myName = "Justine";
-    private static final String password = "password123";
-    private static final String [] students = {
+
+    private static final Scanner SCANNER = new Scanner(System.in);
+
+    private static final String MY_NAME = "Justine";
+    private static final String PASSWORD = "password123";
+
+    private static final String[] STUDENTS = {
             "Alice",
             "Bob",
             "Charlie",
             "David",
             "Jas"
-        };
+    };
 
     public static void main(String[] args) {
-        // printLength();
-        // printToUppercase();
-        // printToLowercase();
-        // printCharSeperately();
-        // printReverseString();
-        // validatePassword();
-        // countVowels();
-        // countConsonants();
-        palindromeChecker();
-        nameSearch();
-        // spaceRemover();
+
+        System.out.println("Length: " + getLength(MY_NAME));
+
+        printUpperCase(MY_NAME);
+        printLowerCase(MY_NAME);
+        printCharactersSeparately(MY_NAME);
+        printReverse(MY_NAME);
+
+        System.out.println("Vowels: " + countVowels(MY_NAME));
+        System.out.println("Consonants: " + countConsonants(MY_NAME));
+
+        System.out.println("Palindrome: " + isPalindrome("Level"));
+
+        System.out.println("Letter 'a': " + countLetter(MY_NAME, 'a'));
+
+        validatePassword("password123");
+
+        System.out.println(searchStudent("Jas"));
+
+        System.out.println(removeSpaces("I love Java Programming"));
     }
 
-    public static void printLength(){
-        System.out.print("The String length: ");
-        System.out.println(myName.length());
-        
+    // -----------------------------
+    // Basic String Methods
+    // -----------------------------
 
-        }
-
-    public static void printToUppercase(){
-        System.out.print("The String to uppercase: ");
-        System.out.println(myName.toUpperCase());
-
-
-    }
-    public static void printToLowercase(){
-        System.out.print("The String to lowercase: ");
-        System.out.println(myName.toLowerCase());
-
-
-    }
-    public static void printCharSeperately(){
-        for (int i = 0; i < myName.length(); i++) {
-            System.out.print(myName.charAt(i) + " ");
-            
-        }
-        System.out.println();
-
-    }
-    public static void countVowels(){
-        int counter = 0;
-        for(int i = 0; i < myName.length(); i++){
-            char ch = Character.toLowerCase(myName.charAt(i));
-            if(ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u'){
-                counter++;
-                
-
-            }
-        }
-        System.out.println("Vowel count: " + counter);
+    public static int getLength(String text) {
+        return text.length();
     }
 
-    public static void countConsonants(){
-        int consonantCount = 0;
-        for(int i = 0; i < myName.length(); i++){
-            char ch = Character.toLowerCase(myName.charAt(i));
-            if(ch != 'a' && ch != 'e' && ch != 'i' && ch != 'o' && ch != 'u'){
-                consonantCount++;
-            }
-        }
-        System.out.println("Consonant count: " + consonantCount);
+    public static void printUpperCase(String text) {
+        System.out.println("Uppercase: " + text.toUpperCase());
     }
 
-    public static void printReverseString(){
-        for (int i = myName.length(); i > 0 ; i--) {
-            System.out.print(myName.charAt(i-1)+ " ");
-            
+    public static void printLowerCase(String text) {
+        System.out.println("Lowercase: " + text.toLowerCase());
+    }
+
+    public static void printCharactersSeparately(String text) {
+        for (char c : text.toCharArray()) {
+            System.out.print(c + " ");
         }
         System.out.println();
-        
-
     }
-    public static void palindromeChecker(){
-        String word = "Level";
+
+    public static void printReverse(String text) {
+        for (int i = text.length() - 1; i >= 0; i--) {
+            System.out.print(text.charAt(i) + " ");
+        }
+        System.out.println();
+    }
+
+    // -----------------------------
+    // Counting
+    // -----------------------------
+
+    public static int countVowels(String text) {
+
+        int count = 0;
+
+        for (char c : text.toLowerCase().toCharArray()) {
+
+            if ("aeiou".indexOf(c) != -1) {
+                count++;
+            }
+
+        }
+
+        return count;
+    }
+
+    public static int countConsonants(String text) {
+
+        int count = 0;
+
+        for (char c : text.toLowerCase().toCharArray()) {
+
+            if (Character.isLetter(c) && "aeiou".indexOf(c) == -1) {
+                count++;
+            }
+
+        }
+
+        return count;
+    }
+
+    public static int countLetter(String text, char target) {
+
+        int count = 0;
+
+        target = Character.toLowerCase(target);
+
+        for (char c : text.toLowerCase().toCharArray()) {
+
+            if (c == target) {
+                count++;
+            }
+
+        }
+
+        return count;
+    }
+
+    // -----------------------------
+    // Validation
+    // -----------------------------
+
+    public static boolean isPalindrome(String word) {
+
         String reversed = "";
 
-        for(int i = word.length()-1; i >= 0; i--){
-            reversed+= Character.toLowerCase(word.charAt(i));
+        for (int i = word.length() - 1; i >= 0; i--) {
+            reversed += Character.toLowerCase(word.charAt(i));
         }
-        if(reversed.equalsIgnoreCase(word)){
-            System.out.println(word + " is a palindrome.");
-        }
-        else{
-            System.out.println(word + " is not a palindrome.");
-        }
+
+        return reversed.equalsIgnoreCase(word);
     }
-    public static void letterCharCounter(){
-        int counter = 0;
-        char target = 'a';
-        for (int i = 0; i < myName.length(); i++) {
-            if (Character.toLowerCase(myName.charAt(i)) == target) {
-                counter++;
-            }
-        }
-        System.out.println("Letter '" + target + "' count: " + counter);
-    }
-    public static void validatePassword(){
-        String passwordInput = "password123";
-        if(password.equals(passwordInput)){
+
+    public static void validatePassword(String input) {
+
+        if (PASSWORD.equals(input)) {
             System.out.println("Password is correct");
-        }
-        else{
+        } else {
             System.out.println("Incorrect Password");
         }
+
     }
-    public static void nameSearch(){
-        String nameX = "Jas";
-        boolean found = false;
-        for (String student : students) {
-            if (student.equalsIgnoreCase(nameX)) {
-                found = true;
-                break;
+
+    // -----------------------------
+    // Search
+    // -----------------------------
+
+    public static boolean searchStudent(String name) {
+
+        for (String student : STUDENTS) {
+
+            if (student.equalsIgnoreCase(name)) {
+                return true;
             }
+
         }
-        if (found) {
-            System.out.println("Name found!");
-        } else {
-            System.out.println("Name not found.");
-        }
+
+        return false;
     }
 
+    // -----------------------------
+    // Utilities
+    // -----------------------------
 
-    // public static void spaceRemover(){}
+    public static String removeSpaces(String text) {
+        return text.replace(" ", "");
+    }
 
 }
