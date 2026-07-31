@@ -22,7 +22,7 @@ public class Strings {
         // countVowels();
         // countConsonants();
         palindromeChecker();
-        // nameSearch();
+        nameSearch();
         // spaceRemover();
     }
 
@@ -87,7 +87,6 @@ public class Strings {
 
     }
     public static void palindromeChecker(){
-        //declare string word and reversed then for loop then if else if word and reversed is equal
         String word = "Level";
         String reversed = "";
 
@@ -102,14 +101,14 @@ public class Strings {
         }
     }
     public static void letterCharCounter(){
-        // for (int i = 0; i < myName.length(); i++) {
-        //     int counter = 0;
-        //     if(myName.charAt(i).equals("a")){
-        //         counter++;
-        //     }
-        //maybe i could i add it to a loop then for every char it adds up on an Array then
-        //that array will for every loop will check if it equals with chat given
-
+        int counter = 0;
+        char target = 'a';
+        for (int i = 0; i < myName.length(); i++) {
+            if (Character.toLowerCase(myName.charAt(i)) == target) {
+                counter++;
+            }
+        }
+        System.out.println("Letter '" + target + "' count: " + counter);
     }
     public static void validatePassword(){
         String passwordInput = "password123";
@@ -119,22 +118,24 @@ public class Strings {
         else{
             System.out.println("Incorrect Password");
         }
-
-
     }
     public static void nameSearch(){
-        // String nameX = "Jas";
-        // for(String name : names){
-        //     if(name.equals(nameX))
-        //     System.out.print(nameX + "Found!");
-        // }
+        String nameX = "Jas";
+        boolean found = false;
+        for (String student : students) {
+            if (student.equalsIgnoreCase(nameX)) {
+                found = true;
+                break;
+            }
+        }
+        if (found) {
+            System.out.println("Name found!");
+        } else {
+            System.out.println("Name not found.");
+        }
+    }
 
 
-    }
-    public static void spaceRemover(){
-        // String mySentence = "The Java Programmer.";
-        // System.out.println(mySentence.equalsIgnoreCase(" "));
-    }
-  
+    // public static void spaceRemover(){}
 
 }
