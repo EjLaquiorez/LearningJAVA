@@ -2,6 +2,7 @@
     "java.project.sourcePaths": [
         "mini-projects/StudentGradeSystem",
         "mini-projects/MathTool",
+        "mini-projects/LoginSystem",
         "mini-projects/GuessingNumber.java",
         "mini-projects/ATMMenuSystem",
         "exercises/Day 8",
@@ -12,6 +13,6 @@
         "exercises/Day 3",
         "exercises/Day 2",
         "exercises/Day 1",
-        "mini-projects/LoginSystem"
+        "exercises/Day 9"
     ]
 }
