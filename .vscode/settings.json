@@ -4,6 +4,7 @@
         "mini-projects/MathTool",
         "mini-projects/GuessingNumber.java",
         "mini-projects/ATMMenuSystem",
+        "exercises/Day 8",
         "exercises/Day 7",
         "exercises/Day 6",
         "exercises/Day 5",
@@ -11,6 +12,6 @@
         "exercises/Day 3",
         "exercises/Day 2",
         "exercises/Day 1",
-        "exercises/Day 8"
+        "mini-projects/LoginSystem"
     ]
 }
