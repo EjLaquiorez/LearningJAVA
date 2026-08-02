@@ -38,7 +38,7 @@ public class Drill08_Movie {
         movies[4].genre = "Action";
         movies[4].rating = 5;
 
-        for (int i = 0; i < movies.length; i++) {
+        for(int i = 0; i < movies.length; i++) {
             System.out.println("Title: " + movies[i].title);
             System.out.println("Genre: " + movies[i].genre);
             System.out.println("Rating: " + movies[i].rating);

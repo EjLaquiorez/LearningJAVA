@@ -4,7 +4,7 @@ public class DreamJob {
         String title = "===== DREAM JOB =====";
         String company = "Google";
         String position = "Java Backend Engineer";
-        int expectedSalary = 120000;
+        int expectedSalary = 300000;
         String experienceRequired = "2 years";
         String country = "Singapore";
 

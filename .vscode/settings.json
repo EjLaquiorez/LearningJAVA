@@ -1,19 +1,20 @@
 {
     "java.project.sourcePaths": [
+        "mini-projects/StudentInfoSystem",
         "mini-projects/StudentGradeSystem",
         "mini-projects/MathTool",
         "mini-projects/LoginSystem",
         "mini-projects/GuessingNumber.java",
         "mini-projects/ATMMenuSystem",
-        "exercises/Day 9",
-        "exercises/Day 8",
-        "exercises/Day 7",
-        "exercises/Day 6",
-        "exercises/Day 5",
-        "exercises/Day 4",
-        "exercises/Day 3",
-        "exercises/Day 2",
-        "exercises/Day 1",
-        "mini-projects/StudentInfoSystem"
+        "exercises/Module 1 – Java Foundations/Topic 9 - Strings",
+        "exercises/Module 1 – Java Foundations/Topic 8 - Arrays",
+        "exercises/Module 1 – Java Foundations/Topic 7 - Methods",
+        "exercises/Module 1 – Java Foundations/Topic 6 - Loops",
+        "exercises/Module 1 – Java Foundations/Topic 5 - Control Flow",
+        "exercises/Module 1 – Java Foundations/Topic 4 - User Input (Scanner)",
+        "exercises/Module 1 – Java Foundations/Topic 3 - Operators",
+        "exercises/Module 1 – Java Foundations/Topic 2 - Variables & Primitive Data Types",
+        "exercises/Module 1 – Java Foundations/Topic 1 - How Java Actually Works",
+        "exercises/Module 1 – Java Foundations/Topic 10 - Debugging Fundamentals"
     ]
 }
