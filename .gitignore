@@ -11,3 +11,6 @@ Thumbs.db
 
 # Logs
 *.log
+
+# Personal/local notes
+courses/software-engineering-mindset/modules/01-engineering-foundations/business-thinking/justtext.md

@@ -1,228 +1,224 @@
 ﻿# Business Thinking Notes
 
-> Module 1 - Engineering Foundations
->
-> These are condensed notes from Topics 1–4. Each topic file contains the detailed lesson. This file serves as a quick review of the most important engineering concepts.
-
 ---
 
 # Topic 1 — Problem vs Solution
 
-## Core Principle
+## Key Idea
 
-Clients usually ask for **solutions**.
+Never build the client's proposed solution before understanding the real business problem.
 
-Engineers discover the **actual problem**.
+Clients often suggest solutions based on symptoms rather than root causes.
 
-Never assume the client's requested solution is the best one.
+Example:
 
-Always ask:
+Problem:
+Employees forget to submit timesheets.
 
-- What problem are we solving?
-- Why does it exist?
-- Who experiences it?
-- Is software actually needed?
+Proposed Solution:
+Build a web portal.
 
-### Mental Model
-
-```
-Request
-    ↓
-Problem
-    ↓
-Root Cause
-    ↓
-Possible Solutions
-    ↓
-Best Solution
-    ↓
-Software
-```
-
-### Remember
-
-Software is the implementation of a solution—not the starting point.
+The engineer's responsibility is to validate whether the proposed solution actually solves the underlying business problem.
 
 ---
 
-# Topic 2 — Bakery Analysis
+# Topic 2 — Understanding Businesses Before Software
 
-## Core Principle
+Before discussing software, understand:
 
-Before building software:
+- How the business operates
+- Daily workflows
+- Employees and customers
+- Business goals
+- Information being exchanged
 
-Understand the business.
+Software exists to support a business process—not replace the need to understand it.
 
-### Analyze
+---
 
-- Customers
-- Employees
-- Products
-- Workflow
-- Pain Points
+# Topic 3 — Learning to Ask Better Questions
 
-### IPO Model
+Good questions seek understanding, not confirmation.
 
-**Input**
+Categories of questions include:
 
-- Customer Order
-- Product
-- Quantity
-- Payment
+- Understanding Questions
+- Problem Questions
+- Constraint Questions
+- Success Questions
 
+The objective is to discover missing information before discussing solutions.
+
+---
+
+# Topic 3.1 — Client Discovery Conversation
+
+## Engineering Information Map
+
+When analyzing a business, investigate:
+
+1. Process
+2. People
+3. Data
+4. Pain
+5. Cause
+6. Frequency
+7. Impact
+8. Constraints
+9. Goal
+10. Risks
+
+---
+
+## Facts vs Assumptions
+
+Separate confirmed information from guesses.
+
+Facts are supported by evidence.
+
+Assumptions require validation.
+
+---
+
+## Cause-and-Effect Thinking
+
+Analyze problems as chains rather than isolated events.
+
+Example:
+
+Customer doesn't understand quotation
 ↓
-
-**Process**
-
-- Check inventory
-- Calculate total
-- Receive payment
-- Update stock
-
+Requests changes
 ↓
+Approval delayed
+↓
+Materials ordered late
+↓
+Manufacturing delayed
+↓
+Delivery delayed
+↓
+Customer cancels
 
-**Output**
-
-- Receipt
-- Updated Inventory
-- Sales Record
-
-### Lesson
-
-Software improves an existing business process.
-
-Never automate something you don't understand.
-
----
-
-# Topic 3 — ATM Analysis
-
-## Core Principle
-
-Large systems become simple when divided into smaller modules.
-
-### ATM Workflow
-
-```
-Insert Card
-    ↓
-Enter PIN
-    ↓
-Authenticate
-    ↓
-Display Menu
-    ↓
-Perform Transaction
-    ↓
-Update Account
-    ↓
-Return Result
-```
-
-### Always Identify
-
-Inputs
-
-- Card
-- PIN
-- Amount
-
-Processes
-
-- Validate
-- Compute
-- Update
-- Record
-
-Outputs
-
-- Cash
-- Receipt
-- Updated Balance
-
-### Think About Failure
-
-- Wrong PIN
-- Insufficient Funds
-- Network Failure
-- ATM Out of Cash
-
-Professional engineers design for both success and failure.
+Engineers investigate upstream causes before proposing downstream solutions.
 
 ---
 
-# Topic 4 — Thinking Like an Engineer
+## Root Cause
 
-## Beginner
+The first visible problem is rarely the actual problem.
 
-```
-Problem
-    ↓
-Code
-```
+Use repeated "Why?" questions to move from symptoms toward root causes.
 
-## Engineer
+---
 
-```
-Problem
-    ↓
-Understand
-    ↓
-Analyze
-    ↓
-Design
-    ↓
-Implement
-    ↓
-Test
-    ↓
-Improve
-```
+## Leverage Point
 
-### Engineering Questions
+A leverage point is an early event in a process where improving one step positively affects many later steps.
 
-- What problem exists?
-- Why does it exist?
-- Who is affected?
-- What constraints exist?
-- What is success?
+---
 
-### Systems Thinking
+# Topic 3.2 — How Senior Engineers Observe Businesses
 
-Everything is connected.
+Observation comes before questioning.
 
-Changing one feature can affect:
+Professional engineers first understand what is happening before asking why it happens.
 
+During observation, focus on six areas:
+
+## 1. People
+
+Who is involved?
+
+Examples:
+
+- Customer
+- Employee
+- Manager
+- Supplier
+- Delivery Driver
+
+---
+
+## 2. Work
+
+What activities are people performing?
+
+Examples:
+
+- Taking orders
+- Packaging
+- Walking
+- Printing
+- Paying
+
+---
+
+## 3. Information
+
+What information moves through the business?
+
+Examples:
+
+- Orders
+- Payments
+- Receipts
 - Inventory
-- Reports
-- Database
+- Customer details
+
+---
+
+## 4. Decisions
+
+Where are humans making decisions?
+
+Examples:
+
+- Approve
+- Reject
+- Schedule
+- Verify
+
+---
+
+## 5. Waiting
+
+Identify who or what is waiting.
+
+Waiting often reveals process bottlenecks.
+
+Examples:
+
 - Customers
-- Employees
-
-Always think beyond the current feature.
-
----
-
-# Engineering Mindset
-
-Before coding, remember:
-
-✓ Understand the business.
-
-✓ Identify the real problem.
-
-✓ Find the root cause.
-
-✓ Design before implementing.
-
-✓ Divide complex systems into modules.
-
-✓ Consider edge cases.
-
-✓ Build software that creates business value.
+- Staff
+- Deliveries
+- Equipment
 
 ---
 
-# One Sentence Summary
+## 6. Repetition
 
-> "Great software engineers don't begin by writing code—they begin by understanding problems."
+Repeated manual work often indicates opportunities for process improvement.
+
+Examples:
+
+- Re-entering data
+- Answering identical questions
+- Printing forms
+- Manual calculations
+
+---
+
+## Observation Mindset
+
+Do not begin with solutions.
+
+Observe → Notice Patterns → Ask Questions → Understand → Analyze → Consider Solutions
+
+---
+
+## Key Principle
+
+Software engineers solve business problems using software.
+
+They do not begin by building software.
