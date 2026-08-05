@@ -367,27 +367,91 @@ Payment Information
 
 ----------------------------------------------------------
 
+==========================================================
 🧠 Practice 5 — Password Reset Feature
 ==========================================================
 
 Scenario:
 A website needs a "Forgot Password" feature.
 
-Do NOT think about email verification codes yet.
-
 Focus only on the process.
+Do NOT think about implementation details
+(e.g., email verification codes, OTPs, or Java code).
 
-Without writing Java, answer:
-
+----------------------------------------------------------
 1. Goal
+----------------------------------------------------------
+Allow users to recover access to their account by
+resetting a forgotten password in a secure and
+user-friendly way.
 
+----------------------------------------------------------
 2. Inputs
+----------------------------------------------------------
+The user provides one or more account identifiers.
 
+- Username
+- Full Name
+- Email Address
+- Phone Number
+
+----------------------------------------------------------
 3. Outputs
+----------------------------------------------------------
 
+If the account is found:
+- Display that the account has been located.
+- Show available password recovery options.
+- Allow the user to continue the recovery process.
+
+If the account is not found:
+- Display an appropriate message:
+  - Account not found
+  - Username does not exist
+  - Email address not registered
+  - Phone number not registered
+
+----------------------------------------------------------
 4. Rules
+----------------------------------------------------------
+- The system searches for a matching account.
+- Only registered accounts can begin recovery.
+- Recovery requests are limited within a time period.
+- If the limit is exceeded, the user must wait
+  before trying again.
+- Repeated requests increase the waiting period
+  to prevent abuse.
 
+----------------------------------------------------------
 5. Edge Cases
+----------------------------------------------------------
+- No internet connection.
+- Server is unavailable.
+- User enters incomplete information.
+- User enters incorrect account information.
+- Multiple accounts have similar names.
+- Account is suspended or deactivated.
+- User exceeds the recovery request limit.
+- Recovery process is interrupted.
 
+----------------------------------------------------------
 6. Questions for the Client
+----------------------------------------------------------
+- What information should users provide to locate
+  their account?
+- Can users recover using email, phone number,
+  or both?
+- Should usernames be unique?
+- What should happen if the provided information
+  does not match any account?
+- How many recovery attempts are allowed?
+- Should suspended or deactivated accounts be
+  allowed to reset their password?
+- How should the system notify users when an
+  account cannot be found?
+- Should users be automatically logged in after
+  resetting their password?
+- What should happen if the recovery process is
+  abandoned before completion?
+
 */
