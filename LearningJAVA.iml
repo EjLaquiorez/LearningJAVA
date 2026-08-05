@@ -1,10 +1,66 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <module type="JAVA_MODULE" version="4">
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/courses/java-backend-engineer/modules" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/projects/mini" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/courses/java-backend-engineer/modules/01-java-core/collections-framework/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/courses/java-backend-engineer/modules/01-java-core/collections-framework/exercises" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/courses/java-backend-engineer/modules/01-java-core/debugging/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/courses/java-backend-engineer/modules/01-java-core/debugging/exercises" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/courses/java-backend-engineer/modules/01-java-core/exception-handling/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/courses/java-backend-engineer/modules/01-java-core/exception-handling/exercises" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/courses/java-backend-engineer/modules/01-java-core/file-io/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/courses/java-backend-engineer/modules/01-java-core/file-io/exercises" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/courses/java-backend-engineer/modules/01-java-core/java-core/01-how-java-works" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/courses/java-backend-engineer/modules/01-java-core/java-core/02-variables-and-primitive-types" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/courses/java-backend-engineer/modules/01-java-core/java-core/03-operators" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/courses/java-backend-engineer/modules/01-java-core/java-core/04-user-input" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/courses/java-backend-engineer/modules/01-java-core/java-core/05-control-flow" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/courses/java-backend-engineer/modules/01-java-core/java-core/06-loops" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/courses/java-backend-engineer/modules/01-java-core/java-core/07-methods" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/courses/java-backend-engineer/modules/01-java-core/java-core/08-arrays" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/courses/java-backend-engineer/modules/01-java-core/java-core/09-strings" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/courses/java-backend-engineer/modules/02-object-oriented-programming/data-structures-and-algorithms/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/courses/java-backend-engineer/modules/02-object-oriented-programming/data-structures-and-algorithms/exercises" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/courses/java-backend-engineer/modules/02-object-oriented-programming/functional-programming/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/courses/java-backend-engineer/modules/02-object-oriented-programming/functional-programming/exercises" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/courses/java-backend-engineer/modules/02-object-oriented-programming/object-oriented-programming/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/courses/java-backend-engineer/modules/02-object-oriented-programming/object-oriented-programming/exercises" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/courses/java-backend-engineer/modules/03-concurrency-and-data-access/databases-sql/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/courses/java-backend-engineer/modules/03-concurrency-and-data-access/databases-sql/exercises" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/courses/java-backend-engineer/modules/03-concurrency-and-data-access/jdbc/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/courses/java-backend-engineer/modules/03-concurrency-and-data-access/jdbc/exercises" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/courses/java-backend-engineer/modules/03-concurrency-and-data-access/multithreading-and-concurrency/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/courses/java-backend-engineer/modules/03-concurrency-and-data-access/multithreading-and-concurrency/exercises" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/courses/java-backend-engineer/modules/04-backend-development/build-tools/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/courses/java-backend-engineer/modules/04-backend-development/build-tools/exercises" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/courses/java-backend-engineer/modules/04-backend-development/rest-apis/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/courses/java-backend-engineer/modules/04-backend-development/rest-apis/exercises" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/courses/java-backend-engineer/modules/04-backend-development/spring-and-spring-boot/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/courses/java-backend-engineer/modules/04-backend-development/spring-and-spring-boot/exercises" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/courses/java-backend-engineer/modules/04-backend-development/testing/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/courses/java-backend-engineer/modules/04-backend-development/testing/exercises" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/courses/java-backend-engineer/modules/05-software-craftsmanship/backend-architecture/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/courses/java-backend-engineer/modules/05-software-craftsmanship/backend-architecture/exercises" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/courses/java-backend-engineer/modules/05-software-craftsmanship/clean-code/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/courses/java-backend-engineer/modules/05-software-craftsmanship/clean-code/exercises" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/courses/java-backend-engineer/modules/05-software-craftsmanship/design-patterns/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/courses/java-backend-engineer/modules/05-software-craftsmanship/design-patterns/exercises" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/courses/java-backend-engineer/modules/05-software-craftsmanship/enterprise-java-development/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/courses/java-backend-engineer/modules/05-software-craftsmanship/enterprise-java-development/exercises" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/courses/java-backend-engineer/modules/05-software-craftsmanship/performance/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/courses/java-backend-engineer/modules/05-software-craftsmanship/performance/exercises" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/courses/java-backend-engineer/modules/05-software-craftsmanship/production-quality-coding/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/courses/java-backend-engineer/modules/05-software-craftsmanship/production-quality-coding/exercises" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/courses/java-backend-engineer/modules/05-software-craftsmanship/refactoring/examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/courses/java-backend-engineer/modules/05-software-craftsmanship/refactoring/exercises" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/projects/mini/atm-menu-system" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/projects/mini/atm-withdrawal" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/projects/mini/guessing-game" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/projects/mini/login-system" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/projects/mini/math-tool" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/projects/mini/student-grade-system" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/projects/mini/student-info-system" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

@@ -32,8 +32,8 @@ LearningJAVA/
 
 | Course | Description |
 |--------|-------------|
-| [java-backend-engineer](courses/java-backend-engineer/) | Module-based exercises from Java basics to OOP |
-| [software-engineering-mindset](courses/software-engineering-mindset/) | Engineering mindset and professional habits |
+| [java-backend-engineer](courses/java-backend-engineer/) | Java core → Spring Boot → production engineering (22 topics) |
+| [software-engineering-mindset](courses/software-engineering-mindset/) | Requirements, domain modeling, and system design (24 topics) |
 
 ## Running Code
 
