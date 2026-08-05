@@ -1,20 +1,22 @@
 {
     "java.project.sourcePaths": [
-        "mini-projects/StudentInfoSystem",
-        "mini-projects/StudentGradeSystem",
-        "mini-projects/MathTool",
-        "mini-projects/LoginSystem",
-        "mini-projects/GuessingNumber.java",
-        "mini-projects/ATMMenuSystem",
-        "exercises/Module 1 – Java Foundations/Topic 9 - Strings",
-        "exercises/Module 1 – Java Foundations/Topic 8 - Arrays",
-        "exercises/Module 1 – Java Foundations/Topic 7 - Methods",
-        "exercises/Module 1 – Java Foundations/Topic 6 - Loops",
-        "exercises/Module 1 – Java Foundations/Topic 5 - Control Flow",
-        "exercises/Module 1 – Java Foundations/Topic 4 - User Input (Scanner)",
-        "exercises/Module 1 – Java Foundations/Topic 3 - Operators",
-        "exercises/Module 1 – Java Foundations/Topic 2 - Variables & Primitive Data Types",
-        "exercises/Module 1 – Java Foundations/Topic 1 - How Java Actually Works",
-        "exercises/Module 1 – Java Foundations/Topic 10 - Debugging Fundamentals"
+        "courses/java-backend-engineer/modules/01-java-fundamentals/01-how-java-works",
+        "courses/java-backend-engineer/modules/01-java-fundamentals/02-variables-and-primitive-types",
+        "courses/java-backend-engineer/modules/01-java-fundamentals/03-operators",
+        "courses/java-backend-engineer/modules/01-java-fundamentals/04-user-input",
+        "courses/java-backend-engineer/modules/01-java-fundamentals/05-control-flow",
+        "courses/java-backend-engineer/modules/01-java-fundamentals/06-loops",
+        "courses/java-backend-engineer/modules/01-java-fundamentals/07-methods",
+        "courses/java-backend-engineer/modules/01-java-fundamentals/08-arrays",
+        "courses/java-backend-engineer/modules/01-java-fundamentals/09-strings",
+        "courses/java-backend-engineer/modules/01-java-fundamentals/10-debugging",
+        "courses/java-backend-engineer/modules/02-object-oriented-programming/01-algorithmic-thinking",
+        "projects/mini/atm-menu-system",
+        "projects/mini/atm-withdrawal",
+        "projects/mini/guessing-game",
+        "projects/mini/login-system",
+        "projects/mini/math-tool",
+        "projects/mini/student-grade-system",
+        "projects/mini/student-info-system"
     ]
 }
