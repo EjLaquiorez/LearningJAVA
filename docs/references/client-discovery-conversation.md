@@ -2,172 +2,121 @@
 
 ## Purpose
 
-The first client meeting is not about discussing software.
+The goal of a client discovery conversation is to understand the business—not to discuss software.
 
-It is about understanding the business.
-
-Professional software engineers spend more time listening than talking.
+Professional engineers investigate before recommending solutions.
 
 ---
 
-# Beginner vs Professional
+# Step 1 — Listen
 
-## Beginner
+Allow the client to explain the situation without interruption.
 
-Client:
+Identify:
 
-"We need a mobile app."
+- Business
+- Problem
+- Proposed solution
 
-Engineer:
+Remember:
 
-"What features do you want?"
-
----
-
-## Professional Engineer
-
-Client:
-
-"We need a mobile app."
-
-Engineer:
-
-"What business problem are you trying to solve?"
+The client's solution is only a hypothesis.
 
 ---
 
-# Discovery Flow
+# Step 2 — Understand the Business
 
-## Step 1 — Understand the Business
+Questions to ask:
 
-Learn:
-
-- What the business does
-- Who the customers are
-- What value the business provides
-
-Example Questions
-
-- Can you tell me about your business?
-- What services do you provide?
-- Who are your customers?
+- What does your business do?
+- Can you walk me through your daily process?
+- Who is involved?
+- What value do you provide?
 
 ---
 
-## Step 2 — Understand the Process
+# Step 3 — Understand the Problem
 
-Learn how work is currently performed.
+Questions to ask:
 
-Example Questions
-
-- Can you walk me through your process?
-- What happens first?
-- What happens after that?
-
----
-
-## Step 3 — Understand the Problem
-
-Discover the actual pain.
-
-Example Questions
-
-- What problem are you experiencing?
+- What problem happens?
 - When does it happen?
+- How often?
 - Who is affected?
+- Why do you think it happens?
 
 ---
 
-## Step 4 — Understand the Cause
+# Step 4 — Understand Constraints
 
-Investigate why the problem exists.
+Questions to ask:
 
-Example Questions
-
-- Why do you think this happens?
-- Has this always been a problem?
-
----
-
-## Step 5 — Understand the Impact
-
-Determine how the problem affects the business.
-
-Questions
-
-- How does this affect customers?
-- How does this affect employees?
-- How does this affect the business?
+- What is your budget?
+- Are there legal requirements?
+- Are employees trained?
+- Are there technology limitations?
+- Are there time constraints?
 
 ---
 
-## Step 6 — Understand Constraints
+# Step 5 — Understand Success
 
-Learn what limits the business.
+Questions to ask:
 
-Examples
-
-- Budget
-- Time
-- Existing technology
-- Regulations
-- Employee skills
-
----
-
-## Step 7 — Define Success
-
-Always ask:
-
-"If this project succeeds, what will be different?"
-
-Success should be measurable.
-
-Examples
-
-- Waiting time reduced
-- More customers served
-- Fewer mistakes
-- Higher customer satisfaction
+- What would success look like?
+- What improvement do you expect?
+- How will you measure success?
 
 ---
 
 # Professional Mindset
 
-Observe
+Do not ask:
 
-↓
+"What software do you want?"
 
-Listen
+Ask:
 
-↓
-
-Understand
-
-↓
-
-Investigate
-
-↓
-
-Analyze
-
-↓
-
-Recommend
-
-↓
-
-Design
-
-↓
-
-Build
+"What business problem are we trying to solve?"
 
 ---
 
-# Remember
+# Discovery Flow
 
-Clients usually describe symptoms.
+Client explains problem
 
-Software engineers discover the real problem.
+↓
+
+Understand the business
+
+↓
+
+Understand the process
+
+↓
+
+Understand the people
+
+↓
+
+Understand the data
+
+↓
+
+Understand the pain
+
+↓
+
+Understand the cause
+
+↓
+
+Understand the constraints
+
+↓
+
+Define success
+
+↓
+
+Only then discuss possible solutions.

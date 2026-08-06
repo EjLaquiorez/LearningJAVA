@@ -2,182 +2,107 @@
 
 ## Purpose
 
-The Engineering Information Map is a framework used by software engineers to understand a business before discussing software.
+The Engineering Information Map is a mental framework used to understand a business before proposing solutions.
 
-Its goal is to prevent jumping to solutions without first understanding the business.
-
----
-
-# Mental Model
-
-Client describes a problem
-
-↓
-
-Understand the business
-
-↓
-
-Analyze the business
-
-↓
-
-Identify the real problem
-
-↓
-
-Consider possible solutions
+Whenever a client describes a problem, analyze these ten areas before thinking about software.
 
 ---
 
-# The 10 Areas to Investigate
+# 1. Process
 
-## 1. Process
+## Question
 
-### Goal
+How does the work happen today?
 
-Understand how work is performed today.
+## Goal
 
-### Questions
-
-- How does the process begin?
-- What happens next?
-- How does it end?
-
-### Example
-
-Customer
-
-↓
-
-Cashier
-
-↓
-
-Kitchen
-
-↓
-
-Packaging
-
-↓
-
-Delivery
+Understand the sequence of activities performed by the business.
 
 ---
 
-## 2. People
+# 2. People
 
-### Goal
+## Question
 
-Identify everyone involved in the process.
+Who is involved?
 
-Examples
+## Goal
 
-- Customer
-- Employee
-- Manager
-- Supplier
-- Delivery Driver
-
-Ask yourself:
-
-> Who performs the work?
+Identify everyone participating in the business process.
 
 ---
 
-## 3. Data
+# 3. Data
 
-### Goal
+## Question
 
-Identify what information moves through the business.
+What information moves through the process?
 
-Examples
+## Examples
 
-- Customer Name
-- Order
-- Payment
-- Receipt
+- Names
+- Orders
+- Payments
 - Inventory
-- Prescription
+- Dates
+- Status
+- Reports
 
-Remember:
-
-Software primarily manages information.
+Software is built around data.
 
 ---
 
-## 4. Pain
+# 4. Pain
 
-### Goal
+## Question
 
-Identify the business problem.
+What is the business problem?
 
-Examples
+Examples:
 
 - Long waiting time
-- Lost inventory
 - Wrong orders
-- Manual paperwork
-
-Pain is the symptom.
-
-Not necessarily the root cause.
+- Lost inventory
+- Late deliveries
 
 ---
 
-## 5. Cause
+# 5. Cause
 
-### Goal
+## Question
 
-Discover WHY the pain exists.
+Why does the problem happen?
 
 Never assume.
 
-Always investigate.
-
-Example:
-
-Pain
-
-↓
-
-Long delivery
-
-Possible Causes
-
-- Too few staff
-- Manual process
-- Supplier delays
-- Traffic
-- Poor scheduling
+Investigate the root cause.
 
 ---
 
-## 6. Frequency
+# 6. Frequency
 
-### Goal
+## Question
 
-Determine how often the problem occurs.
+How often does the problem occur?
 
-Examples
+Examples:
 
-- Every order
-- Every Friday
-- Peak hours
-- End of month
+- Every transaction
+- Daily
+- During peak hours
+- Occasionally
 
-Frequency helps prioritize problems.
+Frequency helps determine priority.
 
 ---
 
-## 7. Impact
+# 7. Impact
 
-### Goal
+## Question
 
-Understand who is affected.
+Who is affected?
 
-Possible impacts
+Possible impacts:
 
 - Customers
 - Employees
@@ -187,68 +112,56 @@ Possible impacts
 
 ---
 
-## 8. Constraints
+# 8. Constraints
 
-### Goal
+## Question
 
-Identify limitations.
+What limits possible solutions?
 
-Examples
+Examples:
 
 - Budget
 - Time
-- Technology
-- Internet
+- Regulations
 - Employee skills
-- Company policy
-- Government regulations
-
-Constraints limit possible solutions.
+- Existing technology
+- Internet availability
 
 ---
 
-## 9. Goal
+# 9. Goal
 
-### Goal
+## Question
 
-Define what success looks like.
+What does success look like?
 
-Examples
+Examples:
 
-- Reduce waiting time
-- Increase sales
-- Improve accuracy
-- Reduce manual work
-
-Always ask:
-
-> If this project succeeds, what will improve?
+- Faster service
+- Fewer mistakes
+- Lower costs
+- Higher customer satisfaction
 
 ---
 
-## 10. Risks
+# 10. Risks
 
-### Goal
+## Question
 
-Identify what could go wrong.
+What could go wrong?
 
-Examples
+Examples:
 
-- Employees reject the new process
-- Internet outage
-- Budget overruns
-- Low customer adoption
-
-Good engineers prepare for risks early.
+- Employee resistance
+- Poor adoption
+- Increased costs
+- Security issues
+- Technical failures
 
 ---
 
 # Engineering Principle
 
-Never recommend software until you understand all ten areas.
+Before proposing any solution, understand all ten areas.
 
-Understanding comes before designing.
-
-Designing comes before coding.
-
-Coding comes last.
+Missing information leads to poor engineering decisions.

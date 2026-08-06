@@ -2,83 +2,51 @@
 
 ## Purpose
 
-Software engineers solve problems by understanding how one event leads to another.
+Business problems rarely exist in isolation.
 
-Rather than looking at isolated problems, they analyze chains of causes and effects.
+One problem often creates several additional problems.
+
+Professional engineers trace the chain of effects before proposing solutions.
 
 ---
 
-# Mental Model
+# Engineering Principle
+
+Never stop at the first visible problem.
+
+Keep asking:
+
+"Why?"
+
+until the underlying cause becomes clear.
+
+---
+
+# Cause-and-Effect Chain
 
 Cause
 
 ↓
 
-Effect
+Immediate Effect
 
 ↓
 
-Cause
+Secondary Effect
 
 ↓
 
-Effect
+Business Effect
 
 ↓
 
-Business Outcome
+Long-Term Effect
 
 ---
 
-# Example
+# Example 1
 
-Customers don't understand the quotation.
-
-↓
-
-Customers request revisions.
-
-↓
-
-Quotation approval takes longer.
-
-↓
-
-Materials are ordered later.
-
-↓
-
-Manufacturing starts later.
-
-↓
-
-Delivery is delayed.
-
-↓
-
-Customers cancel orders.
-
-↓
-
-Revenue decreases.
-
-↓
-
-Business struggles financially.
-
----
-
-# Every Arrow Answers One Question
-
-Ask yourself:
-
-> Because this happened...
-
-> What happened next?
-
-Example
-
-Delivery delayed
+Customers wait too long
 
 ↓
 
@@ -86,11 +54,11 @@ Customers become frustrated
 
 ↓
 
-Customers cancel
+Customers leave negative reviews
 
 ↓
 
-Sales decrease
+Fewer new customers
 
 ↓
 
@@ -98,127 +66,94 @@ Revenue decreases
 
 ---
 
-# Looking Backwards
+# Example 2
 
-Also ask:
-
-> What caused this?
-
-Example
-
-Late Delivery
+Inventory records are inaccurate
 
 ↓
 
-Why?
+Employees cannot find products
 
 ↓
 
-Manufacturing started late.
+Orders are delayed
 
 ↓
 
-Why?
+Customers cancel orders
 
 ↓
 
-Materials arrived late.
-
-↓
-
-Why?
-
-↓
-
-Supplier received the order late.
-
-Continue until the earliest reasonable cause is found.
+Business loses revenue
 
 ---
 
-# Symptoms vs Root Cause
+# Example 3
 
-## Symptom
+Employees forget to submit timesheets
 
-The visible problem.
+↓
 
-Example
+Payroll processing is delayed
+
+↓
+
+Employees receive late salaries
+
+↓
+
+Employee trust decreases
+
+↓
+
+Higher employee turnover
+
+---
+
+# Root Cause Investigation
+
+When analyzing a problem, repeatedly ask:
+
+Why?
+
+Example:
 
 Customers cancel orders.
 
----
+↓
 
-## Root Cause
+Why?
 
-The underlying reason the symptom exists.
-
-Example
-
-Customers repeatedly request quotation revisions because they do not fully understand the proposal.
-
-Root causes require investigation.
-
-Symptoms are immediately visible.
-
----
-
-# Leverage Point
-
-A leverage point is an early part of a process where improving one step positively affects many later steps.
-
-Example
-
-Improve quotation clarity
+Delivery takes too long.
 
 ↓
 
-Fewer revisions
+Why?
+
+Materials arrive late.
 
 ↓
 
-Faster approval
+Why?
+
+Supplier orders are placed too late.
 
 ↓
 
-Earlier manufacturing
+Why?
 
-↓
+Inventory is checked manually once a week.
 
-Earlier delivery
-
-↓
-
-Fewer cancellations
-
-One improvement creates multiple positive outcomes.
+Eventually, the real cause becomes visible.
 
 ---
 
-# Engineering Rule
+# Engineering Reminder
 
-Never stop at the first problem.
+Do not confuse symptoms with causes.
 
-Keep asking:
+Symptoms are visible.
 
-- What caused this?
-- What happened because of this?
+Causes explain why the symptoms exist.
 
-Until the complete chain becomes clear.
-
----
-
-# Key Principles
-
-- Solve causes instead of symptoms.
-- Build complete cause-and-effect chains.
-- Investigate before making assumptions.
-- Search for leverage points.
-- Think in systems, not isolated events.
-
----
-
-# Remember
-
-Software engineers do not only solve problems.
-
-They understand how problems are created.
+Professional engineers solve causes—not symptoms.

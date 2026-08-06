@@ -4,6 +4,8 @@
 
 Learn how professional software engineers understand businesses before designing software.
 
+This module focuses on developing analytical thinking, business understanding, and engineering decision-making rather than programming.
+
 ---
 
 ## Topics
@@ -11,43 +13,49 @@ Learn how professional software engineers understand businesses before designing
 - Topic 1 — Problem vs Solution ✅
 - Topic 2 — Understanding Businesses Before Software ✅
 - Topic 3 — Learning to Ask Better Questions ✅
-- Topic 3.1 — Client Discovery Conversation ✅
-- Topic 3.2 — How Senior Engineers Observe Businesses ✅
-- Topic 4 — Stakeholders vs Users 🚧
+- Topic 3.1 — Engineering Information Map ✅
+- Topic 3.2 — Observation Before Recommendation ✅
+- Topic 3.3 — Cause-and-Effect Thinking ✅
+- Topic 4 — Stakeholders vs Users ✅
+- Topic 4.5 — Decomposition Thinking 🚧
+- Topic 5 — Functional Requirements vs Non-Functional Requirements ⏳
 
 ---
 
 ## Skills Learned
 
-- Separate problems from solutions
-- Understand business workflows
-- Analyze businesses before proposing software
-- Ask purposeful client questions
-- Build an Engineering Information Map
-- Distinguish facts from assumptions
-- Build cause-and-effect chains
-- Identify potential root causes
-- Observe businesses before asking questions
-- Recognize business flows, waiting, repetition, and information movement
+- Distinguish problems from solutions
+- Analyze how businesses operate
+- Ask effective discovery questions
+- Use the Engineering Information Map
+- Think in terms of stakeholders, not just users
+- Trace cause-and-effect relationships
+- Observe business processes before proposing solutions
 
 ---
 
-## Repository Structure
+## References
 
-```
-business-thinking/
-│
-├── README.md
-├── notes.md
-├── glossary.md
-│
-└── exercises/
-    ├── 001-problem-vs-solution.md
-    ├── 002-bakery-analysis.md
-    ├── 003-atm-analysis.md
-    ├── 004-client-interview-questions.md
-    ├── 005-engineering-information-map.md
-    ├── 006-client-discovery-conversation.md
-    ├── 007-cause-and-effect-thinking.md
-    └── 008-observation-before-questions.md
-```
+- Engineering Information Map
+- Client Discovery Conversation
+- Cause-and-Effect Thinking
+
+---
+
+## Exercises Completed
+
+- Problem vs Solution
+- Bakery Business Analysis
+- ATM Business Analysis
+- Client Discovery Questions
+- Engineering Information Map Practice
+- Cause-and-Effect Analysis
+- Stakeholder Analysis
+
+---
+
+## Next Topic
+
+**Topic 4.5 — Decomposition Thinking**
+
+Learn how software engineers break complex systems and business processes into smaller, understandable pieces before designing solutions.
