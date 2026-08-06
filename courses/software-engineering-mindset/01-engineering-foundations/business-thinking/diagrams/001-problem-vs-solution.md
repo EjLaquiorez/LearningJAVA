@@ -2,7 +2,7 @@
 
 ## Objective
 
-Understand why software engineers focus on solving business problems before proposing software solutions.
+Understand why software engineers analyze business problems before proposing software solutions.
 
 ---
 
@@ -15,7 +15,7 @@ A[Business Problem]
 --> B[Identify Root Cause]
 --> C[Gather Requirements]
 --> D[Evaluate Possible Solutions]
---> E[Select Best Solution]
+--> E[Choose Best Solution]
 --> F[Build Software]
 ```
 
@@ -23,18 +23,11 @@ A[Business Problem]
 
 ## Explanation
 
-Every software project begins with a business problem, not with technology.
+Every software project begins with a business problem.
 
-A common beginner mistake is immediately deciding to build an application without fully understanding what needs to be solved.
+Instead of immediately building an application, software engineers first understand what is happening, why it is happening, and what the business actually needs.
 
-Instead, software engineers follow a structured approach:
-
-1. Identify the business problem.
-2. Find the root cause of the problem.
-3. Gather the business requirements.
-4. Explore different possible solutions.
-5. Choose the most appropriate solution.
-6. Only then begin building software.
+Only after understanding the problem should possible solutions be evaluated.
 
 Software is one possible solution—not the starting point.
 
@@ -44,41 +37,26 @@ Software is one possible solution—not the starting point.
 
 ### Problem
 
-Customers wait 20 minutes in line to pay.
+Customers spend 20 minutes waiting in line.
 
-### Wrong Thinking
+Instead of saying:
 
-> We need a Point of Sale (POS) system.
+> "Let's build a mobile app."
 
-### Better Thinking
+A software engineer asks:
 
-Why are customers waiting?
+- Why are customers waiting?
+- Is checkout too slow?
+- Are employees understaffed?
+- Is inventory difficult to manage?
 
-Possible causes:
-
-- Cashiers manually calculate totals.
-- Products have no barcode.
-- Inventory is updated using paper records.
-
-Now the software engineer understands the actual problem before suggesting a solution.
+Only after answering these questions is a solution selected.
 
 ---
 
 ## Software Engineering Insight
 
-Professional software engineers rarely begin by asking:
-
-> "What should we build?"
-
-Instead, they ask:
-
-- What problem are we solving?
-- Why does this problem exist?
-- Who experiences the problem?
-- How is the business affected?
-- What is the best solution?
-
-Sometimes software isn't even the correct solution.
+Professional engineers focus on solving business problems rather than building technology for its own sake.
 
 ---
 
@@ -87,13 +65,11 @@ Sometimes software isn't even the correct solution.
 - Cause and Effect Thinking
 - Requirement Analysis
 - Business Process Analysis
-- Stakeholder Analysis
 
 ---
 
 ## Key Takeaways
 
 - Problems come before solutions.
-- Software exists to solve business problems.
-- Understand the business before writing code.
-- Never assume software is the only solution.
+- Understand the business first.
+- Never assume software is the answer.
