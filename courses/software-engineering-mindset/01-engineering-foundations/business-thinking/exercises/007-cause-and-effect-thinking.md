@@ -1,195 +1,94 @@
-# Cause-and-Effect Thinking
+# Exercise 007 — Cause-and-Effect Thinking
 
 ## Objective
 
-Learn to analyze business problems by identifying chains of causes and effects instead of isolated events.
+Learn to identify how one business problem creates additional problems throughout an organization.
 
 ---
 
-## Why This Matters
+## Engineering Principle
 
-Business problems rarely exist alone.
+Business problems rarely exist in isolation.
 
-One event often triggers another, creating a chain of consequences.
-
-Professional engineers identify where the chain begins.
+One problem often creates a chain of effects that impacts customers, employees, and the business.
 
 ---
 
-# Mental Model
+## Cause-and-Effect Example
 
-Cause
-
-↓
-
-Effect
+Customers cancel orders
 
 ↓
 
-Cause
+Orders are delivered late
 
 ↓
 
-Effect
+Customers become dissatisfied
 
 ↓
 
-Business Outcome
+Negative reviews increase
+
+↓
+
+Sales decrease
+
+↓
+
+Business loses revenue
 
 ---
 
-# Example
+## Root Cause Thinking
 
-Customers don't understand the quotation.
+Do not stop at the first visible problem.
 
-↓
+Continue asking:
 
-Customers request changes.
+Why?
 
-↓
+until the underlying cause becomes visible.
 
-Approval takes longer.
-
-↓
-
-Materials are ordered late.
-
-↓
-
-Manufacturing starts late.
-
-↓
-
-Delivery is delayed.
-
-↓
+Example:
 
 Customers cancel orders.
 
 ↓
 
-Revenue decreases.
+Why?
+
+Deliveries take too long.
 
 ↓
 
-Business struggles financially.
+Why?
+
+Materials arrive late.
+
+↓
+
+Why?
+
+Inventory is checked manually once a week.
 
 ---
 
-# Root Cause
+## Practice
 
-The earliest identifiable cause that leads to later problems.
+Practice distinguishing between:
 
-Example:
+- Symptoms
+- Causes
+- Effects
 
-Late deliveries
-
-❌ Root Cause? Not necessarily.
-
-Late material ordering
-
-Maybe.
-
-Poor quotation process
-
-Possibly.
-
-Always investigate before deciding.
+Rather than solving symptoms, investigate and solve the underlying cause.
 
 ---
 
-# Symptoms vs Root Cause
+## Key Takeaways
 
-Symptom:
-
-Customers cancel orders.
-
-Root Cause:
-
-Customers cannot clearly understand quotations.
-
-Symptoms are visible.
-
-Root causes require investigation.
-
----
-
-# Leverage Point
-
-A leverage point is a place where solving one problem improves many later outcomes.
-
-Example:
-
-Improve quotation clarity
-
-↓
-
-Fewer revisions
-
-↓
-
-Faster approvals
-
-↓
-
-Earlier manufacturing
-
-↓
-
-Earlier delivery
-
-↓
-
-Fewer cancellations
-
----
-
-# Asking Better Questions
-
-Always ask:
-
-What caused this?
-
-Then ask:
-
-What happened because of this?
-
-Repeat until the chain is complete.
-
----
-
-# Cause-and-Effect Rule
-
-Every arrow should answer:
-
-"Because this happened, what happened next?"
-
-Example:
-
-Delivery delayed
-
-↓
-
-Customers become frustrated.
-
-↓
-
-Customers cancel.
-
-↓
-
-Revenue decreases.
-
-↓
-
-Business reputation suffers.
-
----
-
-# Key Takeaways
-
-- Do not stop at the first visible problem.
-- Investigate upstream causes.
-- Analyze downstream consequences.
-- Look for leverage points.
-- Solve causes, not symptoms.
+- Symptoms describe what is happening.
+- Causes explain why it happens.
+- Effects describe what happens next.
+- Professional engineers solve root causes instead of symptoms.

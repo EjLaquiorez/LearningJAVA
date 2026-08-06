@@ -1,138 +1,95 @@
-# Client Discovery Conversation
+# Exercise 006 — Client Discovery Conversation
 
 ## Objective
 
-Learn how professional software engineers conduct the first meeting with a client.
+Practice conducting conversations that discover business requirements instead of discussing software features.
 
 ---
 
-## Core Principle
+## Engineering Principle
 
-The first meeting is not about software.
+Clients often request solutions.
 
-It is about understanding the business.
-
----
-
-# Common Beginner Mistake
-
-Client:
-
-"We need a mobile app."
-
-Beginner:
-
-"What features do you need?"
-
-Professional Engineer:
-
-"What problem are you trying to solve?"
+Professional engineers investigate the business problem before deciding whether the proposed solution is appropriate.
 
 ---
 
-# Conversation Flow
+## Discovery Process
 
-Step 1
+### Step 1
 
 Understand the business.
 
-- What does the business do?
-- Who are the customers?
-- What value does the business provide?
+Questions include:
+
+- What does your business do?
+- What value do you provide?
 
 ---
 
-Step 2
+### Step 2
 
 Understand the current process.
 
-- Walk me through the process.
-- What happens first?
-- What happens after that?
+Questions include:
+
+- Can you walk me through your daily workflow?
+- How is work currently performed?
 
 ---
 
-Step 3
+### Step 3
 
 Understand the problem.
 
+Questions include:
+
 - What is happening?
 - When does it happen?
-- Who is affected?
+- Who experiences the problem?
 
 ---
 
-Step 4
-
-Understand the cause.
-
-- Why do you think this happens?
-- Has it always been this way?
-
----
-
-Step 5
-
-Understand the impact.
-
-- How does this affect customers?
-- How does it affect employees?
-- How does it affect revenue?
-
----
-
-Step 6
+### Step 4
 
 Understand the constraints.
 
 Examples:
 
 - Budget
-- Time
-- Regulations
 - Technology
+- Regulations
 - Employee skills
+- Time
 
 ---
 
-Step 7
+### Step 5
 
-Define success.
+Understand success.
 
-Ask:
+Questions include:
 
-"If this project succeeds, what will be different?"
-
----
-
-# Conversation Mindset
-
-Observe
-
-↓
-
-Listen
-
-↓
-
-Understand
-
-↓
-
-Investigate
-
-↓
-
-Analyze
-
-↓
-
-Recommend
+- What improvement are you expecting?
+- How will you know this project was successful?
 
 ---
 
-## Remember
+## Practice Scenarios
 
-A client usually explains symptoms.
+- Bakery
+- Coffee Shop
+- Hospital
+- Restaurant
+- School
 
-A software engineer discovers the real problem.
+The focus of every interview was understanding the business rather than discussing software.
+
+---
+
+## Key Takeaways
+
+- Listen before recommending.
+- Ask questions that uncover facts.
+- Avoid assumptions.
+- Understand the business before designing solutions.

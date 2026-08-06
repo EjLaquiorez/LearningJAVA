@@ -2,75 +2,59 @@
 
 ## Objective
 
-Practice observing a business before asking questions or proposing solutions.
+Learn to observe a business process before asking interview questions.
 
 ---
 
-## Observation Rule
+## Engineering Principle
 
-During the first stage of analysis:
+Observation produces better questions.
 
-- Do not suggest software.
-- Do not explain why.
-- Do not make assumptions.
-- Record only observable facts.
+Rather than immediately interviewing a client, engineers first understand how work is actually performed.
 
 ---
 
-## Observation Categories
+## Observation Checklist
 
-### People
+Observe:
 
-Who is involved?
-
-### Work
-
-What activities are happening?
-
-### Information
-
-What information is moving?
-
-### Decisions
-
-Where are people making decisions?
-
-### Waiting
-
-Who or what is waiting?
-
-### Repetition
-
-What tasks happen repeatedly?
+- The business process
+- People involved
+- Information exchanged
+- Waiting times
+- Manual activities
+- Repeated work
+- Decision points
+- Possible bottlenecks
 
 ---
 
-## Mental Model
+## Engineering Habit
 
-Observation
+Observe first.
 
-↓
+Question second.
 
-Pattern Recognition
-
-↓
-
-Questions
-
-↓
-
-Understanding
-
-↓
-
-Analysis
-
-↓
-
-Possible Solutions
+Recommend last.
 
 ---
 
-## Key Lesson
+## Practice
 
-Great software engineers are great observers before they become great problem solvers.
+During previous business scenarios, observation was used to understand:
+
+- Bakery workflow
+- Pharmacy workflow
+- Restaurant workflow
+- Hospital workflow
+
+Observation made interview questions more specific and meaningful.
+
+---
+
+## Key Takeaways
+
+- Observe before making assumptions.
+- Observation reveals hidden work.
+- Better observations lead to better questions.
+- Better questions lead to better software solutions.

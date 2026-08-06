@@ -1,199 +1,89 @@
-# Engineering Information Map
+# Exercise 005 — Engineering Information Map
 
 ## Objective
 
-Learn a systematic way to discover the information needed before proposing any software solution.
+Learn how software engineers gather information before proposing solutions.
 
 ---
 
-## Why This Matters
+## Engineering Principle
 
-Software engineers rarely begin by designing software.
+A client usually explains symptoms and may suggest a solution.
 
-Instead, they first understand the business by collecting important information.
+A software engineer's responsibility is to understand the business first.
 
-The Engineering Information Map helps ensure that no critical detail is overlooked.
-
----
-
-# The Engineering Information Map
-
-Whenever a client describes a problem, investigate the following areas:
-
-## 1. Process
-
-Understand how work is currently performed.
-
-Questions:
-
-- How does the work begin?
-- What happens next?
-- How does it end?
-
-Example:
-
-Customer
-↓
-Cashier
-↓
-Kitchen
-↓
-Packaging
-↓
-Delivery
+Before discussing software, investigate the business using the Engineering Information Map.
 
 ---
 
-## 2. People
+## Engineering Information Map
 
-Identify everyone involved.
+### 1. Process
 
-Examples:
+How does the work happen today?
 
-- Customer
-- Employee
-- Manager
-- Supplier
-- Delivery Driver
+### 2. People
 
----
+Who performs the work?
 
-## 3. Data
+### 3. Data
 
-Identify what information moves through the process.
+What information moves through the process?
 
-Examples:
-
-- Customer Name
-- Order
-- Payment
-- Receipt
-- Inventory
-- Prescription
-
-Remember:
-
-Software manages information more than it manages people.
-
----
-
-## 4. Pain
+### 4. Pain
 
 What business problem exists?
 
-Examples:
+### 5. Cause
 
-- Long waiting times
-- Wrong orders
-- Lost inventory
-- Slow approval
+Why does the problem happen?
 
----
+### 6. Frequency
 
-## 5. Cause
+How often does it occur?
 
-Ask:
+### 7. Impact
 
-Why is this happening?
+Who or what is affected?
 
-Never assume.
+### 8. Constraints
 
-Investigate.
-
----
-
-## 6. Frequency
-
-How often does the problem occur?
-
-Examples:
-
-- Every order
-- Every Friday
-- During lunch
-- End of month
-
-Frequency helps determine priority.
-
----
-
-## 7. Impact
-
-Who is affected?
-
-Possible impacts:
-
-- Customers
-- Employees
-- Managers
-- Revenue
-- Reputation
-
----
-
-## 8. Constraints
-
-What limits the business?
+What limits possible solutions?
 
 Examples:
 
 - Budget
 - Time
-- Internet
-- Laws
+- Regulations
+- Technology
 - Employee skills
-- Existing contracts
 
----
-
-## 9. Goal
+### 9. Goal
 
 What does success look like?
 
-Examples:
+### 10. Risks
 
-- Reduce waiting time
-- Increase sales
-- Improve accuracy
-- Reduce manual work
+What could go wrong if changes are introduced?
 
 ---
 
-## 10. Risks
+## Practice Scenarios
 
-What could go wrong?
+- Bakery
+- Coffee Shop
+- Hospital
+- Restaurant
+- School
+- Pharmacy
 
-Examples:
-
-- Employees reject new process
-- Internet outages
-- Customer adoption is low
-- Increased maintenance costs
-
----
-
-# Mental Model
-
-Client Problem
-
-↓
-
-Engineering Information Map
-
-↓
-
-Business Understanding
-
-↓
-
-Analysis
-
-↓
-
-Possible Solutions
+Each scenario was analyzed using the Engineering Information Map before discussing software.
 
 ---
 
-## Key Takeaway
+## Key Takeaways
 
-Never recommend software until you understand all ten areas.
+- Separate problems from solutions.
+- Gather information before making recommendations.
+- Missing information leads to poor engineering decisions.
+- Good engineers investigate before designing systems.
