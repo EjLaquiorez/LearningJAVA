@@ -1,60 +1,58 @@
-# Exercise 008 — Observation Before Questions
+# Exercise 008 — Process Mapping
 
 ## Objective
 
-Learn to observe a business process before asking interview questions.
+Practice visualizing business processes before designing software.
 
 ---
 
 ## Engineering Principle
 
-Observation produces better questions.
+Software engineers model the business process before discussing implementation.
 
-Rather than immediately interviewing a client, engineers first understand how work is actually performed.
+A process map should explain how work moves from beginning to end.
 
 ---
 
-## Observation Checklist
+## Skills Practiced
 
-Observe:
-
-- The business process
-- People involved
-- Information exchanged
-- Waiting times
-- Manual activities
-- Repeated work
+- Process decomposition
+- Sequential thinking
 - Decision points
-- Possible bottlenecks
+- Happy path analysis
+- Alternative path analysis
+- Multiple decision branches
 
 ---
 
-## Engineering Habit
+## Practice Scenarios
 
-Observe first.
+### ATM Withdrawal
 
-Question second.
+Created a detailed process map including:
 
-Recommend last.
-
----
-
-## Practice
-
-During previous business scenarios, observation was used to understand:
-
-- Bakery workflow
-- Pharmacy workflow
-- Restaurant workflow
-- Hospital workflow
-
-Observation made interview questions more specific and meaningful.
+- PIN verification
+- Transaction selection
+- Withdrawal process
+- Balance verification
+- Additional transaction decision
 
 ---
 
-## Key Takeaways
+### Library Book Borrowing
 
-- Observe before making assumptions.
-- Observation reveals hidden work.
-- Better observations lead to better questions.
-- Better questions lead to better software solutions.
+Modeled:
+
+- Membership verification
+- Book issuance
+- Alternative path for invalid memberships
+
+---
+
+## Lesson Learned
+
+Every business process contains decisions.
+
+Those decisions eventually become conditional logic in software.
+
+Understanding the business process always comes before writing code.

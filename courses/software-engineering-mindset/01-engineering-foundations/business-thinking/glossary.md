@@ -1,133 +1,89 @@
-# Business Thinking Glossary
+# Glossary
 
-## Business
+## Alternative Path
 
-An organization that provides products or services to customers in exchange for value.
-
----
-
-## Business Process
-
-A sequence of activities performed to deliver value to customers.
+A different flow taken when a condition is not satisfied.
 
 ---
 
-## Problem
+## Bottleneck
 
-An undesirable condition that prevents a business from achieving its goals.
-
----
-
-## Solution
-
-One possible approach to solving a business problem.
-
-Multiple solutions may exist for the same problem.
-
----
-
-## User
-
-A person who directly interacts with the software.
-
----
-
-## Stakeholder
-
-A person, group, or organization affected by the success or failure of a system, whether or not they use it.
-
----
-
-## Responsibility
-
-The work or duties performed by a stakeholder.
-
----
-
-## Goal
-
-The desired outcome a stakeholder wants to achieve.
-
----
-
-## Problem Analysis
-
-The process of understanding a business problem before proposing a solution.
-
----
-
-## Business Value
-
-The benefit a business provides to its customers.
-
----
-
-## Constraint
-
-A limitation that restricts available solutions.
-
-Examples:
-
-- Budget
-- Time
-- Regulations
-- Employee skills
-- Technology
-- Internet availability
-
----
-
-## Observation
-
-The act of understanding how work is currently performed before recommending improvements.
-
----
-
-## Stakeholder Analysis
-
-The process of identifying stakeholders and understanding their responsibilities, goals, concerns, and relationship to the business.
+The process step that limits the overall speed of the system.
 
 ---
 
 ## Cause
 
-The underlying reason why a problem occurs.
+The underlying reason a problem exists.
 
 ---
 
-## Effect
+## Constraint
 
-The consequence created by a problem.
+Anything that limits possible solutions, such as budget, regulations, technology, or time.
 
-One cause may create multiple effects.
+---
+
+## Decision Point
+
+A point in a process where the next activity depends on a condition.
+
+---
+
+## Decomposition
+
+Breaking a complex process into smaller, understandable activities.
 
 ---
 
 ## Engineering Information Map
 
-A mental framework used to analyze businesses.
-
-It consists of:
-
-- Process
-- People
-- Data
-- Pain
-- Cause
-- Frequency
-- Impact
-- Constraints
-- Goal
-- Risks
+A framework used to gather complete business information before designing solutions.
 
 ---
 
-## Engineering Mindset
+## Happy Path
 
-A way of thinking that emphasizes understanding businesses, analyzing problems, asking questions, and making informed decisions before designing software.
+The normal successful flow through a business process.
 
 ---
 
-## Process Improvement
+## Impact
 
-A change that makes work more efficient, accurate, or valuable without necessarily introducing software.
+The effect a problem has on customers, employees, or the business.
+
+---
+
+## Observation
+
+Watching how work is actually performed before asking questions.
+
+---
+
+## Pain
+
+The business problem currently being experienced.
+
+---
+
+## Process Map
+
+A visual representation of how work flows from beginning to end.
+
+---
+
+## Root Cause
+
+The underlying reason that produces one or more business problems.
+
+---
+
+## Stakeholder
+
+Anyone affected by the business process or project, whether they use the system or not.
+
+---
+
+## User
+
+A person who directly interacts with the system.

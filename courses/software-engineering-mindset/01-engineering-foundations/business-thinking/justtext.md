@@ -1,54 +1,31 @@
-Business
-What does the pharmacy do?
+Small Exercise (5 Minutes)
 
-------------------------------------------------
+Let's stay with the library.
 
-1. Process
-I want to understand...
+I'll give you one decision point.
 
-------------------------------------------------
+Librarian checks membership
 
-2. People
-I want to know...
+↓
 
-------------------------------------------------
+Is membership valid?
 
-3. Data
-I want to identify...
+        /       \
+      Yes       No
 
-------------------------------------------------
+If YES                             
+    ↓
+Librarian issue book
+    ↓
+Customer gets the book
+    ↓
+Customer leaves
 
-4. Pain
-I know...
 
-But I still want to discover...
-
-------------------------------------------------
-
-5. Cause
-I want to find out...
-
-------------------------------------------------
-
-6. Frequency
-I want to know...
-
-------------------------------------------------
-
-7. Impact
-I want to understand...
-
-------------------------------------------------
-
-8. Constraints
-I want to know...
-
-------------------------------------------------
-
-9. Goal
-I want to learn...
-
-------------------------------------------------
-
-10. Risks
-I want to identify...
+IF NO
+    ↓
+Librarian reject book
+    ↓
+Customer get no book
+    ↓
+Customer leave

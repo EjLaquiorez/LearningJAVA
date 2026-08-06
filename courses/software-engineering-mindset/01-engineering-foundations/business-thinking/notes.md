@@ -1,124 +1,35 @@
 ﻿# Business Thinking Notes
 
-## Purpose
+## Problem vs Solution
 
-This document contains the core concepts learned throughout the Business Thinking section of the Software Engineering Thinking Bootcamp.
+Clients often propose solutions.
 
-The goal of these notes is to build the habit of understanding businesses before designing software.
+Engineers investigate problems before deciding whether the proposed solution is appropriate.
 
----
+Always separate:
 
-# Topic 1 — Problem vs Solution
+Problem → Why the business is struggling.
 
-## Definition
-
-A **problem** describes an undesirable business situation.
-
-A **solution** is one possible way to solve that problem.
-
-## Engineering Principle
-
-Never accept the client's proposed solution immediately.
-
-First understand the actual business problem.
-
-## Examples
-
-### Problem
-
-- Employees forget to submit timesheets.
-- Customers wait 45 minutes before receiving support.
-- Managers cannot see sales in real time.
-
-### Solution
-
-- Build a web portal.
-- Add QR codes.
-- Create a mobile app.
+Solution → One possible way to solve it.
 
 ---
 
-# Topic 2 — Understanding Businesses Before Software
+## Understanding the Business
 
-## Engineering Principle
+Before discussing software, understand:
 
-Software engineers solve business problems, not software problems.
+- What the business does
+- How it operates
+- Who performs the work
+- What value it provides
 
-Before discussing technology, understand how the business currently operates.
-
-## Questions to Answer
-
-- What does the business do?
-- What value does it provide?
-- Who performs the work?
-- How does work flow?
-- What information moves through the business?
-
-## Key Lesson
-
-Software exists to improve business processes.
+Software should support the business, not define it.
 
 ---
 
-# Topic 3 — Learning to Ask Better Questions
+## Engineering Information Map
 
-## Engineering Principle
-
-Good software engineers investigate before recommending solutions.
-
-Questions should help discover missing information rather than confirm assumptions.
-
-## Four Categories of Questions
-
-### Understanding Questions
-
-Understand how the business works today.
-
-Examples:
-
-- Can you walk me through your current process?
-- How does a typical day operate?
-
----
-
-### Problem Questions
-
-Identify the actual business pain.
-
-Examples:
-
-- What problem happens most often?
-- When does it usually occur?
-- Who is affected?
-
----
-
-### Constraint Questions
-
-Identify business limitations.
-
-Examples:
-
-- What is your budget?
-- How many employees perform this task?
-- Are there legal or technical limitations?
-
----
-
-### Success Questions
-
-Understand what success looks like.
-
-Examples:
-
-- If this project succeeds, what will improve?
-- How will you measure success?
-
----
-
-# Topic 3.1 — Engineering Information Map
-
-Whenever someone describes a problem, mentally investigate these ten areas.
+Every business problem should be analyzed using the following framework:
 
 1. Process
 2. People
@@ -131,127 +42,192 @@ Whenever someone describes a problem, mentally investigate these ten areas.
 9. Goal
 10. Risks
 
-This framework helps engineers discover missing information before proposing solutions.
+This framework helps engineers identify missing information before making recommendations.
 
 ---
 
-# Topic 3.2 — Observation Before Recommendation
+## Client Discovery
 
-Professional engineers observe first.
+Professional engineers begin with discovery rather than design.
 
-Instead of asking:
+The typical discovery process is:
 
-> "What software do you want?"
+1. Understand the business
+2. Understand the current workflow
+3. Understand the business problem
+4. Investigate possible causes
+5. Identify constraints
+6. Define success
 
-Ask:
-
-- How does work happen today?
-- Where are delays?
-- What information is exchanged?
-- Who is affected?
-- Why does the problem occur?
-
-Observation comes before design.
+Avoid discussing software until enough information has been gathered.
 
 ---
 
-# Topic 3.3 — Cause-and-Effect Thinking
+## Observation Before Questions
 
-Problems rarely exist alone.
+Observation helps engineers ask better questions.
 
-One problem often creates another.
+Observe:
+
+- Activities
+- People
+- Information
+- Waiting
+- Repetition
+- Manual work
+- Delays
+- Decisions
+
+Questions should be based on observations rather than assumptions.
+
+---
+
+## Cause-and-Effect Thinking
+
+Business problems create chains of effects.
 
 Example:
 
-Customers cancel orders
+Late deliveries
 
 ↓
 
-Revenue decreases
+Customer complaints
 
 ↓
 
-Cash flow becomes unstable
+Negative reviews
 
 ↓
 
-Business growth slows
+Lost customers
 
 ↓
 
-The business becomes financially unhealthy
+Reduced revenue
 
-Engineering requires tracing problems beyond the first visible symptom.
+Engineers investigate root causes rather than symptoms.
 
 ---
 
-# Topic 4 — Stakeholders vs Users
+## Decomposition Thinking
 
-## User
+Large processes become easier to understand by breaking them into smaller activities.
 
-A person who directly interacts with the software.
+Example:
+
+Withdraw Cash
+
+↓
+
+Insert Card
+
+↓
+
+Verify PIN
+
+↓
+
+Select Withdraw
+
+↓
+
+Enter Amount
+
+↓
+
+Verify Balance
+
+↓
+
+Dispense Cash
+
+↓
+
+Print Receipt
+
+Each activity can then be analyzed individually.
+
+---
+
+## Bottleneck Thinking
+
+A bottleneck is the slowest or most restrictive step in a process.
+
+Improving non-bottlenecks usually has little impact on the overall workflow.
+
+Identify bottlenecks using evidence rather than assumptions.
+
+Collect information such as:
+
+- Duration
+- Queue length
+- Capacity
+- Staff availability
+- Frequency
+
+---
+
+## Process Mapping
+
+A process map visualizes how work moves from beginning to end.
+
+A good process map answers:
+
+- What happens?
+- In what order?
+- Who performs each activity?
+
+Process maps should describe observable actions.
+
+---
+
+## Decision Points
+
+Not every process follows one straight path.
+
+Decision points create alternative flows.
 
 Examples:
 
-- Student
-- Cashier
-- Doctor
-- Receptionist
+- Is the PIN correct?
+- Is membership valid?
+- Is payment successful?
+- Is inventory available?
 
-## Stakeholder
-
-Anyone affected by the success or failure of the system.
-
-Stakeholders may never log into the software.
-
-Examples:
-
-- Business owner
-- Parents
-- Government agencies
-- Managers
-- Finance department
-- Suppliers
+Decision points become conditional logic during software development.
 
 ---
 
-## Stakeholder Thinking
+## Happy Path and Alternative Paths
 
-For every stakeholder, understand:
+Every business process contains:
 
-### Responsibilities
+Happy Path
 
-What work do they perform?
+The normal successful flow.
 
-### Goals
+Alternative Paths
 
-What outcome are they trying to achieve?
+Situations where conditions are not met.
 
-### Problems
-
-What difficulties do they currently face?
-
-### Concerns
-
-What are they worried about?
-
-### Process Improvements
-
-How could the business process improve their work?
-
-Notice that process improvements do not necessarily require software.
+Professional engineers model both.
 
 ---
 
-# Professional Mindset
+## Multiple Decision Branches
 
-Before proposing software, always ask yourself:
+Not every decision is Yes/No.
 
-- What business am I trying to understand?
-- Who performs the work?
-- Who benefits?
-- Who is affected?
-- What information is missing?
-- Am I solving the real problem?
+Some decisions contain multiple possible outcomes.
 
-Software engineering begins with understanding the business—not writing code.
+Example:
+
+Transaction Type
+
+- Withdraw
+- Deposit
+- Balance Inquiry
+- Transfer
+
+These become multiple branches within the process.
