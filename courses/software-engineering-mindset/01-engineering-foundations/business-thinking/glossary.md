@@ -87,3 +87,61 @@ Anyone affected by the business process or project, whether they use the system 
 ## User
 
 A person who directly interacts with the system.
+
+## Swimlane Diagram
+
+A process diagram that separates activities according to the participant responsible for performing them.
+
+---
+
+## Responsibility
+
+The participant that performs a specific activity within a process.
+
+---
+
+## Participant
+
+A person, organization, department, system, or external service involved in a process.
+
+---
+
+## External Participant
+
+A participant outside the main organization that still interacts with the business process.
+
+---
+
+## Information Flow
+
+The movement of information between participants or systems during a process.
+
+---
+
+## Decision Branch
+
+An alternative path created when a process reaches a decision point.
+
+---
+
+## Loop
+
+A process path that returns to an earlier activity so an action can be repeated.
+
+---
+
+## Data Flow
+
+The movement of data between people, processes, or systems.
+
+---
+
+## Alternative Flow
+
+A path taken when the normal or successful process cannot continue.
+
+---
+
+## Happy Path
+
+The expected successful sequence of activities through a process.
