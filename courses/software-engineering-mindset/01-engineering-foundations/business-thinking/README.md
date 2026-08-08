@@ -299,13 +299,15 @@ Current references:
 
 ```text
 references/
-├── cause-and-effect-thinking.md
-├── client-discovery-conversation.md
-├── decomposition-thinking.md
-├── engineering-information-map.md
-├── process-mapping.md
-├── stakeholder-analysis.md
-└── swimlane-diagrams.md
+├── 004-engineering-information-map.md
+├── 005-client-discovery-conversation.md
+├── 006-cause-and-effect-thinking.md
+├── 008-decomposition-thinking.md
+├── 009-process-mapping.md
+├── 011-swimlane-diagrams.md
+├── 012-information-flow.md
+├── 013-stakeholders-vs-users.md
+└── 014-stakeholder-analysis.md
 ```
 
 These references are designed to be reused across different exercises and business domains.

@@ -14,7 +14,7 @@ We do not jump directly from:
 
 ```text
 Business Problem
-      ↓
+       ↓
 Software Solution
 ```
 
@@ -22,23 +22,23 @@ Instead:
 
 ```text
 Business
-   ↓
+    ↓
 Problem
-   ↓
+    ↓
 Observation
-   ↓
+    ↓
 Process
-   ↓
+    ↓
 People
-   ↓
+    ↓
 Information
-   ↓
+    ↓
 Causes
-   ↓
+    ↓
 Requirements
-   ↓
+    ↓
 System Understanding
-   ↓
+    ↓
 Solution
 ```
 
@@ -281,7 +281,7 @@ Core question:
 
 ---
 
-## 012 — Information Flow 🚧
+## 012 — Information Flow ✅
 
 Learn to identify what information moves between participants.
 
@@ -369,7 +369,7 @@ Learn to distinguish:
 
 ```text
 Business Rule
-      vs
+       vs
 Software Feature
 ```
 
@@ -482,7 +482,7 @@ What happens when communication fails?
 
 # Phase 10 — Preparing for Software Design 🚧
 
-## 021 — From Business Process to System Model
+## 021 — From Business Process to System Model 🚧
 
 Connect everything learned so far:
 
@@ -510,7 +510,7 @@ System Model
 
 ---
 
-## 022 — From System Model to Solution
+## 022 — From System Model to Solution 🚧
 
 Only after understanding the business and requirements do we begin discussing possible technical solutions.
 
@@ -593,42 +593,42 @@ Before leaving Business Thinking, you should be able to receive a completely unf
 The complete Business Thinking model:
 
 ```text
-                 BUSINESS
-                    │
-                    ▼
-                 PROBLEM
-                    │
-                    ▼
+                  BUSINESS
+                     │
+                     ▼
+                  PROBLEM
+                     │
+                     ▼
                 OBSERVATION
-                    │
-                    ▼
-                 PROCESS
-                    │
-          ┌─────────┼─────────┐
-          ▼         ▼         ▼
-        PEOPLE     DATA     RULES
-          │         │         │
-          └─────────┼─────────┘
-                    ▼
-              CAUSE & EFFECT
-                    │
-                    ▼
-               DECISIONS
-                    │
-                    ▼
-             ALTERNATIVE FLOWS
-                    │
-                    ▼
-              REQUIREMENTS
-                    │
-                    ▼
-             SYSTEM BOUNDARY
-                    │
-                    ▼
-             SYSTEM UNDERSTANDING
-                    │
-                    ▼
-              SOFTWARE DESIGN
+                     │
+                     ▼
+                  PROCESS
+                     │
+           ┌─────────┼─────────┐
+           ▼         ▼         ▼
+         PEOPLE     DATA      RULES
+           │         │         │
+           └─────────┼─────────┘
+                     ▼
+               CAUSE & EFFECT
+                     │
+                     ▼
+                  DECISIONS
+                     │
+                     ▼
+              ALTERNATIVE FLOWS
+                     │
+                     ▼
+                REQUIREMENTS
+                     │
+                     ▼
+              SYSTEM BOUNDARY
+                     │
+                     ▼
+              SYSTEM UNDERSTANDING
+                     │
+                     ▼
+                SOFTWARE DESIGN
 ```
 
 ---
@@ -651,6 +651,24 @@ Phase 10 — Preparing for Design        ░░░░░░░░░░░
 
 ---
 
+# Current Learning Position
+
+```text
+Phase 6
+    ↓
+Stakeholder Understanding
+    ↓
+013 — Stakeholders vs Users
+    ↓
+Current Topic
+```
+
+The next learning topic is:
+
+> **013 — Stakeholders vs Users**
+
+---
+
 # Folder Structure
 
 ```text
@@ -662,28 +680,71 @@ business-thinking/
 │
 ├── exercises/
 │   ├── 001-problem-vs-solution.md
-│   ├── 002-bakery-analysis.md
-│   ├── 003-atm-analysis.md
-│   ├── 004-client-interview-questions.md
-│   ├── 005-engineering-information-map.md
-│   ├── 006-client-discovery-conversation.md
-│   ├── 007-cause-and-effect-thinking.md
-│   ├── 008-observation-before-questions.md
-│   └── 009-process-mapping.md
+│   ├── 002-understanding-businesses-before-software.md
+│   ├── 003-learning-to-ask-better-questions.md
+│   ├── 004-engineering-information-map.md
+│   ├── 005-client-discovery-conversations.md
+│   ├── 006-cause-and-effect-thinking.md
+│   ├── 007-observation-before-questions.md
+│   ├── 008-decomposition-thinking.md
+│   ├── 009-bottleneck-thinking.md
+│   ├── 010-process-mapping.md
+│   ├── 011-swimlane-thinking.md
+│   ├── 012-information-flow.md
+│   ├── 013-stakeholders-vs-users.md
+│   └── 014-stakeholder-goals-and-concerns.md
 │
 ├── references/
-│   ├── cause-and-effect-thinking.md
-│   ├── client-discovery-conversation.md
-│   ├── decomposition-thinking.md
-│   ├── engineering-information-map.md
-│   ├── process-mapping.md
-│   ├── stakeholder-analysis.md
-│   └── swimlane-diagrams.md
+│   ├── 001-problem-vs-solution.md
+│   ├── 002-understanding-businesses-before-software.md
+│   ├── 003-learning-to-ask-better-questions.md
+│   ├── 004-engineering-information-map.md
+│   ├── 005-client-discovery-conversations.md
+│   ├── 006-cause-and-effect-thinking.md
+│   ├── 007-observation-before-questions.md
+│   ├── 008-decomposition-thinking.md
+│   ├── 009-bottleneck-thinking.md
+│   ├── 010-process-mapping.md
+│   ├── 011-swimlane-thinking.md
+│   ├── 012-information-flow.md
+│   ├── 013-stakeholders-vs-users.md
+│   └── 014-stakeholder-goals-and-concerns.md
 │
 ├── glossary.md
 ├── README.md
 └── ROADMAP.md
 ```
+
+---
+
+# Naming Convention
+
+All Business Thinking files follow the same convention:
+
+```text
+[number]-[topic-name].md
+```
+
+The same topic number and slug should be used across:
+
+```text
+references/
+exercises/
+```
+
+Example:
+
+```text
+Topic 009 — Bottleneck Thinking
+
+references/
+└── 009-bottleneck-thinking.md
+
+exercises/
+└── 009-bottleneck-thinking.md
+```
+
+This keeps the learning materials synchronized and makes it immediately clear which exercise and reference belong to each roadmap topic.
 
 ---
 

@@ -88,6 +88,8 @@ Anyone affected by the business process or project, whether they use the system 
 
 A person who directly interacts with the system.
 
+---
+
 ## Swimlane Diagram
 
 A process diagram that separates activities according to the participant responsible for performing them.
@@ -142,6 +144,15 @@ A path taken when the normal or successful process cannot continue.
 
 ---
 
-## Happy Path
+## State
 
-The expected successful sequence of activities through a process.
+The current condition of a business object at a particular point in time.
+
+Examples:
+
+```text
+Received
+Preparing
+Ready
+Served
+Paid
