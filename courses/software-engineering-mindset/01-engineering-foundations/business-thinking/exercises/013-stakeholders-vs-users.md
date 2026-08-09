@@ -1,1616 +1,1403 @@
-# Exercise 013 — Stakeholders vs Users
-
-````markdown
-# Exercise 013 — Stakeholders vs Users
+# Topic 013 — Stakeholders vs Users
 
 ## Objective
 
-Practice identifying the difference between **users** and **stakeholders** in a business process.
+Learn to distinguish between:
 
-The goal is to understand that:
+- **Users**
+- **Stakeholders**
+- **Participants**
+- **External Parties**
 
-- Not every stakeholder is a system user.
-- Not every user is the only person who matters.
-- A person can be both a user and a stakeholder.
-- Different stakeholders can have different goals and concerns.
-- Understanding who is affected by a system is essential before designing it.
+and understand that these categories can overlap.
 
----
-
-# Core Principle
-
-> A user interacts with the system. A stakeholder has an interest in, is affected by, or can influence the system or business process.
-
-Use this mental model:
-
-```text
-                    SYSTEM / PROCESS
-                           │
-          ┌────────────────┼────────────────┐
-          │                │                │
-          ▼                ▼                ▼
-        USERS        OTHER STAKEHOLDERS   EXTERNAL PARTIES
-          │                │                │
-          ▼                ▼                ▼
-     Use system       Affected by       Interact with
-                      outcomes          business
-````
-
-Remember:
-
-```text
-User ⊂ Stakeholder
-```
-
-A user is often a stakeholder, but a stakeholder does not necessarily use the system.
+The goal is to understand the wider business environment around software, not only the people who directly use it.
 
 ---
 
-# Exercise 1 — User or Stakeholder?
+# 1. What Is a User?
 
-Classify each person as:
+A **user** is a person who directly interacts with a system to perform or receive a system-supported activity.
 
-* **User**
-* **Stakeholder**
-* **Both**
-* **Neither**
-
-Consider an online shopping system.
-
-| Person                            | Classification |
-| --------------------------------- | -------------- |
-| Customer placing an order         |                |
-| Warehouse employee                |                |
-| Company owner                     |                |
-| Delivery driver                   |                |
-| Finance manager                   |                |
-| Software developer                |                |
-| Customer who receives the package |                |
-| Government regulator              |                |
-
-Explain one of your answers:
+Example:
 
 ```text
-________________________________________
-________________________________________
+Waiter
+    ↓
+Restaurant System
 ```
+
+The waiter might:
+
+- Create an order
+- View an order
+- Update an order
+- Check order status
+
+Therefore:
+
+```text
+Waiter = User
+```
+
+because the waiter directly interacts with the system.
 
 ---
 
-# Exercise 2 — Identify the Users
+# 2. Do Not Define a User by Job Title
 
-Consider:
-
-```text
-University Enrollment System
-```
-
-Possible people:
+Do not assume:
 
 ```text
-Student
-Professor
-Registrar
-University President
-IT Administrator
-Finance Officer
-Government Education Agency
+Manager → Not a User
+Owner → Not a User
+Employee → User
 ```
 
-Which people directly interact with the enrollment system?
+Instead ask:
+
+> Does this person directly interact with the system?
+
+For example:
 
 ```text
-1. _____________________________________
-
-2. _____________________________________
-
-3. _____________________________________
-
-4. _____________________________________
+Hospital Manager
+    ↓
+View appointment reports
 ```
 
-Why are they users?
+Viewing reports is still direct interaction with the system.
+
+Therefore:
 
 ```text
-________________________________________
-________________________________________
+Hospital Manager = User
 ```
+
+The important thing is the **relationship with the system**, not the person's job title.
 
 ---
 
-# Exercise 3 — Identify the Stakeholders
+# 3. What Is a Stakeholder?
 
-Using the same university enrollment system:
+A **stakeholder** is someone who is affected by the business process, system, or project, or has an interest in its outcome.
 
-```text
-Student
-Professor
-Registrar
-University President
-IT Administrator
-Finance Officer
-Government Education Agency
-```
+A stakeholder does **not** necessarily use the software.
 
-Identify everyone who could reasonably be considered a stakeholder.
+Example:
 
 ```text
-1. _____________________________________
-
-2. _____________________________________
-
-3. _____________________________________
-
-4. _____________________________________
-
-5. _____________________________________
-
-6. _____________________________________
-
-7. _____________________________________
-```
-
-Why might someone be a stakeholder without using the system?
-
-```text
-________________________________________
-________________________________________
-```
-
----
-
-# Exercise 4 — User vs Stakeholder
-
-Consider:
-
-```text
-ATM System
-```
-
-Participants:
-
-```text
-Bank Customer
-Bank Teller
-Bank Manager
-Bank Owner
-ATM Technician
-Bank Regulator
-Security Officer
-```
-
-Complete the table.
-
-| Participant      | Uses ATM System? | Stakeholder? | Why? |
-| ---------------- | ---------------- | ------------ | ---- |
-| Bank Customer    |                  |              |      |
-| Bank Teller      |                  |              |      |
-| Bank Manager     |                  |              |      |
-| Bank Owner       |                  |              |      |
-| ATM Technician   |                  |              |      |
-| Bank Regulator   |                  |              |      |
-| Security Officer |                  |              |      |
-
----
-
-# Exercise 5 — Can a Stakeholder Be a Non-User?
-
-Scenario:
-
-> A company introduces a payroll system. Employees receive their salaries through the system, but employees never directly log into it. Payroll employees operate the system.
-
-### Who are the users?
-
-```text
-________________________________________
-```
-
-### Who are the stakeholders?
-
-```text
-________________________________________
-```
-
-### Are employees stakeholders?
-
-```text
-YES / NO
-```
-
-Why?
-
-```text
-________________________________________
-________________________________________
-```
-
-Core lesson:
-
-> Someone can be affected by a system even if they never directly interact with it.
-
----
-
-# Exercise 6 — Can Someone Be Both?
-
-Consider:
-
-```text
-Restaurant Ordering System
-```
-
-Participants:
-
-```text
-Customer
-Cashier
-Kitchen Staff
-Restaurant Manager
-Restaurant Owner
-Supplier
-Delivery Driver
-```
-
-Identify who may be both a user and a stakeholder.
-
-```text
-1. _____________________________________
-
-2. _____________________________________
-
-3. _____________________________________
-```
-
-Explain why:
-
-```text
-________________________________________
-________________________________________
-```
-
----
-
-# Exercise 7 — Stakeholder Discovery
-
-Scenario:
-
-> A hospital wants to introduce a new appointment management system.
-
-Start with:
-
-```text
-Patient
-Doctor
-Receptionist
-```
-
-Now ask:
-
-> Who else might be affected?
-
-List additional stakeholders.
-
-```text
-1. _____________________________________
-
-2. _____________________________________
-
-3. _____________________________________
-
-4. _____________________________________
-
-5. _____________________________________
-```
-
-For each one, explain why they matter.
-
-```text
-Stakeholder:
-________________________________________
-
-Why:
-________________________________________
-```
-
-```text
-Stakeholder:
-________________________________________
-
-Why:
-________________________________________
-```
-
----
-
-# Exercise 8 — Stakeholder Discovery Through the Process
-
-Consider this process:
-
-```text
-Patient requests appointment
-        ↓
-Receptionist records appointment
-        ↓
-Doctor sees appointment schedule
-        ↓
-Patient visits hospital
-        ↓
-Doctor provides consultation
-        ↓
-Hospital records consultation
-        ↓
-Patient receives bill
-```
-
-Identify the stakeholders involved.
-
-```text
-1. _____________________________________
-
-2. _____________________________________
-
-3. _____________________________________
-
-4. _____________________________________
-
-5. _____________________________________
-
-6. _____________________________________
-```
-
-Which of these are direct users?
-
-```text
-________________________________________
-```
-
-Which may not directly use the appointment system?
-
-```text
-________________________________________
-```
-
----
-
-# Exercise 9 — Stakeholder vs Role
-
-Consider:
-
-```text
-"Manager"
-```
-
-Is "manager" automatically a stakeholder?
-
-```text
-YES / NO
-```
-
-Explain.
-
-```text
-________________________________________
-________________________________________
-```
-
-Now consider:
-
-```text
-"Finance Manager"
-```
-
-What additional information would you want to know?
-
-```text
-1. _____________________________________
-
-2. _____________________________________
-
-3. _____________________________________
-```
-
-Core principle:
-
-> A job title alone does not tell you what someone's relationship to a system is.
-
----
-
-# Exercise 10 — Identify the Stakeholder's Relationship
-
-For each participant, identify their relationship to the system.
-
-Possible relationships:
-
-```text
-Uses
-Owns
-Manages
-Funds
-Depends on
-Provides information
-Receives information
-Regulates
-Maintains
-Is affected by
-```
-
-Scenario:
-
-```text
-Online Banking System
-```
-
-| Participant          | Relationship |
-| -------------------- | ------------ |
-| Customer             |              |
-| Bank Teller          |              |
-| Bank Manager         |              |
-| Bank Owner           |              |
-| IT Administrator     |              |
-| Security Team        |              |
-| Government Regulator |              |
-
----
-
-# Exercise 11 — Stakeholder Mapping
-
-Scenario:
-
-> A supermarket wants to introduce an inventory management system.
-
-Identify at least:
-
-### Direct Users
-
-```text
-1. _____________________________________
-
-2. _____________________________________
-
-3. _____________________________________
-```
-
-### Internal Stakeholders
-
-```text
-1. _____________________________________
-
-2. _____________________________________
-
-3. _____________________________________
-```
-
-### External Stakeholders
-
-```text
-1. _____________________________________
-
-2. _____________________________________
-
-3. _____________________________________
-```
-
-Why should external stakeholders be considered?
-
-```text
-________________________________________
-________________________________________
-```
-
----
-
-# Exercise 12 — Stakeholder Impact
-
-Scenario:
-
-> A warehouse system is replaced with a new automated system.
-
-Participants:
-
-```text
-Warehouse Employees
-Warehouse Manager
-Company Owner
-Customers
-Delivery Company
-IT Team
-```
-
-For each participant, identify the possible impact.
-
-| Stakeholder         | Possible Impact |
-| ------------------- | --------------- |
-| Warehouse Employees |                 |
-| Warehouse Manager   |                 |
-| Company Owner       |                 |
-| Customers           |                 |
-| Delivery Company    |                 |
-| IT Team             |                 |
-
-Which stakeholder might experience the biggest change?
-
-```text
-________________________________________
-```
-
-Why?
-
-```text
-________________________________________
-________________________________________
-```
-
----
-
-# Exercise 13 — Stakeholder Goals
-
-Scenario:
-
-```text
-Restaurant Ordering System
-```
-
-Participants:
-
-```text
-Customer
-Cashier
-Kitchen Staff
-Restaurant Manager
 Restaurant Owner
 ```
 
-Identify one possible goal for each.
-
-| Stakeholder        | Possible Goal |
-| ------------------ | ------------- |
-| Customer           |               |
-| Cashier            |               |
-| Kitchen Staff      |               |
-| Restaurant Manager |               |
-| Restaurant Owner   |               |
-
-Do all stakeholders necessarily have the same goal?
+The owner may never directly use the ordering system but may care about:
 
 ```text
-YES / NO
-```
-
-Explain.
-
-```text
-________________________________________
-________________________________________
-```
-
----
-
-# Exercise 14 — Stakeholder Concerns
-
-Consider:
-
-> A company wants to introduce an automated employee scheduling system.
-
-Stakeholders:
-
-```text
-Employees
-Managers
-HR Department
-Company Owner
-IT Department
-```
-
-What might each stakeholder be concerned about?
-
-| Stakeholder   | Concern |
-| ------------- | ------- |
-| Employees     |         |
-| Managers      |         |
-| HR Department |         |
-| Company Owner |         |
-| IT Department |         |
-
-Which concerns could conflict?
-
-```text
-________________________________________
-________________________________________
-```
-
----
-
-# Exercise 15 — Different Stakeholders, Different Priorities
-
-Scenario:
-
-> A restaurant wants to reduce order processing time.
-
-Stakeholders:
-
-```text
-Customer
-Cashier
-Kitchen Staff
-Manager
-Owner
-```
-
-Possible priorities:
-
-```text
-Speed
-Accuracy
-Cost
+Sales
+Costs
 Customer satisfaction
-Staff workload
-Profit
+Operational efficiency
+Business performance
 ```
 
-Assign likely priorities.
-
-| Stakeholder   | Main Priority |
-| ------------- | ------------- |
-| Customer      |               |
-| Cashier       |               |
-| Kitchen Staff |               |
-| Manager       |               |
-| Owner         |               |
-
-Can two stakeholders want different things?
+Therefore:
 
 ```text
-YES / NO
+Restaurant Owner = Stakeholder
 ```
 
-Give an example:
+even if:
 
 ```text
-________________________________________
-________________________________________
+Restaurant Owner ≠ User
 ```
 
 ---
 
-# Exercise 16 — Stakeholder Conflict
+# 4. User and Stakeholder Are Different Questions
 
-Scenario:
-
-> A restaurant owner wants to reduce labor costs by reducing the number of cashiers.
-
-Cashiers are concerned that:
-
-> "Customers will have to wait longer."
-
-Customers are concerned that:
-
-> "Ordering will become slower."
-
-### Identify the stakeholders.
+Do not treat:
 
 ```text
-1. _____________________________________
-
-2. _____________________________________
-
-3. _____________________________________
+User vs Stakeholder
 ```
 
-### What does the owner want?
+as mutually exclusive categories.
+
+Ask two separate questions:
+
+### Question 1
 
 ```text
-________________________________________
+Does this person directly interact with the system?
 ```
 
-### What do cashiers want?
+If yes:
 
 ```text
-________________________________________
+User
 ```
 
-### What do customers want?
+### Question 2
 
 ```text
-________________________________________
+Is this person affected by or interested in
+the system, process, or business outcome?
 ```
 
-### What conflict exists?
+If yes:
 
 ```text
-________________________________________
-________________________________________
+Stakeholder
 ```
 
-Do not immediately propose a software solution.
+Therefore, someone can be both:
 
-First understand the competing goals.
+```text
+Person
+├── User
+└── Stakeholder
+```
+
+This is extremely common in real business systems.
 
 ---
 
-# Exercise 17 — Stakeholder Influence
+# 5. Participant vs User vs Stakeholder
 
-Consider:
+These concepts should not automatically be treated as the same.
 
-```text
-University Enrollment System
-```
+## Participant
 
-Participants:
+A **participant** is a person, organization, system, or external service involved in a business process.
 
-```text
-Students
-Professors
-Registrar
-University Management
-IT Department
-Government Education Agency
-```
-
-Which stakeholders may have the most influence over system decisions?
-
-```text
-1. _____________________________________
-
-2. _____________________________________
-
-3. _____________________________________
-```
-
-Why?
-
-```text
-________________________________________
-________________________________________
-```
-
-Does influence always mean the person is a user?
-
-```text
-YES / NO
-```
-
-Explain:
-
-```text
-________________________________________
-```
-
----
-
-# Exercise 18 — Stakeholder Information Needs
-
-Scenario:
-
-> A supermarket introduces an inventory system.
-
-Identify what information each stakeholder may need.
-
-### Store Employee
-
-```text
-________________________________________
-```
-
-### Store Manager
-
-```text
-________________________________________
-```
-
-### Supplier
-
-```text
-________________________________________
-```
-
-### Owner
-
-```text
-________________________________________
-```
-
-### Finance Department
-
-```text
-________________________________________
-```
-
-Why might different stakeholders need different information?
-
-```text
-________________________________________
-________________________________________
-```
-
----
-
-# Exercise 19 — Stakeholder Discovery Interview
-
-Imagine you are meeting the owner of a business.
-
-You ask:
-
-> "Who uses this process?"
-
-The owner says:
-
-> "Only my employees."
-
-Is that enough information?
-
-```text
-YES / NO
-```
-
-What would you investigate next?
-
-```text
-1. _____________________________________
-
-2. _____________________________________
-
-3. _____________________________________
-
-4. _____________________________________
-
-5. _____________________________________
-```
-
-Why?
-
-```text
-________________________________________
-________________________________________
-```
-
----
-
-# Exercise 20 — Stakeholder Questions
-
-You are investigating a new business system.
-
-Create questions for discovering stakeholders.
-
-### Question 1 — Users
-
-```text
-________________________________________
-```
-
-### Question 2 — Decision Makers
-
-```text
-________________________________________
-```
-
-### Question 3 — People Affected
-
-```text
-________________________________________
-```
-
-### Question 4 — External Parties
-
-```text
-________________________________________
-```
-
-### Question 5 — Owners
-
-```text
-________________________________________
-```
-
-### Question 6 — Regulators
-
-```text
-________________________________________
-```
-
----
-
-# Exercise 21 — Case Study: Pharmacy
-
-Scenario:
-
-> A pharmacy wants to introduce a prescription management system.
-
-Process:
+Example:
 
 ```text
 Customer
-   ↓
-Pharmacist
-   ↓
-Prescription System
-   ↓
-Inventory
-   ↓
-Payment
-   ↓
-Customer
+Payment System
+Bank
+Restaurant
 ```
 
-Identify:
+## User
 
-### Users
+A **user** is someone who directly interacts with the software.
+
+Example:
 
 ```text
-1. _____________________________________
-
-2. _____________________________________
-
-3. _____________________________________
+Cashier
+    ↓
+Payment System
 ```
 
-### Internal Stakeholders
+## Stakeholder
+
+A **stakeholder** is someone affected by or interested in the outcome.
+
+Example:
 
 ```text
-1. _____________________________________
-
-2. _____________________________________
-
-3. _____________________________________
+Restaurant Owner
 ```
 
-### External Stakeholders
+The owner may not directly use the payment system but cares about:
 
 ```text
-1. _____________________________________
-
-2. _____________________________________
-
-3. _____________________________________
+Revenue
+Costs
+Financial accuracy
+Business performance
 ```
 
-### Who may be affected without using the system?
+Therefore:
 
 ```text
-________________________________________
-________________________________________
+Restaurant Owner
+└── Stakeholder
 ```
 
 ---
 
-# Exercise 22 — Case Study: Online Store
+# 6. These Categories Can Overlap
 
-Scenario:
+One person can belong to multiple categories.
 
-> An online store wants to replace its existing order management system.
+Example:
 
-Participants:
+```text
+Restaurant Manager
+├── Participant
+├── User
+└── Stakeholder
+```
+
+The important lesson:
+
+> **Analyze the person's actual relationship to the process and system instead of automatically assigning labels.**
+
+---
+
+# 7. A User Can Be a Stakeholder
+
+A customer may:
+
+```text
+View menu
+Place order
+Pay
+Receive receipt
+```
+
+Therefore:
 
 ```text
 Customer
-Sales Employee
-Warehouse Employee
-Warehouse Manager
-Company Owner
-Finance Department
+├── User
+└── Stakeholder
+```
+
+The customer directly interacts with the system and is affected by its outcome.
+
+---
+
+# 8. A Stakeholder Does Not Need a Login
+
+A common mistake is:
+
+```text
+Has login?
+    ↓
+User
+```
+
+and:
+
+```text
+No login?
+    ↓
+Not important
+```
+
+This is incorrect.
+
+A stakeholder does not need to log into the software.
+
+For example:
+
+```text
+Business Owner
+└── Stakeholder
+```
+
+The owner may receive reports and care about:
+
+```text
+Revenue
+Costs
+Performance
+```
+
+without directly using the system.
+
+---
+
+# 9. A User Does Not Have to Be Defined by "Logging In"
+
+Logging in is only one form of system interaction.
+
+The stronger question is:
+
+> **Does this person directly interact with the system to perform or receive a system-supported activity?**
+
+For example:
+
+```text
+Hospital Manager
+    ↓
+View appointment reports
+```
+
+The manager is interacting with the system.
+
+Therefore:
+
+```text
+Hospital Manager
+├── User
+└── Stakeholder
+```
+
+---
+
+# 10. External Systems and APIs
+
+An external system can interact with another system without being a human user.
+
+Example:
+
+```text
+Hospital System
+       │
+       │ API
+       ▼
+Insurance System
+```
+
+An API integration does not automatically mean:
+
+```text
+Insurance Company = User
+```
+
+Investigate:
+
+> Does a human directly interact with the system?
+
+or:
+
+> Is another system communicating with it automatically?
+
+Therefore:
+
+```text
+Human
+    ↓
+Direct interaction
+    ↓
+User
+```
+
+versus:
+
+```text
+System
+    ↓
+API
+    ↓
+System
+```
+
+The second case is better understood as **system-to-system interaction**, not automatically as a human user.
+
+---
+
+# 11. Stakeholders Can Exist Outside the Organization
+
+Stakeholders are not necessarily employees.
+
+Potential stakeholders may include:
+
+```text
+Customer
+Restaurant Owner
+Bank
 Payment Provider
-Delivery Company
-IT Department
+Regulator
 ```
 
-Classify each participant.
+Therefore, ask:
 
-| Participant        | User | Stakeholder | Both |
-| ------------------ | ---: | ----------: | ---: |
-| Customer           |      |             |      |
-| Sales Employee     |      |             |      |
-| Warehouse Employee |      |             |      |
-| Warehouse Manager  |      |             |      |
-| Company Owner      |      |             |      |
-| Finance Department |      |             |      |
-| Payment Provider   |      |             |      |
-| Delivery Company   |      |             |      |
-| IT Department      |      |             |      |
+> Who is affected by this process?
 
-Which stakeholder would you interview first?
+rather than simply:
+
+> Who works here?
+
+---
+
+# 12. Why Stakeholder Thinking Matters
+
+Different people care about different things.
+
+Example:
 
 ```text
-________________________________________
+Waiter
+    ↓
+Operational efficiency
+
+Owner
+    ↓
+Business performance
+
+Accountant
+    ↓
+Financial accuracy
+
+Customer
+    ↓
+Ease of ordering
 ```
 
-Why?
+If we only talk to the person using the software, we may miss important business requirements.
+
+---
+
+# 13. Stakeholder Goals
+
+A stakeholder is not just a name on a list.
+
+We need to understand:
+
+> What does this stakeholder care about?
+
+A useful model is:
 
 ```text
-________________________________________
-________________________________________
+Stakeholder
+    ↓
+Goal
+    ↓
+Concern
+    ↓
+Business Impact
+```
+
+Example:
+
+```text
+Restaurant Owner
+    ↓
+Increase profitability
+    ↓
+Concerned about costs
+    ↓
+Poor process efficiency may reduce profit
 ```
 
 ---
 
-# Exercise 23 — Case Study: ATM System
+# 14. Stakeholder Goals Can Conflict
 
-Scenario:
+Different stakeholders can want different things.
 
-> A bank wants to replace its ATM software.
-
-Participants:
+Example:
 
 ```text
-Bank Customer
-Bank Teller
-Bank Manager
-Bank Owner
-ATM Technician
-Security Team
-Bank Regulator
-Payment Network
+Customer
+    ↓
+Fast service
+
+Waiter
+    ↓
+Simple workflow
+
+Manager
+    ↓
+Detailed tracking
+
+Owner
+    ↓
+Lower operating costs
 ```
 
-Identify:
+These goals may conflict.
 
-### Users
+For example:
 
 ```text
-1. _____________________________________
-
-2. _____________________________________
-
-3. _____________________________________
+More tracking
+    ↓
+More information entered
+    ↓
+More work for waiter
 ```
 
-### Stakeholders
+The manager may like the additional information while the waiter may dislike the additional work.
+
+Therefore:
+
+> Engineering is not simply asking one person what they want and implementing it.
+
+We need to understand the different interests involved.
+
+---
+
+# 15. Do Not Automatically Choose a Stakeholder's Side
+
+Suppose a Registrar says:
+
+> "Students should not be able to enroll until I manually approve every enrollment."
+
+A Student says:
+
+> "I want to enroll immediately without waiting for approval."
+
+Do not immediately decide which stakeholder is correct.
+
+Instead investigate:
 
 ```text
-1. _____________________________________
+Why is manual approval required?
 
-2. _____________________________________
+Is approval required for every student?
 
-3. _____________________________________
+What exactly does the Registrar check?
 
-4. _____________________________________
+Is there a university policy requiring approval?
 
-5. _____________________________________
+Can those checks be automated?
 
-6. _____________________________________
+What happens if approval is skipped?
 
-7. _____________________________________
+How long does approval normally take?
 
-8. _____________________________________
+What problems are caused by the current process?
 ```
 
-### Who is both a user and stakeholder?
+The engineering sequence is:
 
 ```text
-________________________________________
-```
-
-### Who may be a stakeholder without directly using the ATM software?
-
-```text
-________________________________________
-________________________________________
+Stakeholder Statement
+    ↓
+Investigation
+    ↓
+Business Rule
+    ↓
+Evidence
+    ↓
+Requirement
 ```
 
 ---
 
-# Exercise 24 — Stakeholder Map
+# 16. Do Not Assume
 
-Choose one business process.
-
-Examples:
+Separate:
 
 ```text
-Restaurant ordering
-ATM withdrawal
-University enrollment
-Pharmacy prescription
-Online shopping
-Car repair
-Hotel booking
+Fact
 ```
 
-### Business Process
+from:
 
 ```text
-________________________________________
+Assumption
 ```
 
-### Direct Users
+For example:
 
 ```text
-1. _____________________________________
-
-2. _____________________________________
-
-3. _____________________________________
+Finance Department
+    ↓
+Outside the enrollment system
+    ↓
+Therefore not a User
 ```
 
-### Internal Stakeholders
+This is not necessarily valid.
+
+If Finance can:
 
 ```text
-1. _____________________________________
-
-2. _____________________________________
-
-3. _____________________________________
+View enrollment and payment information
 ```
 
-### External Stakeholders
+then Finance directly interacts with the system.
+
+Therefore:
 
 ```text
-1. _____________________________________
-
-2. _____________________________________
-
-3. _____________________________________
+Finance Department = User
 ```
 
-### People Affected by the Outcome
+The correct reasoning is:
 
 ```text
-1. _____________________________________
+Evidence
+    ↓
+Classification
+```
 
-2. _____________________________________
+not:
 
-3. _____________________________________
+```text
+Job title
+    ↓
+Assumption
+    ↓
+Classification
 ```
 
 ---
 
-# Exercise 25 — Stakeholder Analysis
+# 17. "Unknown" Is a Valid Engineering Answer
 
-For your chosen process, complete:
+Not every relationship can immediately be classified.
 
-| Stakeholder | Role | Uses System? | Goal | Concern | Impact |
-| ----------- | ---- | ------------ | ---- | ------- | ------ |
-|             |      |              |      |         |        |
-|             |      |              |      |         |        |
-|             |      |              |      |         |        |
-|             |      |              |      |         |        |
-|             |      |              |      |         |        |
+Suppose:
 
-Review your table.
+> "The payment provider needs access to our enrollment system."
+
+Do not automatically say:
+
+```text
+User = Yes
+```
+
+or:
+
+```text
+User = No
+```
+
+Instead:
+
+```text
+Unknown
+    ↓
+Investigate
+```
 
 Ask:
 
 ```text
-Who uses the system?
+Does a human employee log into the system?
 
-Who does not use it?
+Does another system communicate with it?
 
+Is the communication through an API?
+
+What information is exchanged?
+```
+
+Then classify based on evidence.
+
+> **Unknown is better than an unsupported assumption.**
+
+---
+
+# 18. Stakeholder Discovery
+
+When nobody gives us a stakeholder list, discover stakeholders through the business process.
+
+Example:
+
+```text
+Student Enrollment
+```
+
+```text
+Student
+    ↓
+Select Courses
+    ↓
+Enrollment
+    ↓
+Approval
+    ↓
+Payment
+    ↓
+Enrollment Confirmed
+```
+
+Then investigate:
+
+```text
+Who performs this?
 Who is affected?
-
+Who depends on the information?
 Who makes decisions?
-
-Who provides information?
-
-Who receives information?
-
-Who can influence the process?
-
-Who could be harmed by a poor solution?
+Who owns the process?
+Who pays?
+Who handles problems?
 ```
 
 ---
 
-# Exercise 26 — Final Challenge
+# 19. Stakeholder Discovery Questions
 
-## Scenario — Hospital Appointment System
+When entering an unfamiliar business, ask:
 
-A hospital wants to build a new appointment management system.
-
-Current process:
+### Identify
 
 ```text
-Patient calls hospital
-        ↓
-Receptionist records appointment
-        ↓
-Doctor views schedule
-        ↓
-Patient visits hospital
-        ↓
-Doctor provides consultation
-        ↓
-Hospital records consultation
-        ↓
-Billing department creates bill
-        ↓
-Patient receives bill
-        ↓
-Hospital management reviews reports
+Who is involved in this process?
 ```
 
-Potential participants:
+### Usage
+
+```text
+Who directly uses the system?
+```
+
+### Impact
+
+```text
+Who is affected by the system or its outcome?
+```
+
+### Goals
+
+```text
+What does each stakeholder want to achieve?
+```
+
+### Concerns
+
+```text
+What is each stakeholder worried about?
+```
+
+### Decisions
+
+```text
+Who makes decisions about this process?
+```
+
+### Dependencies
+
+```text
+Who depends on the output of this process?
+```
+
+### Ownership
+
+```text
+Who owns or is accountable for this process?
+```
+
+### Financial Responsibility
+
+```text
+Who pays for or approves the system?
+```
+
+### Failure Responsibility
+
+```text
+Who handles problems when the process fails?
+```
+
+---
+
+# 20. Stakeholder Discovery Framework
+
+Use this framework when entering an unfamiliar business:
+
+```text
+                    BUSINESS PROCESS
+                           │
+          ┌────────────────┼────────────────┐
+          ▼                ▼                ▼
+        Who?          Who is affected?   Who depends?
+          │                │                │
+          └────────────────┼────────────────┘
+                           ▼
+                    Who makes decisions?
+                           │
+                           ▼
+                     Who owns it?
+                           │
+                           ▼
+                      Who pays?
+                           │
+                           ▼
+                Who handles problems?
+```
+
+This is stronger than simply asking:
+
+> "Who are the stakeholders?"
+
+---
+
+# 21. Restaurant Example
+
+Consider:
+
+```text
+Customer
+    ↓
+Order
+    ↓
+Kitchen
+    ↓
+Food Prepared
+    ↓
+Customer
+    ↓
+Payment
+```
+
+### Who performs the activities?
+
+```text
+Customer
+Waiter
+Kitchen
+Cashier
+```
+
+### Who is affected?
+
+```text
+Customer
+Waiter
+Kitchen
+Cashier
+Restaurant Owner
+```
+
+### Who depends on information?
+
+```text
+Kitchen
+Cashier
+Restaurant Owner
+```
+
+### Who makes decisions?
+
+Possibly:
+
+```text
+Restaurant Manager
+```
+
+### Who owns the business process?
+
+Possibly:
+
+```text
+Restaurant Owner / Management
+```
+
+### Who pays for the system?
+
+Possibly:
+
+```text
+Restaurant Owner
+```
+
+The stakeholder picture is therefore larger than the list of system users.
+
+---
+
+# 22. Stakeholder Does Not Mean "Everyone"
+
+Someone does not become a stakeholder simply because they are important.
+
+Ask:
+
+> What is their relationship to the business process, system, or outcome?
+
+A person may be:
+
+```text
+Yes
+```
+
+or:
+
+```text
+No
+```
+
+or:
+
+```text
+Unknown — investigate
+```
+
+The classification should be based on evidence.
+
+It is normal for many people in a real business process to be stakeholders.
+
+---
+
+# 23. University Enrollment Example
+
+Possible participants:
+
+```text
+Student
+Registrar
+Professor
+Finance Department
+University Administration
+Payment Provider
+```
+
+Potential classifications depend on actual system interaction.
+
+For example:
+
+```text
+Student
+├── User
+└── Stakeholder
+```
+
+```text
+Registrar
+├── User
+└── Stakeholder
+```
+
+If the Professor can view enrolled students:
+
+```text
+Professor
+├── User
+└── Stakeholder
+```
+
+If Finance can view enrollment and payment information:
+
+```text
+Finance Department
+├── User
+└── Stakeholder
+```
+
+If Administration can view enrollment reports:
+
+```text
+University Administration
+├── User
+└── Stakeholder
+```
+
+If the Payment Provider communicates through an API:
+
+```text
+Enrollment System
+       │
+       │ API
+       ▼
+Payment Provider
+```
+
+do not automatically classify the provider as a human user.
+
+Investigate the actual relationship.
+
+---
+
+# 24. Hospital Appointment Example
+
+Consider:
 
 ```text
 Patient
 Receptionist
 Doctor
-Nurse
-Billing Department
 Hospital Manager
-Hospital Owner
-IT Department
 Insurance Company
-Government Health Agency
+Hospital Owner
 ```
 
-### Part 1 — Identify Users
-
-Who directly uses the appointment management system?
+### Patient
 
 ```text
-1. _____________________________________
-
-2. _____________________________________
-
-3. _____________________________________
-
-4. _____________________________________
+User: Yes
+Stakeholder: Yes
 ```
 
-### Part 2 — Identify Stakeholders
-
-Who is affected by or has an interest in the system?
+Reason:
 
 ```text
-1. _____________________________________
-
-2. _____________________________________
-
-3. _____________________________________
-
-4. _____________________________________
-
-5. _____________________________________
-
-6. _____________________________________
-
-7. _____________________________________
-
-8. _____________________________________
+Patient
+    ↓
+Books appointment
 ```
 
-### Part 3 — Identify Both
-
-Which participants are likely to be both users and stakeholders?
+Main concern:
 
 ```text
-1. _____________________________________
-
-2. _____________________________________
-
-3. _____________________________________
+Book an appointment successfully.
 ```
 
-### Part 4 — Non-Users
-
-Which stakeholders may not directly use the appointment system?
+### Receptionist
 
 ```text
-1. _____________________________________
-
-2. _____________________________________
-
-3. _____________________________________
-
-4. _____________________________________
+User: Yes
+Stakeholder: Yes
 ```
 
-Why do they still matter?
+Reason:
 
 ```text
-________________________________________
-________________________________________
+Receptionist
+    ↓
+Create / modify appointments
 ```
 
-### Part 5 — Goals
-
-Identify one goal for each:
+Main concern:
 
 ```text
-Patient:
-________________________________________
-
-Receptionist:
-________________________________________
-
-Doctor:
-________________________________________
-
-Billing Department:
-________________________________________
-
-Hospital Manager:
-________________________________________
-
-Insurance Company:
-________________________________________
+Manage appointments accurately and efficiently.
 ```
 
-### Part 6 — Concerns
-
-Identify one possible concern for each:
+### Doctor
 
 ```text
-Patient:
-________________________________________
-
-Receptionist:
-________________________________________
-
-Doctor:
-________________________________________
-
-Billing Department:
-________________________________________
-
-Hospital Manager:
-________________________________________
-
-Insurance Company:
-________________________________________
+User: Yes
+Stakeholder: Yes
 ```
 
-### Part 7 — Conflicting Goals
-
-Identify at least one possible conflict.
+Reason:
 
 ```text
-Stakeholder A:
-________________________________________
-
-Goal:
-________________________________________
-
-Stakeholder B:
-________________________________________
-
-Goal:
-________________________________________
-
-Conflict:
-________________________________________
-________________________________________
+Doctor
+    ↓
+View appointments
 ```
 
-### Part 8 — Investigation
-
-What would you need to investigate before designing the system?
+Main concern:
 
 ```text
-1. _____________________________________
+Know which patients are scheduled and when.
+```
 
-2. _____________________________________
+### Hospital Manager
 
-3. _____________________________________
+If the system allows:
 
-4. _____________________________________
+```text
+Hospital Manager
+    ↓
+View appointment reports
+```
 
-5. _____________________________________
+then:
 
-6. _____________________________________
+```text
+User: Yes
+Stakeholder: Yes
+```
+
+Viewing reports is still direct interaction with the system.
+
+Main concern:
+
+```text
+Monitor appointment activity and hospital performance.
+```
+
+### Insurance Company
+
+If information is exchanged through an API:
+
+```text
+Hospital System
+       │
+       │ API
+       ▼
+Insurance System
+```
+
+then:
+
+```text
+User: Not established / likely No
+Stakeholder: Yes
+```
+
+Main concern:
+
+```text
+Receive information needed for coverage.
+```
+
+### Hospital Owner
+
+If the owner does not directly use the system:
+
+```text
+User: No
+Stakeholder: Yes
+```
+
+Main concern:
+
+```text
+Monitor overall hospital performance.
 ```
 
 ---
 
-# Exercise 27 — Build Your Own Stakeholder Analysis
+# 25. Stakeholder Map
 
-Choose an unfamiliar business.
-
-### Business
+A simple stakeholder analysis can begin with:
 
 ```text
-________________________________________
+Stakeholder
+    ↓
+Relationship
+    ↓
+Goal
+    ↓
+Concern
+    ↓
+Business Impact
 ```
 
-### Process
+Example:
 
 ```text
-________________________________________
-```
-
-### Users
-
-```text
-1. _____________________________________
-
-2. _____________________________________
-
-3. _____________________________________
-
-4. _____________________________________
-```
-
-### Stakeholders
-
-```text
-1. _____________________________________
-
-2. _____________________________________
-
-3. _____________________________________
-
-4. _____________________________________
-
-5. _____________________________________
-```
-
-### Non-User Stakeholders
-
-```text
-1. _____________________________________
-
-2. _____________________________________
-
-3. _____________________________________
-```
-
-### Decision Makers
-
-```text
-1. _____________________________________
-
-2. _____________________________________
-```
-
-### People Affected
-
-```text
-1. _____________________________________
-
-2. _____________________________________
-
-3. _____________________________________
-```
-
-### External Parties
-
-```text
-1. _____________________________________
-
-2. _____________________________________
-
-3. _____________________________________
+Restaurant Owner
+    ↓
+Owns the business
+    ↓
+Increase profitability
+    ↓
+Concerned about costs
+    ↓
+Poor process efficiency may reduce profit
 ```
 
 ---
 
-# Exercise 28 — Stakeholder Review
+# 26. Engineering Principle
 
-Review your stakeholder analysis.
+Do not define the system only from the perspective of its users.
 
-| Question                                            | Yes / No |
-| --------------------------------------------------- | -------- |
-| Did I identify direct users?                        |          |
-| Did I identify non-user stakeholders?               |          |
-| Did I identify decision makers?                     |          |
-| Did I identify owners or managers?                  |          |
-| Did I identify external parties?                    |          |
-| Did I identify people affected by the process?      |          |
-| Did I identify stakeholder goals?                   |          |
-| Did I identify stakeholder concerns?                |          |
-| Did I identify possible conflicts?                  |          |
-| Did I avoid assuming everyone wants the same thing? |          |
-
-### Who might I have missed?
-
-```text
-________________________________________
-```
-
-### What evidence would help confirm my stakeholder list?
-
-```text
-________________________________________
-________________________________________
-```
-
----
-
-# Mastery Check
-
-You are ready to move forward when you can consistently:
-
-* Define a user.
-* Define a stakeholder.
-* Explain the difference between users and stakeholders.
-* Identify direct system users.
-* Identify stakeholders who do not directly use the system.
-* Identify internal stakeholders.
-* Identify external stakeholders.
-* Identify decision makers.
-* Identify people affected by the system.
-* Identify stakeholder goals.
-* Identify stakeholder concerns.
-* Identify conflicting stakeholder goals.
-* Identify stakeholder influence.
-* Avoid assuming that a job title explains someone's role.
-* Build a stakeholder map for an unfamiliar business.
-
----
-
-# Final Mental Model
+Think:
 
 ```text
                          BUSINESS
                             │
+             ┌──────────────┼──────────────┐
+             ▼              ▼              ▼
+           Users       Stakeholders   External Parties
+             │              │              │
+             └──────────────┼──────────────┘
                             ▼
-                         PROCESS
-                            │
-              ┌─────────────┼─────────────┐
-              │             │             │
-              ▼             ▼             ▼
-            USERS       STAKEHOLDERS   EXTERNAL PARTIES
-              │             │             │
-              │             │             │
-              ▼             ▼             ▼
-          INTERACT       AFFECTED BY    INTERACT WITH
-          WITH SYSTEM    OUTCOMES       BUSINESS
-              │             │             │
-              └─────────────┼─────────────┘
-                            ▼
-                       GOALS & CONCERNS
+                     Business Goals
                             │
                             ▼
-                     POSSIBLE CONFLICTS
-                            │
-                            ▼
-                       INVESTIGATION
-                            │
-                            ▼
-                    BETTER UNDERSTANDING
+                      Requirements
 ```
+
+The software exists inside a larger business environment.
 
 ---
 
-# Reflection
+# 27. Core Mental Model
 
-### Before this exercise, I thought a stakeholder was:
-
-```text
-________________________________________
-```
-
-### Now I understand a stakeholder as:
+Remember:
 
 ```text
-________________________________________
-________________________________________
+USER
+↓
+Directly interacts with the system
 ```
-
-### The difference between a user and stakeholder is:
 
 ```text
-________________________________________
-________________________________________
+STAKEHOLDER
+↓
+Affected by or interested in the outcome
 ```
 
-### One important non-user stakeholder in my chosen process is:
+And:
 
 ```text
-________________________________________
+User
+  ∩
+Stakeholder
 ```
 
-### They matter because:
+is completely possible.
+
+A common real-world situation is:
 
 ```text
-________________________________________
-________________________________________
+Person
+├── User
+└── Stakeholder
 ```
 
-### One stakeholder conflict I discovered is:
+The key engineering skill is:
 
-```text
-________________________________________
-________________________________________
-```
-
-### The most important lesson I learned is:
-
-```text
-________________________________________
-________________________________________
-```
+> **Understand each person's actual relationship to the business and system rather than labeling people based on job titles.**
 
 ---
 
-# Guiding Principle
+# 28. Engineering Investigation Rule
 
-> **Do not ask only "Who uses the system?" Ask "Who is involved, who is affected, who makes decisions, who depends on the outcome, and who can influence the process?"**
+When information is incomplete:
 
+```text
+Do not assume.
+```
 
+Instead:
+
+```text
+Unknown
+    ↓
+Ask questions
+    ↓
+Gather evidence
+    ↓
+Classify
+```
+
+This is the same engineering habit used throughout Business Thinking:
+
+```text
+Problem vs Solution
+        ↓
+Don't accept the first solution
+
+Cause and Effect
+        ↓
+Don't assume the first cause
+
+Process Mapping
+        ↓
+Don't assume a simple linear process
+
+Information Flow
+        ↓
+Don't assume information is obvious
+
+Stakeholders vs Users
+        ↓
+Don't assume everyone has the same relationship
+```
+
+The common principle is:
+
+> **Observe → Ask → Investigate → Understand → Then design.**
+
+---
+
+# Exercises Completed
+
+## Exercise 1 — Restaurant Ordering System
+
+Analyzed:
+
+```text
+Customer
+Waiter
+Kitchen Staff
+Cashier
+Restaurant Owner
+```
+
+Focused on:
+
+- Users
+- Stakeholders
+- User + stakeholder overlap
+- Stakeholders without direct system interaction
+- Owner involvement
+- Different stakeholder requirements
+
+## Exercise 2 — University Enrollment System
+
+Analyzed:
+
+```text
+Student
+Registrar
+Professor
+Finance Department
+University Administration
+Payment Provider
+```
+
+Focused on:
+
+- Users
+- Stakeholders
+- Overlapping classifications
+- Stakeholders without direct system interaction
+- Different stakeholder goals
+- Stakeholder conflicts
+- Investigation before deciding requirements
+- Avoiding assumptions
+- Discovering stakeholder needs
+
+## Exercise 3 — Hospital Appointment System
+
+Analyzed:
+
+```text
+Patient
+Receptionist
+Doctor
+Hospital Manager
+Insurance Company
+Hospital Owner
+```
+
+Focused on:
+
+- Direct system interaction
+- Stakeholder impact
+- External organizations
+- API/system-to-system interaction
+- User + stakeholder overlap
+- Evidence-based classification
+
+---
+
+# Final Learning Checklist
+
+- [x] What is a user?
+- [x] What is a stakeholder?
+- [x] Can someone be both?
+- [x] Can a stakeholder exist without being a user?
+- [x] Does a user have to be defined by a job title?
+- [x] Does a user have to log in?
+- [x] Can viewing a report make someone a user?
+- [x] Can an external organization be a stakeholder?
+- [x] Does an API integration automatically make someone a user?
+- [x] How do we discover stakeholders?
+- [x] How do stakeholder goals differ?
+- [x] Can stakeholder goals conflict?
+- [x] Should an engineer immediately choose which stakeholder is correct?
+- [x] What should we do when the relationship is unclear?
+- [x] Why is "Unknown — investigate" sometimes the correct answer?
+
+---
+
+# Engineering Principle
+
+> **A good engineer does not only ask who uses the software.**
+
+They ask:
+
+```text
+Who uses it?
+
+Who is affected?
+
+Who depends on it?
+
+Who makes decisions?
+
+Who owns the process?
+
+Who pays for it?
+
+Who handles failures?
+
+What does each stakeholder want?
+
+What is each stakeholder concerned about?
+```
+
+Then:
+
+```text
+Stakeholder Understanding
+        ↓
+Goals
+        ↓
+Concerns
+        ↓
+Business Rules
+        ↓
+Requirements
+```
+
+The software is only one part of the larger business system.
