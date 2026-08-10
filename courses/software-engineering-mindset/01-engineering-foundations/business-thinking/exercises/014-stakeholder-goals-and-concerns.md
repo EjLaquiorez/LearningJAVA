@@ -1,1843 +1,801 @@
-# Exercise 014 — Stakeholder Goals and Concerns
+# Topic 014 — Stakeholder Goals and Concerns
+
 ## Objective
 
-Practice understanding what different stakeholders want, what they are responsible for, what problems they face, and what concerns they may have about a business process or system.
+Learn how to identify what different stakeholders want from a business process or system.
 
-The goal is to understand that stakeholders may:
+The goal is not simply to list stakeholders.
 
-- Have different goals
-- Have different responsibilities
-- Experience different problems
-- Have different concerns
-- Measure success differently
-- Disagree about the best solution
+The goal is to understand:
+
+- What each stakeholder wants
+- What each stakeholder is concerned about
+- What outcome they expect
+- What may conflict with another stakeholder
+- Why different stakeholders may have different priorities
 
 ---
 
-# Core Principle
+# Why This Matters
 
-> Understanding stakeholders means understanding what they are trying to achieve and what they are worried about.
+Different stakeholders can look at the same system from completely different perspectives.
 
-Use this mental model:
+For example:
+
+```text
+Student
+↓
+Wants fast enrollment
+```
+
+```text
+Registrar
+↓
+Wants accurate and verified enrollment
+```
+
+```text
+Finance Department
+↓
+Wants payment and account information to be correct
+```
+
+```text
+University Administration
+↓
+Wants accurate enrollment reports
+```
+
+They are all connected to the same business process.
+
+However, they do not necessarily want the same thing.
+
+An engineer needs to understand these differences before deciding what the system should do.
+
+---
+
+# Mental Model
+
+Do not stop at:
 
 ```text
 Stakeholder
-     ↓
-Responsibilities
-     ↓
-Goals
-     ↓
-Problems
-     ↓
-Concerns
-     ↓
-Expectations
-````
+```
 
-Different stakeholders can look at the same process differently:
+Go one level deeper:
 
 ```text
-                    SAME PROCESS
-                         │
-          ┌──────────────┼──────────────┐
-          ▼              ▼              ▼
-       Customer        Employee       Owner
-          │              │              │
-          ▼              ▼              ▼
-        Goals          Goals          Goals
-          │              │              │
-          ▼              ▼              ▼
-      Concerns        Concerns       Concerns
+Stakeholder
+    ↓
+Goal
+    ↓
+Concern
+    ↓
+Expected Outcome
+```
+
+For example:
+
+```text
+Registrar
+    ↓
+Goal:
+Accurate enrollment
+    ↓
+Concern:
+Students being enrolled without verification
+    ↓
+Expected Outcome:
+Only valid enrollments are approved
 ```
 
 ---
 
-# Exercise 1 — Identify the Goal
+# Goal
 
-Consider:
+A **goal** is what a stakeholder wants to achieve.
 
-```text
-Restaurant Ordering Process
-```
-
-Stakeholders:
+Examples:
 
 ```text
-Customer
+Student
+→ Enroll successfully
+
+Registrar
+→ Maintain accurate enrollment records
+
+Restaurant Owner
+→ Reduce cancelled orders
+
 Cashier
-Kitchen Staff
-Manager
-Owner
+→ Process payments correctly
 ```
 
-What might each stakeholder want to achieve?
+A goal describes the desired outcome.
 
-| Stakeholder   | Possible Goal |
-| ------------- | ------------- |
-| Customer      |               |
-| Cashier       |               |
-| Kitchen Staff |               |
-| Manager       |               |
-| Owner         |               |
+---
 
-### Which goals are similar?
+# Concern
+
+A **concern** is something the stakeholder is worried about or wants to prevent.
+
+Examples:
 
 ```text
-________________________________________
-________________________________________
-```
+Student
+→ Concern: Enrollment takes too long
 
-### Which goals are different?
+Registrar
+→ Concern: Invalid students being enrolled
 
-```text
-________________________________________
-________________________________________
+Restaurant Owner
+→ Concern: Too many cancelled orders
+
+Cashier
+→ Concern: Incorrect payment records
 ```
 
 ---
 
-# Exercise 2 — Responsibility vs Goal
+# Goal vs Concern
 
-Consider:
-
-```text
-Warehouse Employee
-```
-
-Identify the difference between responsibility and goal.
-
-### Responsibility
-
-What is the employee expected to do?
-
-```text
-________________________________________
-________________________________________
-```
+Do not confuse the two.
 
 ### Goal
 
-What outcome is the employee trying to achieve?
-
 ```text
-________________________________________
-________________________________________
+What do they want?
 ```
 
-Why are responsibility and goal different?
+### Concern
 
 ```text
-________________________________________
-________________________________________
+What are they worried about?
 ```
 
-Core principle:
-
-> A responsibility describes what someone is expected to do. A goal describes the outcome they want to achieve.
-
----
-
-# Exercise 3 — Identify Stakeholder Concerns
-
-Scenario:
-
-> A company wants to introduce an automated employee scheduling system.
-
-Stakeholders:
+Example:
 
 ```text
-Employees
-Managers
-HR Department
-Company Owner
-IT Department
-```
-
-Identify one possible concern for each.
-
-| Stakeholder   | Concern |
-| ------------- | ------- |
-| Employees     |         |
-| Managers      |         |
-| HR Department |         |
-| Company Owner |         |
-| IT Department |         |
-
-Which concern seems most important?
-
-```text
-________________________________________
-```
-
-Why?
-
-```text
-________________________________________
-________________________________________
-```
-
----
-
-# Exercise 4 — Goals and Concerns
-
-Scenario:
-
-> A supermarket wants to introduce an inventory management system.
-
-### Store Employee
+Stakeholder: Restaurant Owner
 
 Goal:
-
-```text
-________________________________________
-```
+Reduce cancelled orders
 
 Concern:
-
-```text
-________________________________________
-```
-
-### Store Manager
-
-Goal:
-
-```text
-________________________________________
-```
-
-Concern:
-
-```text
-________________________________________
-```
-
-### Owner
-
-Goal:
-
-```text
-________________________________________
-```
-
-Concern:
-
-```text
-________________________________________
-```
-
-### Supplier
-
-Goal:
-
-```text
-________________________________________
-```
-
-Concern:
-
-```text
-________________________________________
+Customers are waiting too long
 ```
 
 ---
 
-# Exercise 5 — Same Problem, Different Perspectives
+# Stakeholder Perspective
 
-Scenario:
+Different stakeholders may observe the same process differently.
 
-> Customers are waiting too long at a restaurant.
-
-### Customer
-
-What might the customer think?
+Consider:
 
 ```text
-________________________________________
-________________________________________
-```
-
-### Cashier
-
-What might the cashier think?
-
-```text
-________________________________________
-________________________________________
-```
-
-### Kitchen Staff
-
-What might the kitchen staff think?
-
-```text
-________________________________________
-________________________________________
-```
-
-### Manager
-
-What might the manager think?
-
-```text
-________________________________________
-________________________________________
-```
-
-### Owner
-
-What might the owner think?
-
-```text
-________________________________________
-________________________________________
-```
-
-Are all explanations necessarily correct?
-
-```text
-YES / NO
-```
-
-Why?
-
-```text
-________________________________________
-________________________________________
-```
-
----
-
-# Exercise 6 — Goal Conflict
-
-Scenario:
-
-> A restaurant owner wants to reduce labor costs.
-
-The manager wants enough employees to maintain service quality.
-
-Employees want manageable workloads.
-
-Customers want fast service.
-
-Identify the goals.
-
-### Owner
-
-```text
-________________________________________
-```
-
-### Manager
-
-```text
-________________________________________
-```
-
-### Employees
-
-```text
-________________________________________
-```
-
-### Customers
-
-```text
-________________________________________
-```
-
-Where is the conflict?
-
-```text
-________________________________________
-________________________________________
-```
-
-What information would you investigate before deciding what to change?
-
-```text
-1. _____________________________________
-
-2. _____________________________________
-
-3. _____________________________________
-
-4. _____________________________________
-```
-
----
-
-# Exercise 7 — Concern vs Problem
-
-Classify each statement as:
-
-* **Problem**
-* **Concern**
-* **Goal**
-
-| Statement                                           | Classification |
-| --------------------------------------------------- | -------------- |
-| Customers wait 20 minutes                           |                |
-| Employee worries automation may be difficult to use |                |
-| Owner wants to reduce operating costs               |                |
-| Warehouse frequently runs out of stock              |                |
-| Manager is concerned about inaccurate reports       |                |
-| Customer wants faster delivery                      |                |
-| Employees spend time manually entering orders       |                |
-
-Explain the difference between a problem and a concern.
-
-```text
-________________________________________
-________________________________________
-```
-
----
-
-# Exercise 8 — Stakeholder Priorities
-
-Scenario:
-
-> An online store wants to improve its order fulfillment process.
-
-Possible priorities:
-
-```text
-Speed
-Accuracy
-Cost
-Reliability
-Customer satisfaction
-Employee workload
-Profit
-```
-
-Assign likely priorities.
-
-| Stakeholder        | Priority |
-| ------------------ | -------- |
-| Customer           |          |
-| Warehouse Employee |          |
-| Warehouse Manager  |          |
-| Owner              |          |
-| Delivery Company   |          |
-| Finance Department |          |
-
-Can a stakeholder have multiple priorities?
-
-```text
-YES / NO
-```
-
-Explain:
-
-```text
-________________________________________
-________________________________________
-```
-
----
-
-# Exercise 9 — Stakeholder Concerns About Change
-
-Scenario:
-
-> A company is replacing a manual process with software.
-
-Stakeholders:
-
-```text
-Employees
-Manager
-Owner
-IT Team
-Customers
-```
-
-What might each stakeholder be concerned about?
-
-### Employees
-
-```text
-________________________________________
-________________________________________
-```
-
-### Manager
-
-```text
-________________________________________
-________________________________________
-```
-
-### Owner
-
-```text
-________________________________________
-________________________________________
-```
-
-### IT Team
-
-```text
-________________________________________
-________________________________________
-```
-
-### Customers
-
-```text
-________________________________________
-________________________________________
-```
-
-Which concerns are about the system?
-
-```text
-________________________________________
-```
-
-Which concerns are about the business change?
-
-```text
-________________________________________
-```
-
----
-
-# Exercise 10 — Goals Behind Requests
-
-Scenario:
-
-> A manager says:
-
-> "We need a dashboard."
-
-Do not design the dashboard.
-
-Instead, investigate the goal.
-
-### What might the manager actually want?
-
-```text
-1. _____________________________________
-
-2. _____________________________________
-
-3. _____________________________________
-```
-
-### What questions would you ask?
-
-```text
-1. _____________________________________
-
-2. _____________________________________
-
-3. _____________________________________
-
-4. _____________________________________
-```
-
-### What information would help identify the real goal?
-
-```text
-________________________________________
-________________________________________
-```
-
-Core principle:
-
-> A requested feature may be an attempt to achieve a deeper business goal.
-
----
-
-# Exercise 11 — Goal Behind a Feature Request
-
-Scenario:
-
-> A customer says:
-
-> "Add a notification feature."
-
-What might the customer actually want?
-
-```text
-1. _____________________________________
-
-2. _____________________________________
-
-3. _____________________________________
-```
-
-What questions should you ask?
-
-```text
-1. _____________________________________
-
-2. _____________________________________
-
-3. _____________________________________
-
-4. _____________________________________
-```
-
-What would you need to know before accepting the request as a requirement?
-
-```text
-________________________________________
-________________________________________
-```
-
----
-
-# Exercise 12 — Stakeholder Expectations
-
-Scenario:
-
-> A hospital is introducing a new appointment system.
-
-Stakeholders:
-
-```text
-Patient
-Receptionist
-Doctor
-Hospital Manager
-IT Department
-```
-
-Identify one expectation for each.
-
-| Stakeholder      | Expectation |
-| ---------------- | ----------- |
-| Patient          |             |
-| Receptionist     |             |
-| Doctor           |             |
-| Hospital Manager |             |
-| IT Department    |             |
-
-Which expectations could conflict?
-
-```text
-________________________________________
-________________________________________
-```
-
----
-
-# Exercise 13 — Stakeholder Success
-
-Ask:
-
-> "What would success look like for this stakeholder?"
-
-### Customer
-
-```text
-________________________________________
-```
-
-### Employee
-
-```text
-________________________________________
-```
-
-### Manager
-
-```text
-________________________________________
-```
-
-### Owner
-
-```text
-________________________________________
-```
-
-### External Partner
-
-```text
-________________________________________
-```
-
-Why is this question useful?
-
-```text
-________________________________________
-________________________________________
-```
-
----
-
-# Exercise 14 — Stakeholder Metrics
-
-Scenario:
-
-> A delivery company wants to improve its delivery process.
-
-Possible measurements:
-
-```text
-Delivery time
-Failed deliveries
-Customer complaints
-Operating cost
-Driver workload
-Number of deliveries
-```
-
-Match likely measurements to stakeholders.
-
-| Stakeholder      | Important Measurement |
-| ---------------- | --------------------- |
-| Customer         |                       |
-| Driver           |                       |
-| Manager          |                       |
-| Owner            |                       |
-| Customer Service |                       |
-
-Why might the same process be measured differently?
-
-```text
-________________________________________
-________________________________________
-```
-
----
-
-# Exercise 15 — Stakeholder Concerns About Risk
-
-Scenario:
-
-> A bank plans to introduce a new payment system.
-
-Stakeholders:
-
-```text
+Restaurant Order
+        ↓
+Kitchen
+        ↓
 Customer
-Bank Employee
-Bank Manager
-Bank Owner
-Security Team
-Regulator
 ```
 
-Identify a possible risk concern for each.
-
-### Customer
+The customer may think:
 
 ```text
-________________________________________
+"My food is taking too long."
 ```
 
-### Bank Employee
+The kitchen staff may think:
 
 ```text
-________________________________________
+"We have too many orders."
 ```
 
-### Bank Manager
+The owner may think:
 
 ```text
-________________________________________
+"We are losing customers."
 ```
 
-### Bank Owner
+The engineer must understand all three perspectives.
+
+---
+
+# Stakeholder Goals Can Conflict
+
+Two stakeholders can have legitimate but conflicting goals.
+
+Example:
 
 ```text
-________________________________________
+Registrar
+↓
+Wants every enrollment manually verified
 ```
 
-### Security Team
-
 ```text
-________________________________________
+Student
+↓
+Wants immediate enrollment
 ```
 
-### Regulator
+Both goals are reasonable from their perspective.
+
+The engineer should not immediately decide:
 
 ```text
-________________________________________
+Registrar is correct
 ```
 
-Which concerns are related to security?
+or:
 
 ```text
-________________________________________
+Student is correct
 ```
 
-Which concerns are related to business performance?
+Instead:
 
 ```text
-________________________________________
+Understand both goals
+        ↓
+Understand their concerns
+        ↓
+Understand the business rules
+        ↓
+Investigate the process
+        ↓
+Determine the actual requirement
 ```
 
 ---
 
-# Exercise 16 — Conflicting Definitions of Success
+# Stakeholder Goal Map
 
-Scenario:
-
-> A warehouse wants to improve picking efficiency.
-
-### Warehouse Employee
-
-Success means:
+A simple way to analyze stakeholders is:
 
 ```text
-________________________________________
+Stakeholder
+    ↓
+Goal
+    ↓
+Concern
+    ↓
+Impact
 ```
 
-### Warehouse Manager
-
-Success means:
+Example:
 
 ```text
-________________________________________
-```
-
-### Owner
-
-Success means:
-
-```text
-________________________________________
-```
-
-### Customer
-
-Success means:
-
-```text
-________________________________________
-```
-
-Do all four definitions need to be considered?
-
-```text
-YES / NO
-```
-
-Why?
-
-```text
-________________________________________
-________________________________________
+Restaurant Owner
+    ↓
+Goal:
+Reduce cancelled orders
+    ↓
+Concern:
+Customers wait too long
+    ↓
+Impact:
+Lost revenue and unhappy customers
 ```
 
 ---
 
-# Exercise 17 — Stakeholder Interview
+# Example — University Enrollment
 
-Imagine you are interviewing a stakeholder.
-
-Create questions for discovering their goals.
-
-### Question 1
-
-```text
-________________________________________
-```
-
-### Question 2
-
-```text
-________________________________________
-```
-
-### Question 3
-
-```text
-________________________________________
-```
-
-### Question 4
-
-```text
-________________________________________
-```
-
-Now create questions for discovering concerns.
-
-### Question 5
-
-```text
-________________________________________
-```
-
-### Question 6
-
-```text
-________________________________________
-```
-
-### Question 7
-
-```text
-________________________________________
-```
-
-### Question 8
-
-```text
-________________________________________
-```
-
----
-
-# Exercise 18 — Separate Facts From Stakeholder Opinions
-
-Scenario:
-
-A manager says:
-
-> "Our employees are too slow."
-
-A customer says:
-
-> "The staff takes too long to serve me."
-
-An employee says:
-
-> "We have too many manual steps."
-
-The system records:
-
-```text
-Average processing time: 18 minutes
-```
-
-Classify each statement.
-
-| Statement                               | Fact / Opinion / Observation |
-| --------------------------------------- | ---------------------------- |
-| "Our employees are too slow."           |                              |
-| "The staff takes too long to serve me." |                              |
-| "We have too many manual steps."        |                              |
-| Average processing time is 18 minutes   |                              |
-
-Which statements need investigation?
-
-```text
-________________________________________
-________________________________________
-```
-
-Core principle:
-
-> Stakeholder statements are valuable evidence, but they are not automatically objective facts.
-
----
-
-# Exercise 19 — Stakeholder Assumptions
-
-Scenario:
-
-> A business owner says:
-
-> "Customers don't like our current process."
-
-What assumptions might be hidden inside this statement?
-
-```text
-1. _____________________________________
-
-2. _____________________________________
-
-3. _____________________________________
-
-4. _____________________________________
-```
-
-What evidence would you want?
-
-```text
-1. _____________________________________
-
-2. _____________________________________
-
-3. _____________________________________
-```
-
----
-
-# Exercise 20 — Case Study: University Enrollment
-
-Scenario:
-
-> A university wants to improve enrollment.
-
-Stakeholders:
+Consider these stakeholders:
 
 ```text
 Student
 Registrar
 Professor
 Finance Department
-University Management
-IT Department
+University Administration
 ```
 
-### Identify each stakeholder's goal.
+Analyze them individually.
 
-| Stakeholder           | Goal |
-| --------------------- | ---- |
-| Student               |      |
-| Registrar             |      |
-| Professor             |      |
-| Finance Department    |      |
-| University Management |      |
-| IT Department         |      |
-
-### Identify one concern for each.
-
-| Stakeholder           | Concern |
-| --------------------- | ------- |
-| Student               |         |
-| Registrar             |         |
-| Professor             |         |
-| Finance Department    |         |
-| University Management |         |
-| IT Department         |         |
-
-### Which goals could conflict?
+### Student
 
 ```text
-________________________________________
-________________________________________
+Goal:
+Enroll in subjects successfully
+
+Concern:
+Enrollment takes too long or fails
+
+Expected Outcome:
+Successful enrollment
 ```
 
-### What would you investigate?
+### Registrar
 
 ```text
-1. _____________________________________
+Goal:
+Maintain accurate enrollment
 
-2. _____________________________________
+Concern:
+Invalid or incorrect enrollment
 
-3. _____________________________________
+Expected Outcome:
+Verified enrollment records
+```
 
-4. _____________________________________
+### Professor
+
+```text
+Goal:
+Know which students are enrolled
+
+Concern:
+Incorrect student enrollment information
+
+Expected Outcome:
+Accurate class lists
+```
+
+### Finance Department
+
+```text
+Goal:
+Maintain correct student financial information
+
+Concern:
+Students being enrolled with unresolved financial issues
+
+Expected Outcome:
+Correct financial status
+```
+
+### University Administration
+
+```text
+Goal:
+Monitor enrollment performance
+
+Concern:
+Incorrect or incomplete enrollment information
+
+Expected Outcome:
+Reliable enrollment information
 ```
 
 ---
 
-# Exercise 21 — Case Study: Pharmacy
+# Exercise 1 — Restaurant
 
-Scenario:
-
-> A pharmacy wants to introduce a prescription management system.
-
-Stakeholders:
+Consider the following stakeholders:
 
 ```text
 Customer
-Pharmacist
-Pharmacy Manager
-Pharmacy Owner
-Inventory Staff
-Supplier
+Waiter
+Kitchen Staff
+Cashier
+Restaurant Owner
 ```
 
-Identify:
+For each stakeholder, identify:
+
+- Goal
+- Concern
+- Expected outcome
+
+Use this format:
+
+```text
+Stakeholder:
+
+Goal:
+
+Concern:
+
+Expected Outcome:
+```
+
+---
+
+# Exercise 2 — Identify the Goal
+
+A restaurant owner says:
+
+> "I want orders to be completed faster."
+
+### Question 1
+
+What is the owner's goal?
+
+### Question 2
+
+What concern might be behind that goal?
+
+### Question 3
+
+What would you investigate before deciding how to make orders faster?
+
+Do not propose a technical solution yet.
+
+---
+
+# Exercise 3 — Different Perspectives
+
+A restaurant has a slow lunch process.
+
+The stakeholders say:
 
 ### Customer
 
-Goal:
+> "I want my food faster."
 
-```text
-________________________________________
-```
+### Kitchen Staff
 
-Concern:
+> "We have too many orders at the same time."
 
-```text
-________________________________________
-```
+### Waiter
 
-### Pharmacist
+> "The kitchen doesn't tell me when orders are ready."
 
-Goal:
+### Owner
 
-```text
-________________________________________
-```
+> "We're losing customers because of the delays."
 
-Concern:
+Answer:
 
-```text
-________________________________________
-```
+### Question 1
 
-### Pharmacy Manager
+What is the goal of each stakeholder?
 
-Goal:
+### Question 2
 
-```text
-________________________________________
-```
+What is each stakeholder concerned about?
 
-Concern:
+### Question 3
 
-```text
-________________________________________
-```
+Are these concerns related?
 
-### Pharmacy Owner
-
-Goal:
-
-```text
-________________________________________
-```
-
-Concern:
-
-```text
-________________________________________
-```
-
-### Inventory Staff
-
-Goal:
-
-```text
-________________________________________
-```
-
-Concern:
-
-```text
-________________________________________
-```
-
-### Supplier
-
-Goal:
-
-```text
-________________________________________
-```
-
-Concern:
-
-```text
-________________________________________
-```
+Explain how.
 
 ---
 
-# Exercise 22 — Case Study: Online Store
+# Exercise 4 — Conflicting Goals
 
-Scenario:
-
-> An online store wants to reduce order cancellations.
-
-Stakeholders:
+Imagine:
 
 ```text
-Customer
-Sales Team
-Warehouse
-Delivery Company
-Customer Service
-Manager
-Owner
+Customer:
+"I want my order prepared immediately."
+
+Kitchen Staff:
+"We need enough time to prepare the food correctly."
 ```
 
-### What might each stakeholder want?
+### Question 1
 
-| Stakeholder      | Goal |
-| ---------------- | ---- |
-| Customer         |      |
-| Sales Team       |      |
-| Warehouse        |      |
-| Delivery Company |      |
-| Customer Service |      |
-| Manager          |      |
-| Owner            |      |
+What does the customer want?
 
-### What might each stakeholder worry about?
+### Question 2
 
-| Stakeholder      | Concern |
-| ---------------- | ------- |
-| Customer         |         |
-| Sales Team       |         |
-| Warehouse        |         |
-| Delivery Company |         |
-| Customer Service |         |
-| Manager          |         |
-| Owner            |         |
+What does the kitchen staff want?
 
-### Where could their goals conflict?
+### Question 3
 
-```text
-________________________________________
-________________________________________
-```
+Why might these goals conflict?
 
----
+### Question 4
 
-# Exercise 23 — Goal vs Solution
+Should the engineer immediately choose one side?
 
-Scenario:
+Why or why not?
 
-> A manager says:
-
-> "We need barcode scanners."
-
-Do not accept the scanner as the solution yet.
-
-### What might the manager's goal be?
-
-```text
-1. _____________________________________
-
-2. _____________________________________
-
-3. _____________________________________
-```
-
-### What problem might they be trying to solve?
-
-```text
-________________________________________
-```
-
-### What questions would you ask?
-
-```text
-1. _____________________________________
-
-2. _____________________________________
-
-3. _____________________________________
-
-4. _____________________________________
-```
-
-### What evidence would you collect?
-
-```text
-1. _____________________________________
-
-2. _____________________________________
-
-3. _____________________________________
-```
-
----
-
-# Exercise 24 — Stakeholder Prioritization
-
-You have identified these stakeholders:
-
-```text
-Customer
-Employee
-Manager
-Owner
-Supplier
-Government Regulator
-IT Team
-```
-
-Rank them based on how important their concerns are for the process you are studying.
-
-| Rank | Stakeholder | Why? |
-| ---- | ----------- | ---- |
-| 1    |             |      |
-| 2    |             |      |
-| 3    |             |      |
-| 4    |             |      |
-| 5    |             |      |
-| 6    |             |      |
-| 7    |             |      |
-
-Important:
-
-> Do not assume there is always one universally correct ranking.
-
-Explain your reasoning:
-
-```text
-________________________________________
-________________________________________
-```
-
----
-
-# Exercise 25 — Build a Stakeholder Goal Map
-
-Choose a business process.
-
-Examples:
-
-```text
-Restaurant ordering
-ATM withdrawal
-University enrollment
-Pharmacy prescription
-Online shopping
-Car repair
-Hotel booking
-```
-
-### Business Process
-
-```text
-________________________________________
-```
-
-### Stakeholders
-
-```text
-1. _____________________________________
-
-2. _____________________________________
-
-3. _____________________________________
-
-4. _____________________________________
-
-5. _____________________________________
-```
-
-Complete:
-
-| Stakeholder | Responsibility | Goal | Problem | Concern |
-| ----------- | -------------- | ---- | ------- | ------- |
-|             |                |      |         |         |
-|             |                |      |         |         |
-|             |                |      |         |         |
-|             |                |      |         |         |
-|             |                |      |         |         |
-
----
-
-# Exercise 26 — Identify Conflicting Goals
-
-Using your chosen business process, identify at least two possible conflicts.
-
-### Conflict 1
-
-Stakeholder A:
-
-```text
-________________________________________
-```
-
-Goal:
-
-```text
-________________________________________
-```
-
-Stakeholder B:
-
-```text
-________________________________________
-```
-
-Goal:
-
-```text
-________________________________________
-```
-
-Conflict:
-
-```text
-________________________________________
-________________________________________
-```
-
-### Conflict 2
-
-Stakeholder A:
-
-```text
-________________________________________
-```
-
-Goal:
-
-```text
-________________________________________
-```
-
-Stakeholder B:
-
-```text
-________________________________________
-```
-
-Goal:
-
-```text
-________________________________________
-```
-
-Conflict:
-
-```text
-________________________________________
-________________________________________
-```
-
----
-
-# Exercise 27 — Final Challenge
-
-## Scenario — Hospital Appointment System
-
-A hospital wants to improve its appointment process.
-
-Current process:
-
-```text
-Patient requests appointment
-        ↓
-Receptionist records appointment
-        ↓
-Doctor views schedule
-        ↓
-Patient arrives
-        ↓
-Doctor provides consultation
-        ↓
-Hospital records consultation
-        ↓
-Billing creates bill
-        ↓
-Patient receives bill
-```
-
-Stakeholders:
-
-```text
-Patient
-Receptionist
-Doctor
-Nurse
-Billing Department
-Hospital Manager
-Hospital Owner
-IT Department
-Insurance Company
-Government Health Agency
-```
-
-### Part 1 — Responsibilities
-
-Identify what each stakeholder is responsible for.
-
-| Stakeholder              | Responsibility |
-| ------------------------ | -------------- |
-| Patient                  |                |
-| Receptionist             |                |
-| Doctor                   |                |
-| Nurse                    |                |
-| Billing Department       |                |
-| Hospital Manager         |                |
-| Hospital Owner           |                |
-| IT Department            |                |
-| Insurance Company        |                |
-| Government Health Agency |                |
-
----
-
-### Part 2 — Goals
-
-Identify the likely goal of each stakeholder.
-
-| Stakeholder              | Goal |
-| ------------------------ | ---- |
-| Patient                  |      |
-| Receptionist             |      |
-| Doctor                   |      |
-| Nurse                    |      |
-| Billing Department       |      |
-| Hospital Manager         |      |
-| Hospital Owner           |      |
-| IT Department            |      |
-| Insurance Company        |      |
-| Government Health Agency |      |
-
----
-
-### Part 3 — Concerns
-
-Identify one concern for each.
-
-| Stakeholder              | Concern |
-| ------------------------ | ------- |
-| Patient                  |         |
-| Receptionist             |         |
-| Doctor                   |         |
-| Nurse                    |         |
-| Billing Department       |         |
-| Hospital Manager         |         |
-| Hospital Owner           |         |
-| IT Department            |         |
-| Insurance Company        |         |
-| Government Health Agency |         |
-
----
-
-### Part 4 — Conflicting Goals
-
-Identify at least two possible conflicts.
-
-```text
-Conflict 1:
-
-Stakeholder A:
-________________________________________
-
-Goal:
-________________________________________
-
-Stakeholder B:
-________________________________________
-
-Goal:
-________________________________________
-
-Conflict:
-________________________________________
-________________________________________
-```
-
-```text
-Conflict 2:
-
-Stakeholder A:
-________________________________________
-
-Goal:
-________________________________________
-
-Stakeholder B:
-________________________________________
-
-Goal:
-________________________________________
-
-Conflict:
-________________________________________
-________________________________________
-```
-
----
-
-### Part 5 — Investigation
-
-You are not allowed to propose a software solution yet.
+### Question 5
 
 What would you investigate?
 
-```text
-1. _____________________________________
+---
 
-2. _____________________________________
+# Exercise 5 — Stakeholder Statement
 
-3. _____________________________________
+The owner says:
 
-4. _____________________________________
+> "I want a dashboard showing every cancelled order."
 
-5. _____________________________________
+Do not immediately treat this as a requirement.
 
-6. _____________________________________
+Answer:
 
-7. _____________________________________
-```
+### Question 1
+
+What is the owner's stated request?
+
+### Question 2
+
+What might be the owner's actual goal?
+
+### Question 3
+
+What concern might be behind the request?
+
+### Question 4
+
+What questions would you ask the owner?
+
+Give at least 3.
 
 ---
 
-### Part 6 — Evidence
+# Exercise 6 — Goal vs Solution
 
-For one stakeholder concern, identify what evidence would help confirm it.
-
-Concern:
+Consider these statements:
 
 ```text
-________________________________________
+A. "I want a notification whenever an order is cancelled."
+
+B. "I want to reduce cancelled orders."
+
+C. "I want to know why orders are being cancelled."
+
+D. "I want a dashboard."
 ```
 
-Evidence:
+Classify each as:
 
 ```text
-1. _____________________________________
-
-2. _____________________________________
-
-3. _____________________________________
+Goal
+Concern
+Request
+Possible Solution
 ```
+
+Explain your reasoning.
 
 ---
 
-# Exercise 28 — Build Your Own Stakeholder Analysis
+# Exercise 7 — Stakeholder Conflict
 
-Choose an unfamiliar business.
+Imagine a university enrollment system.
 
-### Business
+The Registrar says:
 
-```text
-________________________________________
-```
+> "Every enrollment should be manually reviewed."
 
-### Process
+The Student says:
 
-```text
-________________________________________
-```
+> "I should be enrolled immediately."
 
-### Stakeholder 1
+The University Administration says:
 
-```text
-Name:
-________________________________________
+> "Enrollment should be completed quickly during peak periods."
 
-Responsibility:
-________________________________________
+### Question 1
 
-Goal:
-________________________________________
+What is the Registrar's goal?
 
-Problem:
-________________________________________
+### Question 2
 
-Concern:
-________________________________________
-```
+What is the Student's goal?
 
-### Stakeholder 2
+### Question 3
 
-```text
-Name:
-________________________________________
+What is the University's goal?
 
-Responsibility:
-________________________________________
+### Question 4
 
-Goal:
-________________________________________
+What concerns might each stakeholder have?
 
-Problem:
-________________________________________
+### Question 5
 
-Concern:
-________________________________________
-```
+Where do their goals conflict?
 
-### Stakeholder 3
+### Question 6
 
-```text
-Name:
-________________________________________
-
-Responsibility:
-________________________________________
-
-Goal:
-________________________________________
-
-Problem:
-________________________________________
-
-Concern:
-________________________________________
-```
-
-### Stakeholder 4
-
-```text
-Name:
-________________________________________
-
-Responsibility:
-________________________________________
-
-Goal:
-________________________________________
-
-Problem:
-________________________________________
-
-Concern:
-________________________________________
-```
-
-### Stakeholder 5
-
-```text
-Name:
-________________________________________
-
-Responsibility:
-________________________________________
-
-Goal:
-________________________________________
-
-Problem:
-________________________________________
-
-Concern:
-________________________________________
-```
+What would you investigate before deciding how the enrollment process should work?
 
 ---
 
-# Exercise 29 — Stakeholder Analysis Review
+# Exercise 8 — Don't Assume
 
-Review your analysis.
+A stakeholder says:
 
-| Question                                             | Yes / No |
-| ---------------------------------------------------- | -------- |
-| Did I identify each stakeholder's responsibility?    |          |
-| Did I identify each stakeholder's goal?              |          |
-| Did I identify stakeholder problems?                 |          |
-| Did I identify stakeholder concerns?                 |          |
-| Did I distinguish goals from solutions?              |          |
-| Did I identify conflicting goals?                    |          |
-| Did I avoid assuming everyone wants the same thing?  |          |
-| Did I identify evidence needed to validate concerns? |          |
-| Did I separate facts from assumptions?               |          |
-| Did I investigate before proposing solutions?        |          |
+> "The system is too slow."
 
-### What did I initially assume?
+Do not immediately assume this means:
 
 ```text
-________________________________________
-________________________________________
+The software is slow.
 ```
 
-### What needs further investigation?
+Investigate.
 
-```text
-________________________________________
-________________________________________
-```
+Ask:
+
+### Question 1
+
+What does "slow" mean to the stakeholder?
+
+### Question 2
+
+Which part of the process feels slow?
+
+### Question 3
+
+When does it happen?
+
+### Question 4
+
+How often does it happen?
+
+### Question 5
+
+Who experiences the problem?
+
+### Question 6
+
+What business impact does the delay create?
 
 ---
 
-# Mastery Check
+# Exercise 9 — Stakeholder Goal Map
 
-You are ready to move forward when you can consistently:
+Create a goal map for the restaurant.
 
-* Identify stakeholder responsibilities.
-* Identify stakeholder goals.
-* Identify stakeholder problems.
-* Identify stakeholder concerns.
-* Distinguish goals from requested solutions.
-* Understand different stakeholder perspectives.
-* Identify conflicting goals.
-* Explain why stakeholders may disagree.
-* Identify what success means to different stakeholders.
-* Identify stakeholder expectations.
-* Identify risks from a stakeholder perspective.
-* Separate facts from stakeholder opinions.
-* Identify assumptions hidden inside stakeholder statements.
-* Determine what evidence is needed to validate a concern.
-* Investigate stakeholder needs before proposing software.
+Use:
+
+```text
+Stakeholder
+    ↓
+Goal
+    ↓
+Concern
+    ↓
+Expected Outcome
+```
+
+Analyze:
+
+```text
+Customer
+Waiter
+Kitchen Staff
+Cashier
+Restaurant Owner
+```
+
+Then look for relationships between their goals.
 
 ---
 
-# Final Mental Model
+# Exercise 10 — Investigation Challenge
+
+A restaurant owner says:
+
+> "I want the kitchen to process more orders during lunch."
+
+You investigate and discover:
 
 ```text
-                       STAKEHOLDER
-                            │
-             ┌──────────────┼──────────────┐
-             ▼              ▼              ▼
-       RESPONSIBILITY      GOAL         PROBLEM
-             │              │              │
-             │              ▼              ▼
-             │          EXPECTATION      CONCERN
-             │              │              │
-             └──────────────┼──────────────┘
-                            ▼
-                     PERSPECTIVE
-                            │
-                            ▼
-                    POSSIBLE CONFLICT
-                            │
-                            ▼
-                      INVESTIGATION
-                            │
-                            ▼
-                         EVIDENCE
-                            │
-                            ▼
-                     BETTER UNDERSTANDING
-                            │
-                            ▼
-                     BUSINESS NEED
+Lunch orders:
+100
+
+Orders completed:
+70
+
+Cancelled orders:
+20
+
+Remaining orders:
+10
 ```
+
+The kitchen staff says:
+
+> "We are already working as fast as we can."
+
+The waiter says:
+
+> "The kitchen receives orders in large batches."
+
+The owner says:
+
+> "We need more staff."
+
+### Question 1
+
+What is the owner's goal?
+
+### Question 2
+
+What is the kitchen staff's concern?
+
+### Question 3
+
+What is the waiter's observation?
+
+### Question 4
+
+Is "hire more staff" already a confirmed solution?
+
+Why or why not?
+
+### Question 5
+
+What would you investigate next?
+
+Give at least 5 questions.
 
 ---
 
 # Reflection
 
-### Before this exercise, I thought stakeholder goals were:
+After completing the exercises, answer:
 
-```text
-________________________________________
-```
+### 1. What is the difference between a stakeholder's goal and concern?
 
-### Now I understand stakeholder goals as:
+### 2. Why can two stakeholders have different goals?
 
-```text
-________________________________________
-________________________________________
-```
+### 3. Why can legitimate stakeholder goals conflict?
 
-### The difference between a goal and a solution is:
+### 4. Why shouldn't engineers immediately choose one stakeholder's preference?
 
-```text
-________________________________________
-________________________________________
-```
+### 5. Why should an engineer investigate the reason behind a stakeholder request?
 
-### One stakeholder concern I discovered was:
+### 6. Can a stakeholder's requested solution fail to address their actual goal?
 
-```text
-________________________________________
-```
-
-### The concern matters because:
-
-```text
-________________________________________
-________________________________________
-```
-
-### One conflicting stakeholder goal I discovered was:
-
-```text
-________________________________________
-________________________________________
-```
-
-### The evidence I would need to investigate it is:
-
-```text
-________________________________________
-________________________________________
-```
-
-### The most important lesson I learned is:
-
-```text
-________________________________________
-________________________________________
-```
+Give an example.
 
 ---
 
-# Guiding Principle
+# Engineering Principle
 
-> **Do not only ask what stakeholders want built. Understand what they are responsible for, what they are trying to achieve, what problems they face, what they are concerned about, and what evidence supports those concerns.**
+A stakeholder does not always describe the business need directly.
+
+They may describe:
+
+```text
+What they want
+```
+
+instead of:
+
+```text
+Why they want it
+```
+
+Therefore:
+
+```text
+Stakeholder Statement
+        ↓
+Goal
+        ↓
+Concern
+        ↓
+Business Impact
+        ↓
+Investigation
+        ↓
+Requirement
+```
+
+The engineer's responsibility is to understand the stakeholder's perspective **before turning their request into a system requirement**.
+
+---
+
+# Key Takeaway
+
+Do not only ask:
+
+> "Who is the stakeholder?"
+
+Also ask:
+
+> "What does this stakeholder want?"
+
+> "What are they concerned about?"
+
+> "What outcome are they expecting?"
+
+> "Could their goal conflict with another stakeholder's goal?"
+
+> "What evidence do we need before deciding what the system should do?"
+
+This is how engineers move from simply identifying stakeholders to **understanding stakeholder needs**.
