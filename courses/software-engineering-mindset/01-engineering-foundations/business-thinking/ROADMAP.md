@@ -308,7 +308,7 @@ Investigate:
 
 # Phase 6 — Stakeholder Understanding
 
-## 013 — Stakeholders vs Users 🚧
+## 013 — Stakeholders vs Users ✅
 
 Learn the difference between:
 
@@ -642,7 +642,7 @@ Phase 3 — Investigating Problems       ██████████ ✅
 Phase 4 — Understanding Processes      ██████████ ✅
 Phase 5 — Modeling Responsibilities    ██████████ ✅
 
-Phase 6 — Stakeholder Understanding    ███░░░░░░░ 🚧
+Phase 6 — Stakeholder Understanding    ████░░░░░░ 🚧
 Phase 7 — Business Rules               ░░░░░░░░░░░
 Phase 8 — Requirements Thinking        ░░░░░░░░░░░
 Phase 9 — System Boundaries            ░░░░░░░░░░░
@@ -658,14 +658,14 @@ Phase 6
     ↓
 Stakeholder Understanding
     ↓
-013 — Stakeholders vs Users
+014 — Stakeholder Goals and Concerns
     ↓
 Current Topic
 ```
 
 The next learning topic is:
 
-> **013 — Stakeholders vs Users**
+> **014 — Stakeholder Goals and Concerns**
 
 ---
 

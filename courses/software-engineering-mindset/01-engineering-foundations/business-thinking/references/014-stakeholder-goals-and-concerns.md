@@ -1,22 +1,369 @@
-# Exercise 014 — Stakeholder Goals and Concerns
+# Topic 014 — Stakeholder Goals and Concerns
 
 ## Objective
 
-Practice identifying:
+Learn how to identify what different stakeholders want from a business process or system.
 
-- Stakeholders
-- Stakeholder goals
-- Stakeholder concerns
-- Expected outcomes
-- Conflicting goals
-- Stakeholder requests
-- Business needs behind requests
+The goal is not simply to list stakeholders.
 
-The goal is to understand what stakeholders actually want and why before turning their statements into system requirements.
+The goal is to understand:
+
+- What each stakeholder wants
+- What each stakeholder is concerned about
+- What outcome they expect
+- What may conflict with another stakeholder
+- Why different stakeholders may have different priorities
 
 ---
 
-# Exercise 1 — Restaurant Stakeholders
+# Why This Matters
+
+Different stakeholders can look at the same system from completely different perspectives.
+
+For example:
+
+```text
+Student
+↓
+Wants fast enrollment
+```
+
+```text
+Registrar
+↓
+Wants accurate and verified enrollment
+```
+
+```text
+Finance Department
+↓
+Wants payment and account information to be correct
+```
+
+```text
+University Administration
+↓
+Wants accurate enrollment reports
+```
+
+They are all connected to the same business process.
+
+However, they do not necessarily want the same thing.
+
+An engineer needs to understand these differences before deciding what the system should do.
+
+---
+
+# Mental Model
+
+Do not stop at:
+
+```text
+Stakeholder
+```
+
+Go one level deeper:
+
+```text
+Stakeholder
+    ↓
+Goal
+    ↓
+Concern
+    ↓
+Expected Outcome
+```
+
+For example:
+
+```text
+Registrar
+    ↓
+Goal:
+Accurate enrollment
+    ↓
+Concern:
+Students being enrolled without verification
+    ↓
+Expected Outcome:
+Only valid enrollments are approved
+```
+
+---
+
+# Goal
+
+A **goal** is what a stakeholder wants to achieve.
+
+Examples:
+
+```text
+Student
+→ Enroll successfully
+
+Registrar
+→ Maintain accurate enrollment records
+
+Restaurant Owner
+→ Reduce cancelled orders
+
+Cashier
+→ Process payments correctly
+```
+
+A goal describes the desired outcome.
+
+---
+
+# Concern
+
+A **concern** is something the stakeholder is worried about or wants to prevent.
+
+Examples:
+
+```text
+Student
+→ Concern: Enrollment takes too long
+
+Registrar
+→ Concern: Invalid students being enrolled
+
+Restaurant Owner
+→ Concern: Too many cancelled orders
+
+Cashier
+→ Concern: Incorrect payment records
+```
+
+---
+
+# Goal vs Concern
+
+Do not confuse the two.
+
+### Goal
+
+```text
+What do they want?
+```
+
+### Concern
+
+```text
+What are they worried about?
+```
+
+Example:
+
+```text
+Stakeholder: Restaurant Owner
+
+Goal:
+Reduce cancelled orders
+
+Concern:
+Customers are waiting too long
+```
+
+---
+
+# Stakeholder Perspective
+
+Different stakeholders may observe the same process differently.
+
+Consider:
+
+```text
+Restaurant Order
+        ↓
+Kitchen
+        ↓
+Customer
+```
+
+The customer may think:
+
+```text
+"My food is taking too long."
+```
+
+The kitchen staff may think:
+
+```text
+"We have too many orders."
+```
+
+The owner may think:
+
+```text
+"We are losing customers."
+```
+
+The engineer must understand all three perspectives.
+
+---
+
+# Stakeholder Goals Can Conflict
+
+Two stakeholders can have legitimate but conflicting goals.
+
+Example:
+
+```text
+Registrar
+↓
+Wants every enrollment manually verified
+```
+
+```text
+Student
+↓
+Wants immediate enrollment
+```
+
+Both goals are reasonable from their perspective.
+
+The engineer should not immediately decide:
+
+```text
+Registrar is correct
+```
+
+or:
+
+```text
+Student is correct
+```
+
+Instead:
+
+```text
+Understand both goals
+        ↓
+Understand their concerns
+        ↓
+Understand the business rules
+        ↓
+Investigate the process
+        ↓
+Determine the actual requirement
+```
+
+---
+
+# Stakeholder Goal Map
+
+A simple way to analyze stakeholders is:
+
+```text
+Stakeholder
+    ↓
+Goal
+    ↓
+Concern
+    ↓
+Impact
+```
+
+Example:
+
+```text
+Restaurant Owner
+    ↓
+Goal:
+Reduce cancelled orders
+    ↓
+Concern:
+Customers wait too long
+    ↓
+Impact:
+Lost revenue and unhappy customers
+```
+
+---
+
+# Example — University Enrollment
+
+Consider these stakeholders:
+
+```text
+Student
+Registrar
+Professor
+Finance Department
+University Administration
+```
+
+Analyze them individually.
+
+### Student
+
+```text
+Goal:
+Enroll in subjects successfully
+
+Concern:
+Enrollment takes too long or fails
+
+Expected Outcome:
+Successful enrollment
+```
+
+### Registrar
+
+```text
+Goal:
+Maintain accurate enrollment
+
+Concern:
+Invalid or incorrect enrollment
+
+Expected Outcome:
+Verified enrollment records
+```
+
+### Professor
+
+```text
+Goal:
+Know which students are enrolled
+
+Concern:
+Incorrect student enrollment information
+
+Expected Outcome:
+Accurate class lists
+```
+
+### Finance Department
+
+```text
+Goal:
+Maintain correct student financial information
+
+Concern:
+Students being enrolled with unresolved financial issues
+
+Expected Outcome:
+Correct financial status
+```
+
+### University Administration
+
+```text
+Goal:
+Monitor enrollment performance
+
+Concern:
+Incorrect or incomplete enrollment information
+
+Expected Outcome:
+Reliable enrollment information
+```
+
+---
+
+# Exercise 1 — Restaurant
 
 Consider the following stakeholders:
 
@@ -259,6 +606,8 @@ The software is slow.
 
 Investigate.
 
+Ask:
+
 ### Question 1
 
 What does "slow" mean to the stakeholder?
@@ -375,189 +724,6 @@ Give at least 5 questions.
 
 ---
 
-# Exercise 11 — Goal, Concern, or Request?
-
-For each statement, identify whether it is primarily a **Goal**, **Concern**, or **Request**.
-
-### Statement A
-
-> "I want customers to complete payment faster."
-
-### Statement B
-
-> "I'm worried that customers are abandoning their orders."
-
-### Statement C
-
-> "I want the system to send an SMS."
-
-### Statement D
-
-> "I need accurate enrollment records."
-
-### Statement E
-
-> "I'm concerned that invalid students are being enrolled."
-
-Explain your reasoning for each.
-
----
-
-# Exercise 12 — Multiple Stakeholders, One Process
-
-Analyze a university enrollment process.
-
-Participants:
-
-```text
-Student
-Professor
-Registrar
-Finance Department
-University Administration
-```
-
-Create a table:
-
-```text
-Stakeholder | Goal | Concern | Expected Outcome
-```
-
-Then answer:
-
-### Question 1
-
-Which stakeholders have goals related to speed?
-
-### Question 2
-
-Which stakeholders have goals related to accuracy?
-
-### Question 3
-
-Which stakeholders might have conflicting priorities?
-
-### Question 4
-
-What would you investigate before deciding how the enrollment process should work?
-
----
-
-# Exercise 13 — Stakeholder Request vs Underlying Goal
-
-A restaurant owner says:
-
-> "I want a dashboard that shows cancelled orders in real time."
-
-Answer:
-
-### Question 1
-
-What is the stakeholder request?
-
-### Question 2
-
-What might the owner's goal be?
-
-### Question 3
-
-What concern might be behind the request?
-
-### Question 4
-
-Give at least 5 questions you would ask before deciding whether a real-time dashboard is actually necessary.
-
----
-
-# Exercise 14 — Investigation Challenge
-
-Suppose you discover:
-
-```text
-50 cancelled orders this week.
-
-35 were cancelled because customers waited
-more than 30 minutes.
-
-10 were cancelled because the food was incorrect.
-
-5 were cancelled for other reasons.
-```
-
-### Question 1
-
-What appears to be the largest cause?
-
-### Question 2
-
-What stakeholder concern does this evidence support?
-
-### Question 3
-
-Would you immediately build the requested dashboard?
-
-Why or why not?
-
-### Question 4
-
-What would you investigate next?
-
-Think in terms of:
-
-```text
-Observation
-    ↓
-Possible Explanation
-    ↓
-Investigation
-    ↓
-Evidence
-    ↓
-Conclusion
-```
-
----
-
-# Exercise 15 — Stakeholder Conflict Investigation
-
-Imagine:
-
-```text
-Customer:
-"I want my food immediately."
-
-Kitchen Staff:
-"We need enough time to prepare it correctly."
-
-Owner:
-"I want orders completed quickly."
-
-Waiter:
-"I need to know when food is ready."
-```
-
-### Question 1
-
-Identify each stakeholder's goal.
-
-### Question 2
-
-Identify each stakeholder's concern.
-
-### Question 3
-
-Which goals conflict?
-
-### Question 4
-
-Which goals support each other?
-
-### Question 5
-
-What information would you investigate before proposing a solution?
-
----
-
 # Reflection
 
 After completing the exercises, answer:
@@ -610,7 +776,7 @@ Investigation
 Requirement
 ```
 
-The engineer's responsibility is to understand the stakeholder's perspective before turning their request into a system requirement.
+The engineer's responsibility is to understand the stakeholder's perspective **before turning their request into a system requirement**.
 
 ---
 
@@ -632,4 +798,4 @@ Also ask:
 
 > "What evidence do we need before deciding what the system should do?"
 
-This is how engineers move from simply identifying stakeholders to understanding stakeholder needs.
+This is how engineers move from simply identifying stakeholders to **understanding stakeholder needs**.
