@@ -2,67 +2,11 @@
 
 ## Objective
 
-Learn how to identify what different stakeholders want from a business process or system.
+Learn how to understand what stakeholders actually want, what they are concerned about, and why they are making a particular request.
 
-The goal is not simply to list stakeholders.
+The goal is to avoid treating stakeholder requests as automatic requirements.
 
-The goal is to understand:
-
-- What each stakeholder wants
-- What each stakeholder is concerned about
-- What outcome they expect
-- What may conflict with another stakeholder
-- Why different stakeholders may have different priorities
-
----
-
-# Why This Matters
-
-Different stakeholders can look at the same system from completely different perspectives.
-
-For example:
-
-```text
-Student
-↓
-Wants fast enrollment
-```
-
-```text
-Registrar
-↓
-Wants accurate and verified enrollment
-```
-
-```text
-Finance Department
-↓
-Wants payment and account information to be correct
-```
-
-```text
-University Administration
-↓
-Wants accurate enrollment reports
-```
-
-They are all connected to the same business process.
-
-However, they do not necessarily want the same thing.
-
-An engineer needs to understand these differences before deciding what the system should do.
-
----
-
-# Mental Model
-
-Do not stop at:
-
-```text
-Stakeholder
-```
-
-Go one level deeper:
+Instead, learn to investigate:
 
 ```text
 Stakeholder
@@ -71,731 +15,755 @@ Goal
     ↓
 Concern
     ↓
-Expected Outcome
-```
-
-For example:
-
-```text
-Registrar
+Request
     ↓
-Goal:
-Accurate enrollment
+Investigation
     ↓
-Concern:
-Students being enrolled without verification
+Evidence
     ↓
-Expected Outcome:
-Only valid enrollments are approved
+Cause
+    ↓
+Root Cause
+    ↓
+Possible Change
+    ↓
+Measure Result
+    ↓
+Conclusion
 ```
 
 ---
 
-# Goal
+## 1. Stakeholder Goal
 
-A **goal** is what a stakeholder wants to achieve.
+A **goal** describes what a stakeholder wants to achieve.
 
 Examples:
 
 ```text
-Student
-→ Enroll successfully
-
-Registrar
-→ Maintain accurate enrollment records
-
 Restaurant Owner
-→ Reduce cancelled orders
+Goal → Complete orders faster
 
-Cashier
-→ Process payments correctly
-```
-
-A goal describes the desired outcome.
-
----
-
-# Concern
-
-A **concern** is something the stakeholder is worried about or wants to prevent.
-
-Examples:
-
-```text
-Student
-→ Concern: Enrollment takes too long
-
-Registrar
-→ Concern: Invalid students being enrolled
-
-Restaurant Owner
-→ Concern: Too many cancelled orders
-
-Cashier
-→ Concern: Incorrect payment records
-```
-
----
-
-# Goal vs Concern
-
-Do not confuse the two.
-
-### Goal
-
-```text
-What do they want?
-```
-
-### Concern
-
-```text
-What are they worried about?
-```
-
-Example:
-
-```text
-Stakeholder: Restaurant Owner
-
-Goal:
-Reduce cancelled orders
-
-Concern:
-Customers are waiting too long
-```
-
----
-
-# Stakeholder Perspective
-
-Different stakeholders may observe the same process differently.
-
-Consider:
-
-```text
-Restaurant Order
-        ↓
-Kitchen
-        ↓
-Customer
-```
-
-The customer may think:
-
-```text
-"My food is taking too long."
-```
-
-The kitchen staff may think:
-
-```text
-"We have too many orders."
-```
-
-The owner may think:
-
-```text
-"We are losing customers."
-```
-
-The engineer must understand all three perspectives.
-
----
-
-# Stakeholder Goals Can Conflict
-
-Two stakeholders can have legitimate but conflicting goals.
-
-Example:
-
-```text
-Registrar
-↓
-Wants every enrollment manually verified
-```
-
-```text
-Student
-↓
-Wants immediate enrollment
-```
-
-Both goals are reasonable from their perspective.
-
-The engineer should not immediately decide:
-
-```text
-Registrar is correct
-```
-
-or:
-
-```text
-Student is correct
-```
-
-Instead:
-
-```text
-Understand both goals
-        ↓
-Understand their concerns
-        ↓
-Understand the business rules
-        ↓
-Investigate the process
-        ↓
-Determine the actual requirement
-```
-
----
-
-# Stakeholder Goal Map
-
-A simple way to analyze stakeholders is:
-
-```text
-Stakeholder
-    ↓
-Goal
-    ↓
-Concern
-    ↓
-Impact
-```
-
-Example:
-
-```text
-Restaurant Owner
-    ↓
-Goal:
-Reduce cancelled orders
-    ↓
-Concern:
-Customers wait too long
-    ↓
-Impact:
-Lost revenue and unhappy customers
-```
-
----
-
-# Example — University Enrollment
-
-Consider these stakeholders:
-
-```text
-Student
-Registrar
-Professor
-Finance Department
-University Administration
-```
-
-Analyze them individually.
-
-### Student
-
-```text
-Goal:
-Enroll in subjects successfully
-
-Concern:
-Enrollment takes too long or fails
-
-Expected Outcome:
-Successful enrollment
-```
-
-### Registrar
-
-```text
-Goal:
-Maintain accurate enrollment
-
-Concern:
-Invalid or incorrect enrollment
-
-Expected Outcome:
-Verified enrollment records
-```
-
-### Professor
-
-```text
-Goal:
-Know which students are enrolled
-
-Concern:
-Incorrect student enrollment information
-
-Expected Outcome:
-Accurate class lists
-```
-
-### Finance Department
-
-```text
-Goal:
-Maintain correct student financial information
-
-Concern:
-Students being enrolled with unresolved financial issues
-
-Expected Outcome:
-Correct financial status
-```
-
-### University Administration
-
-```text
-Goal:
-Monitor enrollment performance
-
-Concern:
-Incorrect or incomplete enrollment information
-
-Expected Outcome:
-Reliable enrollment information
-```
-
----
-
-# Exercise 1 — Restaurant
-
-Consider the following stakeholders:
-
-```text
-Customer
-Waiter
 Kitchen Staff
+Goal → Prepare food correctly while maintaining quality
+
+Waiter
+Goal → Serve customers promptly
+
 Cashier
-Restaurant Owner
+Goal → Process payments accurately
+
+Customer
+Goal → Receive the correct food within an acceptable time
 ```
 
-For each stakeholder, identify:
+A goal describes the desired outcome, not necessarily the solution.
 
-- Goal
-- Concern
-- Expected outcome
+---
 
-Use this format:
+## 2. Stakeholder Concern
+
+A **concern** describes something that may prevent the stakeholder from achieving their goal.
+
+Example:
 
 ```text
-Stakeholder:
-
 Goal:
+Complete orders faster
 
 Concern:
-
-Expected Outcome:
+Customers may leave because orders take too long.
 ```
 
----
-
-# Exercise 2 — Identify the Goal
-
-A restaurant owner says:
-
-> "I want orders to be completed faster."
-
-### Question 1
-
-What is the owner's goal?
-
-### Question 2
-
-What concern might be behind that goal?
-
-### Question 3
-
-What would you investigate before deciding how to make orders faster?
-
-Do not propose a technical solution yet.
-
----
-
-# Exercise 3 — Different Perspectives
-
-A restaurant has a slow lunch process.
-
-The stakeholders say:
-
-### Customer
-
-> "I want my food faster."
-
-### Kitchen Staff
-
-> "We have too many orders at the same time."
-
-### Waiter
-
-> "The kitchen doesn't tell me when orders are ready."
-
-### Owner
-
-> "We're losing customers because of the delays."
-
-Answer:
-
-### Question 1
-
-What is the goal of each stakeholder?
-
-### Question 2
-
-What is each stakeholder concerned about?
-
-### Question 3
-
-Are these concerns related?
-
-Explain how.
-
----
-
-# Exercise 4 — Conflicting Goals
-
-Imagine:
+Another example:
 
 ```text
-Customer:
-"I want my order prepared immediately."
+Goal:
+Maintain food quality
 
-Kitchen Staff:
-"We need enough time to prepare the food correctly."
+Concern:
+Increasing preparation speed may affect food quality.
 ```
 
-### Question 1
+Important:
 
-What does the customer want?
+> A concern is not automatically a confirmed fact.
 
-### Question 2
-
-What does the kitchen staff want?
-
-### Question 3
-
-Why might these goals conflict?
-
-### Question 4
-
-Should the engineer immediately choose one side?
-
-Why or why not?
-
-### Question 5
-
-What would you investigate?
+It is something that should be investigated.
 
 ---
 
-# Exercise 5 — Stakeholder Statement
+## 3. Goal vs Concern vs Expected Outcome
 
-The owner says:
+These concepts should be separated.
+
+```text
+Goal
+↓
+What the stakeholder wants to achieve
+
+Concern
+↓
+What might prevent the goal
+
+Expected Outcome
+↓
+What successful completion looks like
+```
+
+Example:
+
+```text
+Restaurant Owner
+
+Goal:
+Maintain profitable operations
+
+Concern:
+Customers may leave because of long waiting times
+
+Expected Outcome:
+Customers complete their orders and the restaurant retains revenue
+```
+
+---
+
+## 4. Stakeholder Request
+
+A stakeholder request describes what the stakeholder believes should be done.
+
+Example:
 
 > "I want a dashboard showing every cancelled order."
 
-Do not immediately treat this as a requirement.
+This is a **request**, not automatically a requirement.
 
-Answer:
+The stakeholder may be asking for a dashboard because they have a deeper business concern.
 
-### Question 1
-
-What is the owner's stated request?
-
-### Question 2
-
-What might be the owner's actual goal?
-
-### Question 3
-
-What concern might be behind the request?
-
-### Question 4
-
-What questions would you ask the owner?
-
-Give at least 3.
-
----
-
-# Exercise 6 — Goal vs Solution
-
-Consider these statements:
+We should investigate:
 
 ```text
-A. "I want a notification whenever an order is cancelled."
-
-B. "I want to reduce cancelled orders."
-
-C. "I want to know why orders are being cancelled."
-
-D. "I want a dashboard."
-```
-
-Classify each as:
-
-```text
-Goal
-Concern
 Request
-Possible Solution
-```
-
-Explain your reasoning.
-
----
-
-# Exercise 7 — Stakeholder Conflict
-
-Imagine a university enrollment system.
-
-The Registrar says:
-
-> "Every enrollment should be manually reviewed."
-
-The Student says:
-
-> "I should be enrolled immediately."
-
-The University Administration says:
-
-> "Enrollment should be completed quickly during peak periods."
-
-### Question 1
-
-What is the Registrar's goal?
-
-### Question 2
-
-What is the Student's goal?
-
-### Question 3
-
-What is the University's goal?
-
-### Question 4
-
-What concerns might each stakeholder have?
-
-### Question 5
-
-Where do their goals conflict?
-
-### Question 6
-
-What would you investigate before deciding how the enrollment process should work?
-
----
-
-# Exercise 8 — Don't Assume
-
-A stakeholder says:
-
-> "The system is too slow."
-
-Do not immediately assume this means:
-
-```text
-The software is slow.
-```
-
-Investigate.
-
-Ask:
-
-### Question 1
-
-What does "slow" mean to the stakeholder?
-
-### Question 2
-
-Which part of the process feels slow?
-
-### Question 3
-
-When does it happen?
-
-### Question 4
-
-How often does it happen?
-
-### Question 5
-
-Who experiences the problem?
-
-### Question 6
-
-What business impact does the delay create?
-
----
-
-# Exercise 9 — Stakeholder Goal Map
-
-Create a goal map for the restaurant.
-
-Use:
-
-```text
-Stakeholder
-    ↓
+↓
+Why?
+↓
 Goal
-    ↓
+↓
 Concern
-    ↓
-Expected Outcome
+↓
+Business Problem
 ```
-
-Analyze:
-
-```text
-Customer
-Waiter
-Kitchen Staff
-Cashier
-Restaurant Owner
-```
-
-Then look for relationships between their goals.
 
 ---
 
-# Exercise 10 — Investigation Challenge
+## 5. Request vs Goal
 
-A restaurant owner says:
-
-> "I want the kitchen to process more orders during lunch."
-
-You investigate and discover:
+Example:
 
 ```text
-Lunch orders:
-100
+Request:
+"I want a dashboard showing cancelled orders."
 
-Orders completed:
-70
+Information Need:
+"I want to know which orders are cancelled and how often."
 
-Cancelled orders:
-20
+Possible Goal:
+"Understand the causes and frequency of cancellations."
 
-Remaining orders:
-10
+Possible Business Concern:
+"A high number of cancellations may be hurting the business."
 ```
 
-The kitchen staff says:
-
-> "We are already working as fast as we can."
-
-The waiter says:
-
-> "The kitchen receives orders in large batches."
-
-The owner says:
-
-> "We need more staff."
-
-### Question 1
-
-What is the owner's goal?
-
-### Question 2
-
-What is the kitchen staff's concern?
-
-### Question 3
-
-What is the waiter's observation?
-
-### Question 4
-
-Is "hire more staff" already a confirmed solution?
-
-Why or why not?
-
-### Question 5
-
-What would you investigate next?
-
-Give at least 5 questions.
+The request is only the starting point.
 
 ---
 
-# Reflection
+## 6. Don't Automatically Accept Stakeholder Claims
 
-After completing the exercises, answer:
+Stakeholders may make statements based on their experience or assumptions.
 
-### 1. What is the difference between a stakeholder's goal and concern?
+Example:
 
-### 2. Why can two stakeholders have different goals?
+> "We need to process orders faster."
 
-### 3. Why can legitimate stakeholder goals conflict?
+This tells us the owner's concern, but it doesn't tell us:
 
-### 4. Why shouldn't engineers immediately choose one stakeholder's preference?
-
-### 5. Why should an engineer investigate the reason behind a stakeholder request?
-
-### 6. Can a stakeholder's requested solution fail to address their actual goal?
-
-Give an example.
-
----
-
-# Engineering Principle
-
-A stakeholder does not always describe the business need directly.
-
-They may describe:
-
-```text
-What they want
-```
-
-instead of:
-
-```text
-Why they want it
-```
+- Where the delay happens
+- Why the delay happens
+- How often it happens
+- What causes it
+- Whether faster processing affects quality
 
 Therefore:
 
 ```text
 Stakeholder Statement
         ↓
-Goal
-        ↓
-Concern
-        ↓
-Business Impact
+Claim
         ↓
 Investigation
         ↓
-Requirement
+Evidence
+        ↓
+Conclusion
 ```
-
-The engineer's responsibility is to understand the stakeholder's perspective **before turning their request into a system requirement**.
 
 ---
 
-# Key Takeaway
+## 7. Stakeholder Conflicts
 
-Do not only ask:
+Different stakeholders may appear to have conflicting goals.
 
-> "Who is the stakeholder?"
+Example:
 
-Also ask:
+```text
+Owner
+Goal → Complete orders faster
 
-> "What does this stakeholder want?"
+Kitchen Manager
+Goal → Prepare food correctly while maintaining quality
 
-> "What are they concerned about?"
+Waiter
+Goal → Serve customers promptly
+```
 
-> "What outcome are they expecting?"
+Possible conflict:
 
-> "Could their goal conflict with another stakeholder's goal?"
+```text
+Speed
+  ⚔
+Quality
+```
 
-> "What evidence do we need before deciding what the system should do?"
+However, we should not immediately assume that the goals are truly incompatible.
 
-This is how engineers move from simply identifying stakeholders to **understanding stakeholder needs**.
+It is possible that:
+
+```text
+Fast
++
+High Quality
++
+Prompt Service
+```
+
+can all be achieved together.
+
+We need evidence.
+
+---
+
+## 8. Investigating Stakeholder Conflicts
+
+When stakeholders disagree, do not immediately choose one side.
+
+Instead investigate:
+
+```text
+Conflicting Goals
+        ↓
+Understand Each Perspective
+        ↓
+Identify Constraints
+        ↓
+Observe Process
+        ↓
+Collect Evidence
+        ↓
+Determine Actual Trade-offs
+        ↓
+Decide
+```
+
+Useful questions include:
+
+```text
+How is the current process performed?
+
+Where does the delay occur?
+
+How often does the delay happen?
+
+Which orders are most affected?
+
+Does increasing speed actually affect quality?
+
+What constraint is preventing the process from being faster?
+```
+
+---
+
+## 9. Evidence vs Assumption
+
+One of the most important lessons from this topic:
+
+> A stakeholder's statement is not automatically evidence.
+
+For example:
+
+> "Making orders faster will sacrifice food quality."
+
+This is a claim.
+
+We investigate it.
+
+Suppose we discover:
+
+```text
+Food quality tests:
+No difference between individual and simultaneous preparation.
+
+Customer complaints:
+Mostly about waiting time.
+
+Food quality complaints:
+Very few.
+```
+
+The correct conclusion is:
+
+> The current evidence does not support the claim that faster preparation will sacrifice food quality.
+
+Do not overstate the evidence.
+
+```text
+No evidence supporting a claim
+        ≠
+Claim proven false
+```
+
+Use conclusions that match the strength of the evidence.
+
+---
+
+## 10. Historical Business Rules
+
+Businesses often have rules that were created because of an old constraint.
+
+Example:
+
+```text
+Old Grill
+↓
+Could handle only one order
+↓
+Batching rule introduced
+```
+
+Years later:
+
+```text
+New Grill
+↓
+Can handle multiple orders
+```
+
+But the old rule remains:
+
+```text
+Batching Rule
+↓
+Still practiced
+```
+
+This creates an important engineering question:
+
+> Why does this rule still exist?
+
+A historical rule should not automatically be considered necessary.
+
+But we also should not immediately remove it.
+
+Investigate:
+
+```text
+Why was the rule created?
+
+What problem was it solving?
+
+Does that problem still exist?
+
+Does the rule provide any current benefit?
+
+What happens if the rule changes?
+```
+
+---
+
+## 11. Process Investigation Example
+
+Restaurant scenario:
+
+```text
+Orders are delayed
+        ↓
+Investigate process
+        ↓
+Batch waiting discovered
+        ↓
+80% of orders experience batch waiting
+        ↓
+Investigate why batching exists
+        ↓
+Rule created years ago
+        ↓
+Old equipment could only handle one order
+        ↓
+Equipment was replaced
+        ↓
+New equipment can handle multiple orders
+        ↓
+Food quality is not affected by simultaneous preparation
+        ↓
+Waiting rule becomes a strong root-cause candidate
+```
+
+Important:
+
+> We did not conclude that the rule was unnecessary simply because it was old.
+
+We investigated the reason behind the rule and checked whether the original constraint still existed.
+
+---
+
+## 12. Root Cause Investigation
+
+A stakeholder may report:
+
+> "Customers are waiting too long."
+
+This is a problem observation, not yet a root cause.
+
+We investigate:
+
+```text
+Problem
+↓
+Orders are delayed
+↓
+Where is the delay?
+↓
+Batch waiting
+↓
+Why does batching happen?
+↓
+Historical rule
+↓
+Why was the rule created?
+↓
+Old equipment limitation
+↓
+Does the limitation still exist?
+↓
+No
+```
+
+This gives us a strong candidate for the root cause.
+
+The engineer should still validate it.
+
+---
+
+## 13. Process Change Before Software
+
+A major lesson from this topic:
+
+> A business problem does not automatically require software.
+
+Example:
+
+```text
+Problem:
+Orders take too long.
+
+Possible Cause:
+Batch waiting.
+
+Investigation:
+Batching rule came from an old equipment limitation.
+
+Current Situation:
+New equipment can handle multiple batches.
+
+Process Change:
+Allow simultaneous preparation.
+
+Measure Result:
+Check whether order time and cancellations improve.
+```
+
+Only after understanding the process should we ask whether software is necessary.
+
+---
+
+## 14. Testing a Process Change
+
+Suppose we temporarily change the process.
+
+### Before
+
+```text
+Average order time → 38 minutes
+Customer cancellations → 50/week
+Food quality complaints → 4/week
+```
+
+### After
+
+```text
+Average order time → 27 minutes
+Customer cancellations → 18/week
+Food quality complaints → 4/week
+```
+
+The evidence shows:
+
+```text
+Order time:
+38 → 27 minutes
+
+Cancellations:
+50 → 18/week
+
+Food quality complaints:
+4 → 4/week
+```
+
+This suggests:
+
+- Order processing became faster.
+- Cancellations decreased.
+- Observed food-quality complaints did not increase.
+
+Therefore:
+
+> The evidence strongly supports the conclusion that the previous waiting process was contributing to the problem.
+
+The process change can now be considered successful based on the observed measurements.
+
+---
+
+## 15. Information → Decision → Action → Outcome
+
+Information is useful when it helps someone make a decision or take an action.
+
+For example:
+
+```text
+Information
+↓
+35 cancellations caused by long waiting
+↓
+Decision
+↓
+Investigate kitchen waiting process
+↓
+Action
+↓
+Change batching process
+↓
+Outcome
+↓
+Reduced order time and cancellations
+```
+
+A dashboard or notification may provide information, but providing information does not automatically solve the underlying problem.
+
+---
+
+## 16. Important Engineering Mindset
+
+Do not think:
+
+```text
+Stakeholder Request
+↓
+Build Software
+```
+
+Think:
+
+```text
+Stakeholder Request
+↓
+Why?
+↓
+Goal
+↓
+Concern
+↓
+Investigate
+↓
+Observe Process
+↓
+Collect Evidence
+↓
+Identify Cause
+↓
+Validate Root Cause
+↓
+Consider Process Changes
+↓
+Measure Results
+↓
+Then determine whether Software is needed
+```
+
+---
+
+## 17. Key Questions to Ask Stakeholders
+
+### About the Goal
+
+```text
+What are you trying to achieve?
+
+What would success look like?
+
+What outcome are you expecting?
+```
+
+### About the Concern
+
+```text
+What are you worried about?
+
+What happens if this problem continues?
+
+Who is affected?
+```
+
+### About a Request
+
+```text
+Why do you need this?
+
+What decision will you make using this?
+
+What information do you actually need?
+
+What problem are you trying to solve?
+```
+
+### About a Business Rule
+
+```text
+Why does this rule exist?
+
+Why was it originally introduced?
+
+What problem was it solving?
+
+Does that problem still exist?
+
+Does the rule provide any current benefit?
+```
+
+### About a Process
+
+```text
+Where does the delay occur?
+
+How often does it happen?
+
+Which activities are involved?
+
+Which orders are most affected?
+
+What happens before and after the problem?
+```
+
+---
+
+## 18. Core Mental Model
+
+Use this mental model when talking to stakeholders:
+
+```text
+Stakeholder
+    ↓
+What do they want?
+    ↓
+Goal
+    ↓
+What are they worried about?
+    ↓
+Concern
+    ↓
+What are they asking for?
+    ↓
+Request
+    ↓
+Why do they want it?
+    ↓
+Investigation
+    ↓
+What is actually happening?
+    ↓
+Observation
+    ↓
+What evidence do we have?
+    ↓
+Evidence
+    ↓
+What is causing the problem?
+    ↓
+Cause / Root Cause
+    ↓
+What should change?
+    ↓
+Process Change / Possible Solution
+    ↓
+Did the change work?
+    ↓
+Measure Result
+```
+
+---
+
+## 19. Key Takeaways
+
+1. A stakeholder's **goal** describes what they want to achieve.
+2. A stakeholder's **concern** describes what may prevent that goal.
+3. A stakeholder's **request** is not automatically a requirement.
+4. Stakeholder statements are often **claims that need investigation**.
+5. Conflicting stakeholder goals should not be resolved through assumptions.
+6. Investigate the actual process before deciding what should change.
+7. Historical business rules should be questioned when their original constraints no longer exist.
+8. Do not confuse **information needs** with actual business goals.
+9. A dashboard or notification may provide information without solving the underlying problem.
+10. Software is not automatically the solution to a business problem.
+11. Match the strength of your conclusion to the strength of your evidence.
+12. Test important process changes and measure the results.
+
+---
+
+## 20. Topic 014 Mastery Check
+
+Before moving forward, I should be able to:
+
+- [x] Identify stakeholder goals
+- [x] Identify stakeholder concerns
+- [x] Distinguish goals from requests
+- [x] Identify possible stakeholder conflicts
+- [x] Investigate stakeholder claims
+- [x] Separate assumptions from evidence
+- [x] Ask questions before proposing solutions
+- [x] Investigate historical business rules
+- [x] Identify likely causes and root causes
+- [x] Understand that software is not automatically the solution
+- [x] Test a process change
+- [x] Use evidence to evaluate whether a change worked
+- [x] Match conclusions to the strength of evidence
+
+---
+
+## Topic Status
+
+**Topic 014 — Stakeholder Goals and Concerns**
+
+Status: ✅ Completed
+
+Next:
+
+**Topic 015**
