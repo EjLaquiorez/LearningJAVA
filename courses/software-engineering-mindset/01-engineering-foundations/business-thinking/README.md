@@ -1,12 +1,43 @@
-﻿# Business Thinking
+# Business Thinking
 
-## Objective
+Part of **Roadmap B — Software Engineering Mindset**.
+
+This module develops the thinking habits needed to understand a business problem before designing or building software.
+
+The goal is not simply to learn software development techniques. It is to learn how to enter an unfamiliar problem, investigate it systematically, understand how the business operates, and reason toward an appropriate solution.
+
+> **Understand before you build.**
+
+---
+
+# Objective
 
 Learn to think like a software engineer before writing software.
 
-This module focuses on understanding businesses, discovering problems, analyzing processes, identifying causes, and modeling how people and systems interact.
+This module focuses on:
 
-The goal is to develop engineering thinking that can be applied across different industries, companies, technologies, and countries.
+- Understanding businesses
+- Identifying problems
+- Asking effective questions
+- Observing processes
+- Decomposing complex workflows
+- Understanding people and responsibilities
+- Tracing information
+- Investigating causes
+- Identifying stakeholders
+- Discovering business rules
+- Developing requirements thinking
+- Understanding system boundaries
+- Preparing for software design
+
+These skills should be applicable across different:
+
+- Industries
+- Companies
+- Business domains
+- Technologies
+- Countries
+- Software systems
 
 ---
 
@@ -14,360 +45,280 @@ The goal is to develop engineering thinking that can be applied across different
 
 Software engineering is not only about writing code.
 
-Before building a solution, an engineer must understand:
+Before deciding what to build, we first develop an understanding of the environment in which the software will operate.
+
+Our overall thinking progression is:
 
 ```text
 Business
-   ↓
+    ↓
 Problem
-   ↓
+    ↓
+Observation
+    ↓
 Process
-   ↓
+    ↓
 People
-   ↓
+    ↓
 Information
-   ↓
+    ↓
 Causes
-   ↓
+    ↓
+Business Rules
+    ↓
 Requirements
-   ↓
+    ↓
+System Understanding
+    ↓
 Solution
 ```
 
-We focus on understanding the problem before deciding what to build.
+We do not jump directly from:
+
+```text
+Problem → Software
+```
+
+Instead, we investigate what happens in between.
 
 ---
 
-# Topics
+# Learning Approach
 
-## 1. Problem vs Solution ✅
-
-Learn to distinguish between:
-
-- The problem the business is experiencing
-- The solution the client proposes
-
-Core mental model:
+Each topic follows a mastery-oriented learning cycle:
 
 ```text
-Client Request
+Roadmap Position
       ↓
-Problem
+Concept
       ↓
-Root Cause
+Mental Model
       ↓
-Possible Solutions
+Examples
       ↓
-Software
+Guided Exercise
+      ↓
+Feedback
+      ↓
+Application
+      ↓
+Mastery Check
+      ↓
+Documentation Update
+```
+
+The objective is understanding, not speed.
+
+A topic should not be considered mastered simply because the lesson has been completed. The concept should be explainable, applicable, and usable when analyzing an unfamiliar situation.
+
+---
+
+# Current Progress
+
+The detailed and continuously updated progress tracker is maintained separately in:
+
+**[ROADMAP.md](ROADMAP.md)**
+
+Current position:
+
+```text
+Roadmap B — Software Engineering Mindset
+    ↓
+Module 1 — Business Thinking
+    ↓
+Phase 7 — Business Rules
+    ↓
+015 — Discovering Business Rules 🚧
+```
+
+Previous completed topic:
+
+```text
+014 — Stakeholder Goals and Concerns ✅
+```
+
+Next topic:
+
+```text
+016 — Exceptions and Edge Cases ⬜
+```
+
+For the complete roadmap, topic statuses, phase progress, and learning position, see **[ROADMAP.md](ROADMAP.md)**.
+
+---
+
+# Topics Covered
+
+The module progresses through the following areas.
+
+## Phase 1 — Understanding Problems
+
+- 001 — Problem vs Solution
+- 002 — Understanding Businesses Before Software
+
+## Phase 2 — Discovering Information
+
+- 003 — Learning to Ask Better Questions
+- 004 — Engineering Information Map
+- 005 — Client Discovery Conversations
+
+## Phase 3 — Investigating Problems
+
+- 006 — Cause-and-Effect Thinking
+- 007 — Observation Before Questions
+
+## Phase 4 — Understanding Processes
+
+- 008 — Decomposition Thinking
+- 009 — Bottleneck Thinking
+- 010 — Process Mapping
+
+## Phase 5 — Modeling Responsibilities
+
+- 011 — Swimlane Thinking
+- 012 — Information Flow
+
+## Phase 6 — Stakeholder Understanding
+
+- 013 — Stakeholders vs Users
+- 014 — Stakeholder Goals and Concerns
+
+## Phase 7 — Business Rules
+
+- 015 — Discovering Business Rules
+- 016 — Exceptions and Edge Cases
+
+## Phase 8 — Requirements Thinking
+
+- 017 — From Observation to Requirements
+- 018 — Functional vs Non-Functional Requirements
+
+## Phase 9 — System Boundaries
+
+- 019 — What Belongs Inside the System?
+- 020 — System Boundaries and External Systems
+
+## Phase 10 — Preparing for Software Design
+
+- 021 — From Business Process to System Model
+- 022 — From System Model to Solution
+
+For completion status, always refer to **[ROADMAP.md](ROADMAP.md)**.
+
+---
+
+# Repository Structure
+
+```text
+business-thinking/
+│
+├── README.md
+├── ROADMAP.md
+├── glossary.md
+│
+├── references/
+│   ├── 001-problem-vs-solution.md
+│   ├── 002-understanding-businesses-before-software.md
+│   ├── 003-learning-to-ask-better-questions.md
+│   ├── 004-engineering-information-map.md
+│   ├── 005-client-discovery-conversations.md
+│   ├── 006-cause-and-effect-thinking.md
+│   ├── 007-observation-before-questions.md
+│   ├── 008-decomposition-thinking.md
+│   ├── 009-bottleneck-thinking.md
+│   ├── 010-process-mapping.md
+│   ├── 011-swimlane-thinking.md
+│   ├── 012-information-flow.md
+│   ├── 013-stakeholders-vs-users.md
+│   ├── 014-stakeholder-goals-and-concerns.md
+│   └── 015-discovering-business-rules.md
+│
+├── exercises/
+│   ├── 001-problem-vs-solution.md
+│   ├── 002-understanding-businesses-before-software.md
+│   ├── 003-learning-to-ask-better-questions.md
+│   ├── 004-engineering-information-map.md
+│   ├── 005-client-discovery-conversations.md
+│   ├── 006-cause-and-effect-thinking.md
+│   ├── 007-observation-before-questions.md
+│   ├── 008-decomposition-thinking.md
+│   ├── 009-bottleneck-thinking.md
+│   ├── 010-process-mapping.md
+│   ├── 011-swimlane-thinking.md
+│   ├── 012-information-flow.md
+│   ├── 013-stakeholders-vs-users.md
+│   ├── 014-stakeholder-goals-and-concerns.md
+│   └── 015-discovering-business-rules.md
+│
+├── examples/
+└── diagrams/
+```
+
+The repository uses the same topic number and topic slug across learning materials.
+
+For example:
+
+```text
+015-discovering-business-rules.md
+```
+
+is used consistently in:
+
+```text
+references/
+exercises/
 ```
 
 ---
 
-## 2. Understanding Businesses Before Software ✅
+# References
 
-Learn to understand a business before thinking about technology.
-
-Questions include:
-
-- What does the business do?
-- What value does it provide?
-- Who is involved?
-- How does work happen?
-- What information is used?
-- Where are the problems?
-
----
-
-## 3. Learning to Ask Better Questions ✅
-
-Learn how to ask questions that uncover missing information rather than confirm assumptions.
-
-The goal is not to memorize interview questions.
-
-The goal is to identify:
-
-> **What do I need to know before I can make a good engineering decision?**
-
----
-
-## 4. Engineering Information Map ✅
-
-A reusable framework for analyzing business problems.
-
-```text
-1. Process
-2. People
-3. Data
-4. Pain
-5. Cause
-6. Frequency
-7. Impact
-8. Constraints
-9. Goal
-10. Risks
-```
-
-The framework helps identify unknown information before proposing solutions.
-
----
-
-## 5. Client Discovery Conversations ✅
-
-Learn how engineers investigate a business problem through conversation.
-
-Focus areas:
-
-- Understanding the current process
-- Clarifying business rules
-- Discovering pain points
-- Investigating causes
-- Identifying constraints
-- Understanding desired outcomes
-
----
-
-## 6. Cause-and-Effect Thinking ✅
-
-Learn to trace problems beyond their obvious symptoms.
-
-Example:
-
-```text
-Customers cancel orders
-        ↓
-Orders arrive late
-        ↓
-Delivery process is delayed
-        ↓
-Orders take too long to prepare
-        ↓
-Investigate the preparation process
-```
-
-The goal is to investigate the chain rather than immediately assume a solution.
-
----
-
-## 7. Observation Before Questions ✅
-
-Learn to observe a process before asking questions.
-
-Observe:
-
-- Activities
-- People
-- Waiting
-- Repetition
-- Delays
-- Decisions
-- Manual work
-- Information movement
-
-The engineer identifies what is known, unknown, and assumed.
-
----
-
-## 8. Decomposition Thinking ✅
-
-Learn to break large processes into smaller activities.
-
-Example:
-
-```text
-Withdraw Money
-      ↓
-Insert Card
-      ↓
-Enter PIN
-      ↓
-Verify PIN
-      ↓
-Select Transaction
-      ↓
-Enter Amount
-      ↓
-Check Balance
-      ↓
-Dispense Cash
-```
-
-Decomposition makes complex processes easier to understand and investigate.
-
----
-
-## 9. Bottleneck Thinking ✅
-
-Learn to identify the part of a process that limits overall performance.
-
-Investigate using evidence such as:
-
-- Processing time
-- Queue length
-- Capacity
-- Staff availability
-- Frequency
-- Time of day
-
-Important principle:
-
-> Improving a non-bottleneck does not necessarily improve the overall process significantly.
-
----
-
-## 10. Process Mapping ✅
-
-Learn to model how work flows from beginning to end.
-
-Process mapping includes:
-
-- Sequential activities
-- Decision points
-- Alternative paths
-- Loops
-- Failure paths
-
-Core questions:
-
-```text
-What happens?
-What happens next?
-Can this step fail?
-What happens if it fails?
-Can the process repeat?
-```
-
----
-
-## 11. Swimlane Thinking ✅
-
-Learn to identify **who performs each activity**.
-
-A normal process map asks:
-
-> What happens?
-
-A swimlane diagram asks:
-
-> What happens, and who does it?
-
-Participants may include:
-
-- Customers
-- Employees
-- Departments
-- Internal systems
-- External systems
-- Banks
-- Payment providers
-- Suppliers
-
----
-
-## 12. Information Flow 🚧
-
-Learn to identify what information moves between participants.
-
-Example:
-
-```text
-Customer
-    │
-    │ Order
-    ▼
-Restaurant
-```
-
-Questions:
-
-- What information is being transferred?
-- Who produces it?
-- Who receives it?
-- Who uses it?
-- What happens if the information is missing or incorrect?
-
----
-
-# Engineering Frameworks
-
-Reusable frameworks are stored in:
+Reusable conceptual frameworks are stored in:
 
 ```text
 references/
 ```
 
-Current references:
+References explain concepts and frameworks that can be reused across different exercises and business domains.
 
-```text
-references/
-├── 004-engineering-information-map.md
-├── 005-client-discovery-conversation.md
-├── 006-cause-and-effect-thinking.md
-├── 008-decomposition-thinking.md
-├── 009-process-mapping.md
-├── 011-swimlane-diagrams.md
-├── 012-information-flow.md
-├── 013-stakeholders-vs-users.md
-└── 014-stakeholder-analysis.md
-```
+Examples include:
 
-These references are designed to be reused across different exercises and business domains.
+- Problem vs Solution
+- Engineering Information Map
+- Cause-and-Effect Thinking
+- Decomposition Thinking
+- Process Mapping
+- Swimlane Thinking
+- Information Flow
+- Stakeholder Analysis
+- Business Rules
 
 ---
 
 # Exercises
 
-Practical exercises are stored in:
+Practical application is stored in:
 
 ```text
 exercises/
 ```
 
-Current exercises:
+Exercises are designed to turn concepts into engineering thinking skills.
 
-```text
-001-problem-vs-solution.md
-002-bakery-analysis.md
-003-atm-analysis.md
-004-client-interview-questions.md
-005-engineering-information-map.md
-006-client-discovery-conversation.md
-007-cause-and-effect-thinking.md
-008-observation-before-questions.md
-009-process-mapping.md
-```
-
-The exercises use different business scenarios to practice the same engineering principles.
-
-Examples include:
+Different business scenarios may be used, including:
 
 - Bakery
 - ATM
 - Pharmacy
 - Restaurant
 - Supermarket
-- Car repair shop
+- Car repair
 - University
 - Library
 - Online food ordering
 - Payment processing
 
----
-
-# Diagrams
-
-Visual models are stored in:
-
-```text
-diagrams/
-```
-
-These will contain reusable visual representations of concepts such as:
-
-- Process flows
-- Decision branches
-- Swimlanes
-- Information flow
-- Business workflows
+The purpose is to practice the same reasoning skills across different domains rather than memorize one specific example.
 
 ---
 
@@ -379,19 +330,40 @@ Reusable business case studies are stored in:
 examples/
 ```
 
-Examples help connect abstract engineering concepts to real-world business situations.
+Examples connect abstract engineering concepts to realistic business situations.
+
+---
+
+# Diagrams
+
+Visual models are stored in:
+
+```text
+diagrams/
+```
+
+These may include:
+
+- Process flows
+- Decision branches
+- Swimlanes
+- Information flows
+- Business workflows
+- System-related visual models
+
+Diagrams are used when visualization improves understanding.
 
 ---
 
 # Glossary
 
-Common engineering and business-thinking terms are maintained in:
+Common business-thinking and software-engineering terms are maintained in:
 
 ```text
 glossary.md
 ```
 
-The glossary includes concepts such as:
+Examples include:
 
 - Problem
 - Solution
@@ -405,61 +377,41 @@ The glossary includes concepts such as:
 - Swimlane
 - Responsibility
 - Information Flow
+- Business Rule
+- Requirement
+- System Boundary
 
 ---
 
-# Skills Developed
+# Skills Being Developed
 
-By completing this module, you are learning to:
+By progressing through this module, the learner develops the ability to:
 
-- Separate problems from solutions.
-- Understand unfamiliar businesses.
-- Ask effective questions.
-- Identify missing information.
-- Separate facts from assumptions.
-- Observe business processes.
-- Decompose complex workflows.
-- Identify bottlenecks.
-- Model decision points.
-- Model alternative paths.
-- Identify loops.
-- Identify responsibilities.
-- Identify external participants.
-- Trace information between participants.
-- Think about failure scenarios.
-- Communicate business processes clearly.
-
----
-
-# Current Progress
-
-```text
-Business Thinking
-
-██████████████████████░░ 90%
-
-Completed:
-✔ Problem vs Solution
-✔ Understanding Businesses
-✔ Learning to Ask Better Questions
-✔ Engineering Information Map
-✔ Client Discovery Conversations
-✔ Cause-and-Effect Thinking
-✔ Observation Before Questions
-✔ Decomposition Thinking
-✔ Bottleneck Thinking
-✔ Process Mapping
-✔ Swimlane Thinking
-
-Current:
-🚧 Information Flow
-```
+- Separate problems from solutions
+- Understand unfamiliar businesses
+- Ask effective questions
+- Identify missing information
+- Separate facts from assumptions
+- Observe business processes
+- Decompose complex workflows
+- Identify bottlenecks
+- Identify decision points
+- Identify alternative paths
+- Identify loops
+- Identify responsibilities
+- Identify stakeholders
+- Trace information between participants
+- Discover business rules
+- Investigate failure scenarios
+- Reason about requirements
+- Communicate business processes clearly
+- Think systematically before designing software
 
 ---
 
-# Current Mental Model
+# Master Mental Model
 
-When given a business problem:
+When given an unfamiliar business problem:
 
 ```text
 1. Understand the Business
@@ -472,59 +424,102 @@ When given a business problem:
           ↓
 5. Identify People
           ↓
-6. Identify Decisions
+6. Identify Responsibilities
           ↓
-7. Identify Bottlenecks
+7. Identify Information
           ↓
-8. Identify Causes
+8. Identify Decisions
           ↓
-9. Identify Information Flow
+9. Identify Bottlenecks
           ↓
-10. Identify Requirements
+10. Investigate Causes
           ↓
-11. Design a Solution
+11. Identify Stakeholders
+          ↓
+12. Identify Business Rules
+          ↓
+13. Derive Requirements
+          ↓
+14. Understand System Boundaries
+          ↓
+15. Design a Solution
 ```
 
-We do not jump directly from:
+This is not a rigid procedure.
 
-```text
-Problem → Software
-```
-
-We investigate what happens in between.
+It is a mental model for avoiding premature solution design.
 
 ---
 
 # What Comes Next
 
-After Information Flow, we will continue developing the ability to understand:
+The module progressively moves from understanding the business toward understanding the system.
 
 ```text
-Business Processes
-        ↓
+Business
+    ↓
+Problems
+    ↓
+Processes
+    ↓
+People
+    ↓
 Information
-        ↓
+    ↓
+Causes
+    ↓
+Stakeholders
+    ↓
+Business Rules
+    ↓
 Requirements
-        ↓
+    ↓
 System Boundaries
-        ↓
-Software Design
+    ↓
+System Model
+    ↓
+Software Solution
 ```
 
-The purpose of this module is to build the thinking habits that will later support:
+These thinking skills will later support:
 
 - Requirements engineering
 - System analysis
 - System design
-- Architecture
+- Software architecture
 - Backend development
 - API design
 - Database design
 
 ---
 
+# Documentation Principle
+
+The repository separates **orientation** from **progress tracking**.
+
+```text
+README.md
+    ↓
+What is this module?
+How is it organized?
+What am I learning?
+
+ROADMAP.md
+    ↓
+Where am I?
+What have I completed?
+What am I learning now?
+What comes next?
+```
+
+The README is the stable front page.
+
+The roadmap is the living learning tracker.
+
+---
+
 # Core Principle
 
-> **Understand the problem before designing the solution.**
+> **Understand before you build.**
 
-Good software engineering begins with understanding.
+Good software engineering begins with understanding the business, the problem, the process, the people, the information, the rules, and the constraints before deciding what software to build.
