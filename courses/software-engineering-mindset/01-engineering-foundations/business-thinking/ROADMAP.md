@@ -1,24 +1,77 @@
+# Current Progress
+
+**Roadmap B — Software Engineering Mindset**
+
+**Phase 1 — Engineering Foundations**  
+**Module 1 — Business Thinking**
+
+### Current Phase
+**Phase 7 — Business Rules**
+
+### Current Topic
+**015 — Discovering Business Rules**
+
+### Status
+🚧 Currently Learning
+
+### Previous Completed Topic
+**014 — Stakeholder Goals and Concerns** ✅
+
+### Next Topic
+**016 — Exceptions and Edge Cases** ⬜
+
+## Phase Progress
+
+Phase 1 — Understanding Problems       ██████████ ✅  
+Phase 2 — Discovering Information      ██████████ ✅  
+Phase 3 — Investigating Problems       ██████████ ✅  
+Phase 4 — Understanding Processes      ██████████ ✅  
+Phase 5 — Modeling Responsibilities    ██████████ ✅  
+Phase 6 — Stakeholder Understanding    ██████████ ✅  
+Phase 7 — Business Rules               █████░░░░░ 🚧  
+Phase 8 — Requirements Thinking        ░░░░░░░░░░ ⬜  
+Phase 9 — System Boundaries            ░░░░░░░░░░ ⬜  
+Phase 10 — Preparing for Software Design ░░░░░░░░░░ ⬜  
+
+> Phase 7 contains 2 topics. Topic 015 is currently being learned, so the phase is at 1/2 topics progressed.
+
+---
+
+# Current Learning Position
+
+Roadmap B — Software Engineering Mindset  
+↓  
+Module 1 — Business Thinking  
+↓  
+Phase 7 — Business Rules  
+↓  
+015 — Discovering Business Rules
+
+**Current Topic:**  
+015 — Discovering Business Rules
+
+**Status:**  
+🚧 Currently Learning
+
+---
+
 # Business Thinking — Roadmap
 
 ## Purpose
 
-Learn how to think like a software engineer before designing or writing software.
+This roadmap develops the thinking skills required to understand a business problem before designing or building software.
 
-The goal is to develop the ability to understand unfamiliar businesses, investigate problems, analyze processes, identify requirements, and reason about systems before deciding on a solution.
+The goal is to learn how to investigate unfamiliar situations, identify problems and causes, understand processes and people, discover business rules, reason about requirements, and eventually translate that understanding into system design.
 
 ---
 
 # Core Learning Principle
 
-We do not jump directly from:
+> **Understand before you build.**
 
-```text
-Business Problem
-       ↓
-Software Solution
-```
+Software should be the result of understanding the problem, not the starting point.
 
-Instead:
+The learning progression is:
 
 ```text
 Business
@@ -35,6 +88,8 @@ Information
     ↓
 Causes
     ↓
+Business Rules
+    ↓
 Requirements
     ↓
 System Understanding
@@ -44,312 +99,100 @@ Solution
 
 ---
 
-# Phase 1 — Understanding Problems
+# Roadmap Overview
 
-## 001 — Problem vs Solution ✅
+## Phase 1 — Understanding Problems
 
-Learn to distinguish between:
+**Objective:** Learn to distinguish business problems from proposed software solutions.
 
-- What the business actually needs
-- What the client thinks should be built
+### Topics
 
-Core principle:
+- 001 — Problem vs Solution ✅
+- 002 — Understanding Businesses Before Software ✅
 
-> A proposed solution is not automatically the real problem.
-
----
-
-## 002 — Understanding Businesses Before Software ✅
-
-Learn to understand:
-
-- What the business does
-- What value it provides
-- Who is involved
-- How work happens
-- Where problems occur
+**Phase Status:** ✅ Completed
 
 ---
 
-# Phase 2 — Discovering Information
+## Phase 2 — Discovering Information
 
-## 003 — Learning to Ask Better Questions ✅
+**Objective:** Learn how engineers discover the information needed to understand a business problem.
 
-Learn to identify what information is missing before asking questions.
+### Topics
 
-Focus:
+- 003 — Learning to Ask Better Questions ✅
+- 004 — Engineering Information Map ✅
+- 005 — Client Discovery Conversations ✅
 
-```text
-Unknown Information
-        ↓
-Investigation
-        ↓
-Better Questions
-        ↓
-Better Understanding
-```
+**Phase Status:** ✅ Completed
 
 ---
 
-## 004 — Engineering Information Map ✅
+## Phase 3 — Investigating Problems
 
-Learn to investigate a business problem using:
+**Objective:** Learn to investigate what is actually happening instead of immediately accepting assumptions.
 
-```text
-Process
-People
-Data
-Pain
-Cause
-Frequency
-Impact
-Constraints
-Goal
-Risks
-```
+### Topics
 
-This becomes a reusable engineering framework.
+- 006 — Cause-and-Effect Thinking ✅
+- 007 — Observation Before Questions ✅
+
+**Phase Status:** ✅ Completed
 
 ---
 
-## 005 — Client Discovery Conversations ✅
+## Phase 4 — Understanding Processes
 
-Learn how to have productive conversations with clients and stakeholders.
+**Objective:** Learn to break business activities into understandable processes and identify where problems occur.
 
-Focus:
+### Topics
 
-- Understanding the current process
-- Clarifying business rules
-- Discovering pain points
-- Investigating causes
-- Identifying constraints
-- Understanding goals
+- 008 — Decomposition Thinking ✅
+- 009 — Bottleneck Thinking ✅
+- 010 — Process Mapping ✅
 
----
-
-# Phase 3 — Investigating Problems
-
-## 006 — Cause-and-Effect Thinking ✅
-
-Learn to trace a problem through its consequences and investigate possible causes.
-
-Example:
-
-```text
-Orders are cancelled
-        ↓
-Customers wait too long
-        ↓
-Delivery is delayed
-        ↓
-Investigate delivery process
-```
-
-Goal:
-
-> Do not stop at the first obvious explanation.
+**Phase Status:** ✅ Completed
 
 ---
 
-## 007 — Observation Before Questions ✅
+## Phase 5 — Modeling Responsibilities
 
-Learn to observe a process before forming conclusions.
+**Objective:** Understand who performs activities and how responsibilities and information move through a process.
 
-Look for:
+### Topics
 
-- Activities
-- Waiting
-- Repetition
-- Delays
-- Manual work
-- Decisions
-- People
-- Information movement
+- 011 — Swimlane Thinking ✅
+- 012 — Information Flow ✅
 
-Separate:
-
-```text
-FACTS
-vs
-HYPOTHESES
-vs
-INVESTIGATIONS
-```
+**Phase Status:** ✅ Completed
 
 ---
 
-# Phase 4 — Understanding Processes
+## Phase 6 — Stakeholder Understanding
 
-## 008 — Decomposition Thinking ✅
+**Objective:** Understand the people affected by a system, their responsibilities, goals, concerns, and different perspectives.
 
-Learn to break complex processes into smaller activities.
+### Topics
 
-Example:
+- 013 — Stakeholders vs Users ✅
+- 014 — Stakeholder Goals and Concerns ✅
 
-```text
-Withdraw Money
-      ↓
-Insert Card
-      ↓
-Enter PIN
-      ↓
-Verify PIN
-      ↓
-Select Transaction
-      ↓
-Enter Amount
-      ↓
-Check Balance
-      ↓
-Dispense Cash
-```
-
-Goal:
-
-> Make a process specific enough to understand what is actually happening.
+**Phase Status:** ✅ Completed
 
 ---
 
-## 009 — Bottleneck Thinking ✅
+## Phase 7 — Business Rules
 
-Learn to identify the part of a process that restricts overall performance.
+**Objective:** Learn to identify rules that control how a business operates.
 
-Investigate:
+### Topics
 
-- Processing time
-- Queue length
-- Capacity
-- Staff availability
-- Frequency
-- Time of day
+- 015 — Discovering Business Rules 🚧
+- 016 — Exceptions and Edge Cases ⬜
 
-Core principle:
+**Phase Status:** 🚧 Currently Learning
 
-> Improving a non-bottleneck does not necessarily improve the overall process.
-
----
-
-## 010 — Process Mapping ✅
-
-Learn to represent a business workflow from beginning to end.
-
-Understand:
-
-- Sequential activities
-- Decision points
-- Happy paths
-- Alternative paths
-- Failure paths
-- Loops
-
-Core questions:
-
-```text
-What happens?
-        ↓
-What happens next?
-        ↓
-Can this step fail?
-        ↓
-What happens if it fails?
-        ↓
-Can the process repeat?
-```
-
----
-
-# Phase 5 — Modeling Responsibilities
-
-## 011 — Swimlane Thinking ✅
-
-Learn to separate responsibilities between participants.
-
-Participants may include:
-
-- Customers
-- Employees
-- Departments
-- Internal systems
-- External systems
-- Banks
-- Payment systems
-- Suppliers
-
-Core question:
-
-> Who actually performs this activity?
-
----
-
-## 012 — Information Flow ✅
-
-Learn to identify what information moves between participants.
-
-Example:
-
-```text
-Customer
-    │
-    │ Order
-    ▼
-Restaurant
-```
-
-Investigate:
-
-- What information is produced?
-- Who receives it?
-- Who uses it?
-- Where does it change?
-- What happens if it is missing?
-- What happens if it is incorrect?
-
----
-
-# Phase 6 — Stakeholder Understanding
-
-## 013 — Stakeholders vs Users ✅
-
-Learn the difference between:
-
-### Users
-
-People who directly interact with a system.
-
-### Stakeholders
-
-People who are affected by the system or business process, even if they never use the system.
-
-Learn to identify:
-
-- Users
-- Owners
-- Managers
-- Employees
-- Customers
-- External organizations
-- Decision makers
-
----
-
-## 014 — Stakeholder Goals and Concerns 🚧
-
-For each stakeholder, investigate:
-
-```text
-Responsibilities
-Goals
-Problems
-Concerns
-```
-
-Understand why different stakeholders may disagree about the same system or process.
-
----
-
-# Phase 7 — Business Rules
-
-## 015 — Discovering Business Rules 🚧
+### Topic 015 — Discovering Business Rules
 
 Learn to identify rules that control how a business operates.
 
@@ -365,311 +208,210 @@ A student must complete prerequisites before enrollment.
 A withdrawal cannot exceed the available balance.
 ```
 
-Learn to distinguish:
+Important distinction:
 
 ```text
 Business Rule
-       vs
+      vs
 Software Feature
 ```
 
----
-
-## 016 — Exceptions and Edge Cases 🚧
-
-Learn to ask:
-
-> What happens when the normal process does not work?
-
-Investigate:
-
-- Missing information
-- Invalid information
-- Failed payments
-- Unavailable inventory
-- Cancellations
-- Rejections
-- Timeouts
-- External system failures
+A business rule exists because the business operates according to a policy, constraint, condition, or decision. A software feature is one possible way to support or enforce that rule.
 
 ---
 
-# Phase 8 — Requirements Thinking
+## Phase 8 — Requirements Thinking
 
-## 017 — From Observation to Requirements 🚧
+**Objective:** Learn how observations and business understanding become clear software requirements.
 
-Learn how observations become requirements.
+### Topics
 
-```text
-Observation
-     ↓
-Problem
-     ↓
-Business Need
-     ↓
-Requirement
-```
+- 017 — From Observation to Requirements ⬜
+- 018 — Functional vs Non-Functional Requirements ⬜
 
-Avoid jumping directly from an observation to a feature.
+**Phase Status:** ⬜ Upcoming
 
 ---
 
-## 018 — Functional vs Non-Functional Requirements 🚧
+## Phase 9 — System Boundaries
 
-Learn to distinguish:
+**Objective:** Determine what belongs inside the system and what remains external.
 
-### Functional
+### Topics
 
-What the system must do.
+- 019 — What Belongs Inside the System? ⬜
+- 020 — System Boundaries and External Systems ⬜
 
-### Non-functional
-
-How well the system must perform.
-
-Examples:
-
-```text
-Functional:
-The system must allow customers to place orders.
-
-Non-functional:
-The system should handle 1,000 concurrent orders.
-```
+**Phase Status:** ⬜ Upcoming
 
 ---
 
-# Phase 9 — System Boundaries
+## Phase 10 — Preparing for Software Design
 
-## 019 — What Belongs Inside the System? 🚧
+**Objective:** Prepare to translate business understanding into system models and eventually software solutions.
 
-Learn to distinguish between:
+### Topics
 
-```text
-Business Process
-        ↓
-Human Activity
-        ↓
-Internal System
-        ↓
-External System
-```
+- 021 — From Business Process to System Model ⬜
+- 022 — From System Model to Solution ⬜
 
-Understand what the software should and should not be responsible for.
+**Phase Status:** ⬜ Upcoming
 
 ---
 
-## 020 — System Boundaries and External Systems 🚧
+# Topic Status Summary
 
-Analyze interactions with:
-
-- Payment providers
-- Banks
-- Suppliers
-- Government systems
-- Third-party APIs
-- Authentication providers
-
-Focus on:
-
-```text
-Who communicates with whom?
-What information is exchanged?
-Why is it exchanged?
-What happens when communication fails?
-```
+| Topic | Title | Status |
+|---|---|---|
+| 001 | Problem vs Solution | ✅ Completed |
+| 002 | Understanding Businesses Before Software | ✅ Completed |
+| 003 | Learning to Ask Better Questions | ✅ Completed |
+| 004 | Engineering Information Map | ✅ Completed |
+| 005 | Client Discovery Conversations | ✅ Completed |
+| 006 | Cause-and-Effect Thinking | ✅ Completed |
+| 007 | Observation Before Questions | ✅ Completed |
+| 008 | Decomposition Thinking | ✅ Completed |
+| 009 | Bottleneck Thinking | ✅ Completed |
+| 010 | Process Mapping | ✅ Completed |
+| 011 | Swimlane Thinking | ✅ Completed |
+| 012 | Information Flow | ✅ Completed |
+| 013 | Stakeholders vs Users | ✅ Completed |
+| 014 | Stakeholder Goals and Concerns | ✅ Completed |
+| 015 | Discovering Business Rules | 🚧 Currently Learning |
+| 016 | Exceptions and Edge Cases | ⬜ Upcoming |
+| 017 | From Observation to Requirements | ⬜ Upcoming |
+| 018 | Functional vs Non-Functional Requirements | ⬜ Upcoming |
+| 019 | What Belongs Inside the System? | ⬜ Upcoming |
+| 020 | System Boundaries and External Systems | ⬜ Upcoming |
+| 021 | From Business Process to System Model | ⬜ Upcoming |
+| 022 | From System Model to Solution | ⬜ Upcoming |
 
 ---
 
-# Phase 10 — Preparing for Software Design 🚧
+# Master Engineering-Thinking Progression
 
-## 021 — From Business Process to System Model 🚧
-
-Connect everything learned so far:
+The roadmap builds the following reasoning chain:
 
 ```text
 Business
-   ↓
+    ↓
 Problem
-   ↓
+    ↓
+Observation
+    ↓
 Process
-   ↓
-Participants
-   ↓
-Responsibilities
-   ↓
+    ↓
+People
+    ↓
 Information
-   ↓
+    ↓
+Causes
+    ↓
 Business Rules
-   ↓
+    ↓
 Requirements
-   ↓
-System Boundary
-   ↓
-System Model
+    ↓
+System Understanding
+    ↓
+Solution
 ```
 
----
+Each stage exists for a reason:
 
-## 022 — From System Model to Solution 🚧
-
-Only after understanding the business and requirements do we begin discussing possible technical solutions.
-
-This prepares us for later topics such as:
-
-- APIs
-- Databases
-- Services
-- Components
-- Architecture
-- Backend systems
+- **Business** — understand the environment.
+- **Problem** — identify what needs attention.
+- **Observation** — separate facts from assumptions.
+- **Process** — understand how work actually happens.
+- **People** — identify actors and responsibilities.
+- **Information** — identify what is created, used, changed, and communicated.
+- **Causes** — investigate why problems occur.
+- **Business Rules** — identify constraints, policies, decisions, and conditions.
+- **Requirements** — express what the system needs to support.
+- **System Understanding** — determine system responsibilities and boundaries.
+- **Solution** — design an appropriate technical approach.
 
 ---
 
 # Mastery Checkpoint
 
-Before leaving Business Thinking, you should be able to receive a completely unfamiliar business scenario and answer:
+Before progressing toward software design, be able to reason through an unfamiliar business situation using the concepts learned so far.
 
-### Business
-
-- What does the business do?
-- What value does it provide?
-
-### Problem
-
-- What problem is occurring?
-- What is fact?
-- What is assumption?
-
-### Process
-
-- How does the work happen?
-- Can I decompose it?
-
-### People
-
-- Who performs each activity?
-- Who uses the system?
-- Who are the stakeholders?
-
-### Information
-
-- What information moves through the process?
-- Who creates it?
-- Who receives it?
-
-### Causes
-
-- What might be causing the problem?
-- What evidence do I need?
-
-### Decisions
-
-- Where can the process branch?
-- What happens when something fails?
-
-### Performance
-
-- Where is the bottleneck?
-- How often does it occur?
-- What is its impact?
-
-### Business Rules
-
-- What rules control the process?
-
-### Requirements
-
-- What does the business actually need?
-
-### System Boundary
-
-- What belongs inside the system?
-- What belongs outside it?
-
----
-
-# Final Mental Model
-
-The complete Business Thinking model:
+The checkpoint should cover:
 
 ```text
-                  BUSINESS
-                     │
-                     ▼
-                  PROBLEM
-                     │
-                     ▼
-                OBSERVATION
-                     │
-                     ▼
-                  PROCESS
-                     │
-           ┌─────────┼─────────┐
-           ▼         ▼         ▼
-         PEOPLE     DATA      RULES
-           │         │         │
-           └─────────┼─────────┘
-                     ▼
-               CAUSE & EFFECT
-                     │
-                     ▼
-                  DECISIONS
-                     │
-                     ▼
-              ALTERNATIVE FLOWS
-                     │
-                     ▼
-                REQUIREMENTS
-                     │
-                     ▼
-              SYSTEM BOUNDARY
-                     │
-                     ▼
-              SYSTEM UNDERSTANDING
-                     │
-                     ▼
-                SOFTWARE DESIGN
+Business
+    ↓
+Problem
+    ↓
+Process
+    ↓
+People
+    ↓
+Information
+    ↓
+Causes
+    ↓
+Decisions
+    ↓
+Performance
+    ↓
+Stakeholders
+    ↓
+Business Rules
+    ↓
+Requirements
+    ↓
+System Boundary
+    ↓
+System Understanding
 ```
+
+A strong understanding means being able to answer questions such as:
+
+1. What business is being analyzed?
+2. What problem is occurring?
+3. What evidence supports the problem?
+4. What process is involved?
+5. Who participates in the process?
+6. What responsibilities does each participant have?
+7. What information moves through the process?
+8. What causes the observed problem?
+9. What decisions are made?
+10. What business rules control those decisions?
+11. What exceptions or edge cases exist?
+12. What stakeholders have different goals or concerns?
+13. What does the business actually need?
+14. What should the system be responsible for?
+15. What should remain outside the system?
+16. What requirements can be derived from the business understanding?
+
+The goal is not to memorize the questions.
+
+The goal is to develop the habit of investigating systematically.
 
 ---
 
-# Current Progress
+# Learning Philosophy
 
-```text
-Phase 1 — Understanding Problems       ██████████ ✅
-Phase 2 — Discovering Information      ██████████ ✅
-Phase 3 — Investigating Problems       ██████████ ✅
-Phase 4 — Understanding Processes      ██████████ ✅
-Phase 5 — Modeling Responsibilities    ██████████ ✅
+## Mastery Before Progress
 
-Phase 6 — Stakeholder Understanding    ████░░░░░░ 🚧
-Phase 7 — Business Rules               ░░░░░░░░░░░
-Phase 8 — Requirements Thinking        ░░░░░░░░░░░
-Phase 9 — System Boundaries            ░░░░░░░░░░░
-Phase 10 — Preparing for Design        ░░░░░░░░░░░
-```
+Do not move to the next topic simply because the current topic has been introduced.
 
----
+A topic should be considered complete only after:
 
-# Current Learning Position
+- The concept is understood.
+- The mental model is understood.
+- Exercises have been completed.
+- Mistakes have been identified and corrected.
+- The concept can be explained in the learner's own words.
+- The concept can be applied to an unfamiliar example.
+- The learner is ready to connect the concept to previous topics.
 
-```text
-Phase 6
-    ↓
-Stakeholder Understanding
-    ↓
-014 — Stakeholder Goals and Concerns
-    ↓
-Current Topic
-```
-
-The next learning topic is:
-
-> **014 — Stakeholder Goals and Concerns**
+Progress should prioritize understanding over speed.
 
 ---
 
-# Folder Structure
+# Repository Structure
 
 ```text
 business-thinking/
@@ -692,7 +434,8 @@ business-thinking/
 │   ├── 011-swimlane-thinking.md
 │   ├── 012-information-flow.md
 │   ├── 013-stakeholders-vs-users.md
-│   └── 014-stakeholder-goals-and-concerns.md
+│   ├── 014-stakeholder-goals-and-concerns.md
+│   └── 015-discovering-business-rules.md
 │
 ├── references/
 │   ├── 001-problem-vs-solution.md
@@ -708,7 +451,8 @@ business-thinking/
 │   ├── 011-swimlane-thinking.md
 │   ├── 012-information-flow.md
 │   ├── 013-stakeholders-vs-users.md
-│   └── 014-stakeholder-goals-and-concerns.md
+│   ├── 014-stakeholder-goals-and-concerns.md
+│   └── 015-discovering-business-rules.md
 │
 ├── glossary.md
 ├── README.md
@@ -717,34 +461,138 @@ business-thinking/
 
 ---
 
+# File Organization Principle
+
+ROADMAP.md is a navigation and progress document.
+
+It should answer:
+
+- Where am I?
+- What have I completed?
+- What am I learning now?
+- What comes next?
+- What does each topic teach?
+- How does the overall roadmap progress?
+- Where are the related files?
+
+Detailed teaching material belongs in:
+
+```text
+references/
+exercises/
+examples/
+diagrams/
+```
+
+Do not turn ROADMAP.md into the complete lesson content.
+
+---
+
 # Naming Convention
 
-All Business Thinking files follow the same convention:
+Use three-digit topic numbering:
 
 ```text
-[number]-[topic-name].md
+001-topic-name.md
+002-topic-name.md
+003-topic-name.md
+...
+015-discovering-business-rules.md
+016-exceptions-and-edge-cases.md
 ```
 
-The same topic number and slug should be used across:
+The same topic number and topic slug should be used consistently across:
 
 ```text
-references/
 exercises/
+references/
 ```
 
-Example:
+This keeps the learning materials synchronized with the roadmap.
+
+---
+
+# Topic File Relationship
+
+Each topic should normally have corresponding learning materials:
 
 ```text
-Topic 009 — Bottleneck Thinking
-
-references/
-└── 009-bottleneck-thinking.md
-
-exercises/
-└── 009-bottleneck-thinking.md
+Topic
+  ├── Exercise
+  ├── Reference
+  ├── Examples
+  └── Diagrams (when useful)
 ```
 
-This keeps the learning materials synchronized and makes it immediately clear which exercise and reference belong to each roadmap topic.
+For the current topic:
+
+```text
+015 — Discovering Business Rules
+    ├── exercises/015-discovering-business-rules.md
+    └── references/015-discovering-business-rules.md
+```
+
+---
+
+# Progress Rules
+
+The roadmap uses three topic statuses:
+
+```text
+✅ Completed
+🚧 Currently Learning
+⬜ Upcoming
+```
+
+Rules:
+
+- Completed topics remain visible.
+- The current topic is explicitly marked.
+- Future topics remain upcoming.
+- A topic is never marked completed without explicit confirmation.
+- The learner never moves forward automatically.
+- No topic is skipped.
+- Mastery is prioritized over speed.
+
+---
+
+# Roadmap Update Rules
+
+Whenever progress changes, synchronize all affected sections.
+
+At minimum, check:
+
+```text
+Current Progress
+Current Learning Position
+Topic Statuses
+Phase Statuses
+Phase Progress Indicators
+Topic List
+Repository Structure
+Exercise Files
+Reference Files
+Mastery Checkpoint
+Master Engineering-Thinking Progression
+```
+
+The roadmap must never contain conflicting progress information.
+
+The following should always agree:
+
+```text
+Current Progress
+        =
+Current Learning Position
+        =
+Current Topic Status
+        =
+Current Phase Status
+        =
+Repository Materials
+```
+
+Completed topics must never be erased because the roadmap also serves as a record of the learning journey.
 
 ---
 
@@ -755,3 +603,55 @@ This keeps the learning materials synchronized and makes it immediately clear wh
 The objective is not to memorize frameworks.
 
 The objective is to develop the habit of entering an unfamiliar problem, breaking it down, identifying what is known and unknown, and reasoning toward a solution systematically.
+
+---
+
+# Current Roadmap Snapshot
+
+```text
+Phase 1 — Understanding Problems
+    └── Completed ✅
+
+Phase 2 — Discovering Information
+    └── Completed ✅
+
+Phase 3 — Investigating Problems
+    └── Completed ✅
+
+Phase 4 — Understanding Processes
+    └── Completed ✅
+
+Phase 5 — Modeling Responsibilities
+    └── Completed ✅
+
+Phase 6 — Stakeholder Understanding
+    └── Completed ✅
+
+Phase 7 — Business Rules
+    ├── 015 — Discovering Business Rules 🚧
+    └── 016 — Exceptions and Edge Cases ⬜
+
+Phase 8 — Requirements Thinking
+    ├── 017 — From Observation to Requirements ⬜
+    └── 018 — Functional vs Non-Functional Requirements ⬜
+
+Phase 9 — System Boundaries
+    ├── 019 — What Belongs Inside the System? ⬜
+    └── 020 — System Boundaries and External Systems ⬜
+
+Phase 10 — Preparing for Software Design
+    ├── 021 — From Business Process to System Model ⬜
+    └── 022 — From System Model to Solution ⬜
+```
+
+---
+
+# Next Milestone
+
+The immediate learning milestone is:
+
+**015 — Discovering Business Rules**
+
+After Topic 015 is explicitly completed and mastered, the roadmap can progress to:
+
+**016 — Exceptions and Edge Cases**
