@@ -1,24 +1,4 @@
 # 017 — Business Rules and Decision Logic
-
-## Current Progress
-
-```text
-Roadmap B — Software Engineering Mindset
-└── Phase 1 — Engineering Foundations
-    └── Module 1 — Engineering Foundations
-        └── Part A — Business Thinking
-            ├── 014 — Stakeholder Goals and Concerns        ✅
-            ├── 015 — Stakeholder Priorities and Trade-offs ✅
-            ├── 016 — Exceptions and Edge Cases             ✅
-            └── 017 — Business Rules and Decision Logic     🚧 CURRENT
-```
-
-**Status:** 🚧 In Progress  
-**Previous Topic:** 016 — Exceptions and Edge Cases  
-**Current Topic:** 017 — Business Rules and Decision Logic
-
----
-
 # Objective
 
 Learn how to identify, express, validate, and reason about **business rules** without immediately turning them into software requirements or solutions.
