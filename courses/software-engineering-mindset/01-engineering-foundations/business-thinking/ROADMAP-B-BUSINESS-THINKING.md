@@ -1,39 +1,41 @@
 # Current Progress
 
-**Roadmap B — Software Engineering Mindset**
+## Roadmap B — Software Engineering Mindset
 
 **Phase 1 — Engineering Foundations**  
 **Module 1 — Business Thinking**
 
 ### Current Phase
-**Phase 7 — Business Rules**
+**Phase 8 — Requirements Thinking**
 
 ### Current Topic
-**015 — Discovering Business Rules**
+**018 — Requirements vs Solutions**
 
 ### Status
 🚧 Currently Learning
 
 ### Previous Completed Topic
-**014 — Stakeholder Goals and Concerns** ✅
+**017 — Business Rules and Decision Logic** ✅
 
 ### Next Topic
-**016 — Exceptions and Edge Cases** ⬜
+**019 — What Belongs Inside the System?** ⬜
 
-## Phase Progress
+---
 
-Phase 1 — Understanding Problems       ██████████ ✅  
-Phase 2 — Discovering Information      ██████████ ✅  
-Phase 3 — Investigating Problems       ██████████ ✅  
-Phase 4 — Understanding Processes      ██████████ ✅  
-Phase 5 — Modeling Responsibilities    ██████████ ✅  
-Phase 6 — Stakeholder Understanding    ██████████ ✅  
-Phase 7 — Business Rules               █████░░░░░ 🚧  
-Phase 8 — Requirements Thinking        ░░░░░░░░░░ ⬜  
-Phase 9 — System Boundaries            ░░░░░░░░░░ ⬜  
-Phase 10 — Preparing for Software Design ░░░░░░░░░░ ⬜  
+# Phase Progress
 
-> Phase 7 contains 2 topics. Topic 015 is currently being learned, so the phase is at 1/2 topics progressed.
+Phase 1 — Understanding Problems          ██████████ ✅  
+Phase 2 — Discovering Information         ██████████ ✅  
+Phase 3 — Investigating Problems          ██████████ ✅  
+Phase 4 — Understanding Processes         ██████████ ✅  
+Phase 5 — Modeling Responsibilities       ██████████ ✅  
+Phase 6 — Stakeholder Understanding       ██████████ ✅  
+Phase 7 — Business Rules                  ██████████ ✅  
+Phase 8 — Requirements Thinking           █████░░░░░ 🚧  
+Phase 9 — System Boundaries               ░░░░░░░░░░ ⬜  
+Phase 10 — Preparing for Software Design  ░░░░░░░░░░ ⬜  
+
+> Phase 8 is currently in progress. Topic 018 is being learned.
 
 ---
 
@@ -43,12 +45,12 @@ Roadmap B — Software Engineering Mindset
 ↓  
 Module 1 — Business Thinking  
 ↓  
-Phase 7 — Business Rules  
+Phase 8 — Requirements Thinking  
 ↓  
-015 — Discovering Business Rules
+018 — Requirements vs Solutions
 
 **Current Topic:**  
-015 — Discovering Business Rules
+018 — Requirements vs Solutions
 
 **Status:**  
 🚧 Currently Learning
@@ -88,6 +90,8 @@ Information
     ↓
 Causes
     ↓
+Stakeholders
+    ↓
 Business Rules
     ↓
 Requirements
@@ -122,7 +126,7 @@ Solution
 
 - 003 — Learning to Ask Better Questions ✅
 - 004 — Engineering Information Map ✅
-- 005 — Client Discovery Conversations ✅
+- 005 — Client Discovery Conversation ✅
 
 **Phase Status:** ✅ Completed
 
@@ -161,7 +165,7 @@ Solution
 
 ### Topics
 
-- 011 — Swimlane Thinking ✅
+- 011 — Swimlane Diagrams ✅
 - 012 — Information Flow ✅
 
 **Phase Status:** ✅ Completed
@@ -170,12 +174,13 @@ Solution
 
 ## Phase 6 — Stakeholder Understanding
 
-**Objective:** Understand the people affected by a system, their responsibilities, goals, concerns, and different perspectives.
+**Objective:** Understand the people affected by a business process, their responsibilities, goals, priorities, concerns, and trade-offs.
 
 ### Topics
 
 - 013 — Stakeholders vs Users ✅
 - 014 — Stakeholder Goals and Concerns ✅
+- 015 — Stakeholder Priorities and Trade-Offs ✅
 
 **Phase Status:** ✅ Completed
 
@@ -183,59 +188,90 @@ Solution
 
 ## Phase 7 — Business Rules
 
-**Objective:** Learn to identify rules that control how a business operates.
+**Objective:** Learn to identify exceptions, rules, constraints, policies, and decision logic that control how a business operates.
 
 ### Topics
 
-- 015 — Discovering Business Rules 🚧
-- 016 — Exceptions and Edge Cases ⬜
+- 016 — Exceptions and Edge Cases ✅
+- 017 — Business Rules and Decision Logic ✅
 
-**Phase Status:** 🚧 Currently Learning
+**Phase Status:** ✅ Completed
 
-### Topic 015 — Discovering Business Rules
+### Topic 016 — Exceptions and Edge Cases
 
-Learn to identify rules that control how a business operates.
+Learn to identify situations where the normal business process does not apply.
+
+Examples include:
+
+```text
+Normal process
+    ↓
+Exception occurs
+    ↓
+Different decision or action
+    ↓
+Different outcome
+```
+
+The goal is to understand that exceptions are part of the business process, not merely programming errors.
+
+### Topic 017 — Business Rules and Decision Logic
+
+Learn to identify the rules and decisions that control business behavior.
 
 Examples:
 
 ```text
-Customers cannot cancel after X days.
-
-Only authorized employees can approve refunds.
-
-A student must complete prerequisites before enrollment.
-
-A withdrawal cannot exceed the available balance.
+IF patient has a valid referral
+    THEN specialist appointment may be scheduled
 ```
-
-Important distinction:
 
 ```text
-Business Rule
-      vs
-Software Feature
+IF payment amount exceeds the approval limit
+    THEN additional authorization is required
 ```
 
-A business rule exists because the business operates according to a policy, constraint, condition, or decision. A software feature is one possible way to support or enforce that rule.
+A business rule should be understood independently from the software feature that may enforce it.
 
 ---
 
 ## Phase 8 — Requirements Thinking
 
-**Objective:** Learn how observations and business understanding become clear software requirements.
+**Objective:** Learn to distinguish what the business needs from the software solution proposed to satisfy that need.
 
 ### Topics
 
-- 017 — From Observation to Requirements ⬜
-- 018 — Functional vs Non-Functional Requirements ⬜
+- 018 — Requirements vs Solutions 🚧
 
-**Phase Status:** ⬜ Upcoming
+**Phase Status:** 🚧 Currently Learning
+
+### Topic 018 — Requirements vs Solutions
+
+Learn to separate:
+
+```text
+Business Need
+      ↓
+Requirement
+      ↓
+Possible Solution
+```
+
+A requirement describes what the business or system needs to achieve or support.
+
+A solution describes one possible way to satisfy that requirement.
+
+The key reasoning habit is:
+
+> **Do not mistake the requested solution for the actual requirement.**
+
+This topic connects the earlier business-thinking work to the next stage of system understanding.
 
 ---
 
 ## Phase 9 — System Boundaries
 
-**Objective:** Determine what belongs inside the system and what remains external.
+**Objective:** Determine what belongs inside the system, what remains outside the system, and which external actors or systems interact with it.
 
 ### Topics
 
@@ -267,20 +303,20 @@ A business rule exists because the business operates according to a policy, cons
 | 002 | Understanding Businesses Before Software | ✅ Completed |
 | 003 | Learning to Ask Better Questions | ✅ Completed |
 | 004 | Engineering Information Map | ✅ Completed |
-| 005 | Client Discovery Conversations | ✅ Completed |
+| 005 | Client Discovery Conversation | ✅ Completed |
 | 006 | Cause-and-Effect Thinking | ✅ Completed |
 | 007 | Observation Before Questions | ✅ Completed |
 | 008 | Decomposition Thinking | ✅ Completed |
 | 009 | Bottleneck Thinking | ✅ Completed |
 | 010 | Process Mapping | ✅ Completed |
-| 011 | Swimlane Thinking | ✅ Completed |
+| 011 | Swimlane Diagrams | ✅ Completed |
 | 012 | Information Flow | ✅ Completed |
 | 013 | Stakeholders vs Users | ✅ Completed |
 | 014 | Stakeholder Goals and Concerns | ✅ Completed |
-| 015 | Discovering Business Rules | 🚧 Currently Learning |
-| 016 | Exceptions and Edge Cases | ⬜ Upcoming |
-| 017 | From Observation to Requirements | ⬜ Upcoming |
-| 018 | Functional vs Non-Functional Requirements | ⬜ Upcoming |
+| 015 | Stakeholder Priorities and Trade-Offs | ✅ Completed |
+| 016 | Exceptions and Edge Cases | ✅ Completed |
+| 017 | Business Rules and Decision Logic | ✅ Completed |
+| 018 | Requirements vs Solutions | 🚧 Currently Learning |
 | 019 | What Belongs Inside the System? | ⬜ Upcoming |
 | 020 | System Boundaries and External Systems | ⬜ Upcoming |
 | 021 | From Business Process to System Model | ⬜ Upcoming |
@@ -307,6 +343,8 @@ Information
     ↓
 Causes
     ↓
+Stakeholders
+    ↓
 Business Rules
     ↓
 Requirements
@@ -325,9 +363,10 @@ Each stage exists for a reason:
 - **People** — identify actors and responsibilities.
 - **Information** — identify what is created, used, changed, and communicated.
 - **Causes** — investigate why problems occur.
-- **Business Rules** — identify constraints, policies, decisions, and conditions.
-- **Requirements** — express what the system needs to support.
-- **System Understanding** — determine system responsibilities and boundaries.
+- **Stakeholders** — understand different goals, concerns, priorities, and trade-offs.
+- **Business Rules** — identify constraints, policies, decisions, conditions, and exceptions.
+- **Requirements** — express what the business or system needs.
+- **System Understanding** — determine responsibilities and boundaries.
 - **Solution** — design an appropriate technical approach.
 
 ---
@@ -343,6 +382,8 @@ Business
     ↓
 Problem
     ↓
+Observation
+    ↓
 Process
     ↓
 People
@@ -357,7 +398,11 @@ Performance
     ↓
 Stakeholders
     ↓
+Priorities
+    ↓
 Business Rules
+    ↓
+Exceptions
     ↓
 Requirements
     ↓
@@ -380,10 +425,13 @@ A strong understanding means being able to answer questions such as:
 10. What business rules control those decisions?
 11. What exceptions or edge cases exist?
 12. What stakeholders have different goals or concerns?
-13. What does the business actually need?
-14. What should the system be responsible for?
-15. What should remain outside the system?
-16. What requirements can be derived from the business understanding?
+13. What priorities or trade-offs exist?
+14. What does the business actually need?
+15. What is a requirement?
+16. What is merely a proposed solution?
+17. What should the system be responsible for?
+18. What should remain outside the system?
+19. What requirements can be derived from the business understanding?
 
 The goal is not to memorize the questions.
 
@@ -425,34 +473,40 @@ business-thinking/
 │   ├── 002-understanding-businesses-before-software.md
 │   ├── 003-learning-to-ask-better-questions.md
 │   ├── 004-engineering-information-map.md
-│   ├── 005-client-discovery-conversations.md
+│   ├── 005-client-discovery-conversation.md
 │   ├── 006-cause-and-effect-thinking.md
 │   ├── 007-observation-before-questions.md
 │   ├── 008-decomposition-thinking.md
 │   ├── 009-bottleneck-thinking.md
 │   ├── 010-process-mapping.md
-│   ├── 011-swimlane-thinking.md
+│   ├── 011-swimlane-diagrams.md
 │   ├── 012-information-flow.md
 │   ├── 013-stakeholders-vs-users.md
 │   ├── 014-stakeholder-goals-and-concerns.md
-│   └── 015-discovering-business-rules.md
+│   ├── 015-stakeholder-priorities-and-trade-offs.md
+│   ├── 016-exceptions-and-edge-cases.md
+│   ├── 017-business-rules-and-decision-logic.md
+│   └── 018-requirements-vs-solutions.md
 │
 ├── references/
 │   ├── 001-problem-vs-solution.md
 │   ├── 002-understanding-businesses-before-software.md
 │   ├── 003-learning-to-ask-better-questions.md
 │   ├── 004-engineering-information-map.md
-│   ├── 005-client-discovery-conversations.md
+│   ├── 005-client-discovery-conversation.md
 │   ├── 006-cause-and-effect-thinking.md
 │   ├── 007-observation-before-questions.md
 │   ├── 008-decomposition-thinking.md
 │   ├── 009-bottleneck-thinking.md
 │   ├── 010-process-mapping.md
-│   ├── 011-swimlane-thinking.md
+│   ├── 011-swimlane-diagrams.md
 │   ├── 012-information-flow.md
 │   ├── 013-stakeholders-vs-users.md
 │   ├── 014-stakeholder-goals-and-concerns.md
-│   └── 015-discovering-business-rules.md
+│   ├── 015-stakeholder-priorities-and-trade-offs.md
+│   ├── 016-exceptions-and-edge-cases.md
+│   ├── 017-business-rules-and-decision-logic.md
+│   └── 018-requirements-vs-solutions.md
 │
 ├── glossary.md
 ├── README.md
@@ -463,7 +517,7 @@ business-thinking/
 
 # File Organization Principle
 
-ROADMAP.md is a navigation and progress document.
+`ROADMAP.md` is a navigation and progress document.
 
 It should answer:
 
@@ -484,7 +538,7 @@ examples/
 diagrams/
 ```
 
-Do not turn ROADMAP.md into the complete lesson content.
+Do not turn `ROADMAP.md` into the complete lesson content.
 
 ---
 
@@ -497,8 +551,8 @@ Use three-digit topic numbering:
 002-topic-name.md
 003-topic-name.md
 ...
-015-discovering-business-rules.md
-016-exceptions-and-edge-cases.md
+018-requirements-vs-solutions.md
+019-topic-name.md
 ```
 
 The same topic number and topic slug should be used consistently across:
@@ -518,18 +572,18 @@ Each topic should normally have corresponding learning materials:
 
 ```text
 Topic
-  ├── Exercise
-  ├── Reference
-  ├── Examples
-  └── Diagrams (when useful)
+    ├── Exercise
+    ├── Reference
+    ├── Examples
+    └── Diagrams (when useful)
 ```
 
 For the current topic:
 
 ```text
-015 — Discovering Business Rules
-    ├── exercises/015-discovering-business-rules.md
-    └── references/015-discovering-business-rules.md
+018 — Requirements vs Solutions
+    ├── exercises/018-requirements-vs-solutions.md
+    └── references/018-requirements-vs-solutions.md
 ```
 
 ---
@@ -574,6 +628,7 @@ Exercise Files
 Reference Files
 Mastery Checkpoint
 Master Engineering-Thinking Progression
+Current Roadmap Snapshot
 ```
 
 The roadmap must never contain conflicting progress information.
@@ -628,12 +683,11 @@ Phase 6 — Stakeholder Understanding
     └── Completed ✅
 
 Phase 7 — Business Rules
-    ├── 015 — Discovering Business Rules 🚧
-    └── 016 — Exceptions and Edge Cases ⬜
+    ├── 016 — Exceptions and Edge Cases ✅
+    └── 017 — Business Rules and Decision Logic ✅
 
 Phase 8 — Requirements Thinking
-    ├── 017 — From Observation to Requirements ⬜
-    └── 018 — Functional vs Non-Functional Requirements ⬜
+    └── 018 — Requirements vs Solutions 🚧
 
 Phase 9 — System Boundaries
     ├── 019 — What Belongs Inside the System? ⬜
@@ -650,8 +704,8 @@ Phase 10 — Preparing for Software Design
 
 The immediate learning milestone is:
 
-**015 — Discovering Business Rules**
+**018 — Requirements vs Solutions**
 
-After Topic 015 is explicitly completed and mastered, the roadmap can progress to:
+After Topic 018 is explicitly completed and mastered, the roadmap can progress to:
 
-**016 — Exceptions and Edge Cases**
+**019 — What Belongs Inside the System?**

@@ -1,20 +1,4 @@
 # Topic 018 — Requirements vs. Solutions — Exercises
-
-## Current Roadmap Position
-
-```text
-Roadmap B — Software Engineering Mindset
-│
-├── Phase 1 — Engineering Foundations
-│   └── Module 1 — Business Thinking
-│       └── Part A
-│           ├── Topic 014 — Stakeholder Goals & Concerns ✅
-│           ├── Topic 015 — Stakeholder Priorities & Trade-offs ✅
-│           ├── Topic 016 — Exceptions & Edge Cases ✅
-│           ├── Topic 017 — Business Rules & Decision Logic ✅ MASTERED
-│           └── Topic 018 — Requirements vs. Solutions 🚧 CURRENT
-```
-
 ## Exercise Objective
 
 Practice distinguishing:
