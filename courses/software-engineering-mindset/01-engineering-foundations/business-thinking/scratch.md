@@ -1,75 +1,39 @@
-🏁 Exercise 018.7 — Final Mastery Challenge
+🎯 Your Turn — Exercise 019.1
 
-You are the engineer for a university enrollment system.
+Let's start with the first exercise from your new exercise MD.
 
-The registrar tells you:
+For each statement, classify it as:
 
-"We need a new enrollment portal. Students keep coming to the registrar's office because they don't know whether their enrollment has been approved. The new portal should show students their enrollment status and automatically email them whenever the status changes."
+A. Inside the System
+B. Outside the System
+C. Needs More Information
 
-You have not been given any additional information.
+And most importantly:
 
-Analyze this as an engineer.
+Explain why.
 
-Q1 — Separate the statement
+Q1
 
-Identify:
+"A restaurant waiter physically brings the prepared food to the customer's table."
 
-Observation:
-Stakeholder request:
-Possible requirement:
-Proposed solution:
-Q2 — Identify assumptions
+Use this format:
 
-Give me at least 2 things we don't actually know yet.
+Q1:
+Classification: outside the system
 
-Don't guess.
 
-Q3 — Investigate
+Why: Because waiter "physically" brings the prepared food to the customer's table.
 
-Give me 4 questions you would ask the registrar before accepting the proposed solution.
 
-At least one question should investigate the current process, and at least one should investigate the cause.
+Who is responsible: waiter
 
-Q4 — Requirement vs. solution
 
-Classify these individually:
+Does the software need to perform this responsibility: No, 
 
-A.
+Don't rush.
 
-"Students must be able to know the current status of their enrollment."
+The goal isn't just to answer Outside.
 
-B.
+I want you to practice the reasoning:
 
-"The portal should display the enrollment status."
-
-C.
-
-"The system should automatically email students whenever their status changes."
-
-D.
-
-"Students must be informed when their enrollment status changes."
-
-For B and C, explain why they may be solutions rather than pure requirements.
-
-Q5 — Engineering judgment
-
-The registrar says:
-
-"Just build the portal. That's clearly the solution."
-
-Would you agree?
-
-Explain your answer as if you were speaking to the registrar professionally.
-
-Don't just say "No."
-
-Construct the reasoning.
-
-Q6 — Final reasoning
-
-Finish this sentence:
-
-"Before deciding what software to build, I need to understand..."
-
-Give me your own answer.
+Activity → Actor → Responsibility → System boundary.
