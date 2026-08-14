@@ -59,3 +59,27 @@ Who is responsible: the restaurant system
 Does the software need to perform this responsibility: Yes
 
 This time, pay attention to the difference between performing the business activity and recording information about the activity.
+
+🎯 Q3
+
+Now let's introduce human decision-making.
+
+"A registrar reviews a student's submitted documents and decides whether the requirements are satisfied."
+
+Use the same format:
+
+Q3:
+Classification: Outside the system
+
+
+Why: A registrar is the one resposible on deciding whether the requirements are satisfied.
+
+
+Who is responsible: Registrar
+ 
+
+Does the software need to perform this responsibility: No
+
+Pay special attention to the word "decides."
+
+Don't automatically assume that because software could perform something, it should own that responsibility.
