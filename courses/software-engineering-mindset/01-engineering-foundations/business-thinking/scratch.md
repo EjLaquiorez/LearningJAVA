@@ -1,25 +1,19 @@
-Your Turn — Exercise 018.1
+Exercise 018.3 — Disguised Solutions
 
-Classify each statement as:
+Classify each as Requirement or Solution and explain your reasoning.
 
-A. Requirement
-B. Solution
+Q1 - requirement; It decribes what the system should provide the manager.
 
-And most importantly, explain why.
+"The system must provide managers with a daily view of delayed orders."
 
-Q1 - This is a requirement, the statement tells what the business should do.
+Q2 - requirement; It describes what the manager should know about the current state of the orders.
 
-"The business needs to know which orders have been waiting for more than 30 minutes."
+"Managers need to know which orders are currently delayed."
 
-Q2 This is a solution, the statement tells how the orders should display showing all the orders.
+Q3 - solution; It specifies how the application send manager the information on every delayed orders.
 
-"Create a dashboard showing all orders that have been waiting for more than 30 minutes."
+"The application must send managers an email every morning containing the delayed orders."
 
-Q3 - This is a requirement, this tells what should the staff do to identify an order that exeeds the expected preparation time
+Q4 - requirement; It decribes what the manager should be informed about the orders.
 
-"Staff must be able to identify an order that has exceeded the expected preparation time."
-
-Q4 - This is a solution, showing how a notification system will solve the unknown exceeding orders based on it's average prep time 
-
-"Send the kitchen staff a notification whenever an order exceeds the expected preparation time."
-
+"Managers must be informed when an order becomes significantly delayed."
