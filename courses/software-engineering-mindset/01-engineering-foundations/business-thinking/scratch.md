@@ -1,47 +1,50 @@
-Exercise 018.4 — Ambiguous Statements
+Exercise 018.5 — Rewrite the Solution
 
-This exercise is deliberately different.
+Rewrite each statement into a requirement-oriented statement.
 
-Some statements sound like solutions, but they might actually be requirements depending on the context.
+Q1
+Original solution: "Build a dashboard that shows customers' overdue payments."
+...
 
-Your job is not simply to say A or B.
+Requirement: The customer must be able to see the overdue payments.
+...
 
-For each one, give me:
+Why I changed it: I change it to how will the diplay should be implemented on what the customer need to see about the payments
+...
 
-Requirement or Solution
-Why
-What information would you need to confirm your interpretation, if the statement is ambiguous
 
-Q1 - Requirement; It describes what the system should generate based on delayed orders.
 
-"The system must generate a daily report of delayed orders."
+Q2
+Original solution: "Send an SMS to customers when their order is ready."
 
-Is "daily report" a required business outcome, or has someone already chosen a particular solution?
+...
 
-Q2 - Solution; It specifies how should the delayed orders be monitored using a dashboard.
+Requirement: Customer must be able to see whenever their order id ready.
+...
 
-"Managers need a dashboard to monitor delayed orders."
+Why I changed it: I change it from proposing a solution using a SMS to when the customer should be notified.
+...
 
-Is the dashboard genuinely required, or is it simply what the manager currently thinks they need?
 
-Q3 - Mix of both - It describes what the system should allow the customers do and a solution where it specifies how orders can be cancel which is through mobile phone.
+Q3
+Original solution:"Add a search button so employees can quickly find customer records."
+...
 
-"The system must allow customers to cancel orders through the mobile application."
+Requirement: Employees must be able to quickly find the customer records.
+...
 
-Look carefully.
+Why I changed it: Change the  implementation in a form of a search in to a generic requirement what should be done inside the system.
+...
 
-Is this:
 
-a requirement,
-a solution,
-or a mixture of both?
 
-Explain your reasoning.
+Q4
+Original solution:"Store all completed orders in PostgreSQL."
+...
 
-Q4 - Requirement; It describes what the customer be able to do about an eligible order before preparation begins.
+Requirement: System must be able to retain datas of completed orders.
+...
 
-"Customers must be able to cancel an eligible order before preparation begins."
+Why I changed it: I changed it from having to use a PostgreSQL to a requirement on what the system be able to do.
+...
 
-Compare this directly with Q3.
-
-What changed? 
