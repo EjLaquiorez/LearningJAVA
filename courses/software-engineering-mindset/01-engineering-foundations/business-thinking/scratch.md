@@ -83,3 +83,31 @@ Does the software need to perform this responsibility: No
 Pay special attention to the word "decides."
 
 Don't automatically assume that because software could perform something, it should own that responsibility.
+
+🎯 Q4
+
+Now we're going back to the university example, but we're changing who performs the activity.
+
+"The enrollment system stores the student's enrollment status."
+
+Use the same format:
+
+Q4:
+Classification: inside the system
+
+
+Why:  Enrollment system is the one who retains the records
+
+
+Who is responsible:Enrollment system
+
+
+Does the software need to perform this responsibility: Yes
+
+Think carefully about the difference between:
+
+Q3: The registrar makes the decision.
+
+Q4: The system stores the result of that decision.
+
+Don't combine the two responsibilities.
