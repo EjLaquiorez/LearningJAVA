@@ -1,50 +1,49 @@
-Exercise 018.5 — Rewrite the Solution
+Exercise 018.6 — Restaurant Scenario
 
-Rewrite each statement into a requirement-oriented statement.
+A restaurant owner tells you:
 
-Q1
-Original solution: "Build a dashboard that shows customers' overdue payments."
-...
+"We need a mobile app that sends customers a notification when their food is ready. Right now, customers keep asking the waiters whether their orders are ready."
 
-Requirement: The customer must be able to see the overdue payments.
-...
+Your job is to analyze the statement.
 
-Why I changed it: I change it to how will the diplay should be implemented on what the customer need to see about the payments
-...
+Q1 — Identify the solution
 
+What part of the owner's statement is a proposed solution?
+    - We need a mobile app that sends customers a notification when their food is ready
 
+Q2 — Find the underlying need
 
-Q2
-Original solution: "Send an SMS to customers when their order is ready."
+What do you think the underlying requirement might be? Customers must be able to know whether their orders are ready.
 
-...
+Don't assume the mobile app is necessary.
 
-Requirement: Customer must be able to see whenever their order id ready.
-...
+Q3 — Investigate
 
-Why I changed it: I change it from proposing a solution using a SMS to when the customer should be notified.
-...
+Give me 3 questions you would ask the restaurant owner before accepting the proposed solution.
+    - What kind of notification do you need or planning to have?
+    - What information should the customers be able to see ?
+    - Who are your customers?
 
+Q4 — Separate them
 
-Q3
-Original solution:"Add a search button so employees can quickly find customer records."
-...
+Put the information into:
 
-Requirement: Employees must be able to quickly find the customer records.
-...
+Observation:
+?
+I observed that customers keep asking the waiters whether their orders are ready.
 
-Why I changed it: Change the  implementation in a form of a search in to a generic requirement what should be done inside the system.
-...
+Stakeholder request:
+?
+A mobile app that sends customers a notification when their food is ready.
 
+Possible requirement:
+?
+Customer must be notified whenever their orders are ready.
 
+Proposed solution:
+?
+Q5 — Engineering judgment
 
-Q4
-Original solution:"Store all completed orders in PostgreSQL."
-...
+Would you immediately recommend building the mobile app? No, because creating an immediate solution based on just a client request may not really address the real cause of the problem.
 
-Requirement: System must be able to retain datas of completed orders.
-...
-
-Why I changed it: I changed it from having to use a PostgreSQL to a requirement on what the system be able to do.
-...
-
+Answer yes/no, then explain why.
