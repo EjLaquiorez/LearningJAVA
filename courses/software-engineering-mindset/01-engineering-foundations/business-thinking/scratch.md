@@ -37,3 +37,25 @@ The goal isn't just to answer Outside.
 I want you to practice the reasoning:
 
 Activity → Actor → Responsibility → System boundary.
+
+🎯 Q2
+
+Now let's make it slightly harder.
+
+"The restaurant system records that an order has been marked as served."
+
+Use the same format:
+
+Q2:
+Classification: Inside the system
+
+
+Why: The statement says system records has been marked as served
+
+
+Who is responsible: the restaurant system
+
+
+Does the software need to perform this responsibility: Yes
+
+This time, pay attention to the difference between performing the business activity and recording information about the activity.
