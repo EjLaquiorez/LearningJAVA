@@ -1,19 +1,47 @@
-Exercise 018.3 — Disguised Solutions
+Exercise 018.4 — Ambiguous Statements
 
-Classify each as Requirement or Solution and explain your reasoning.
+This exercise is deliberately different.
 
-Q1 - requirement; It decribes what the system should provide the manager.
+Some statements sound like solutions, but they might actually be requirements depending on the context.
 
-"The system must provide managers with a daily view of delayed orders."
+Your job is not simply to say A or B.
 
-Q2 - requirement; It describes what the manager should know about the current state of the orders.
+For each one, give me:
 
-"Managers need to know which orders are currently delayed."
+Requirement or Solution
+Why
+What information would you need to confirm your interpretation, if the statement is ambiguous
 
-Q3 - solution; It specifies how the application send manager the information on every delayed orders.
+Q1 - Requirement; It describes what the system should generate based on delayed orders.
 
-"The application must send managers an email every morning containing the delayed orders."
+"The system must generate a daily report of delayed orders."
 
-Q4 - requirement; It decribes what the manager should be informed about the orders.
+Is "daily report" a required business outcome, or has someone already chosen a particular solution?
 
-"Managers must be informed when an order becomes significantly delayed."
+Q2 - Solution; It specifies how should the delayed orders be monitored using a dashboard.
+
+"Managers need a dashboard to monitor delayed orders."
+
+Is the dashboard genuinely required, or is it simply what the manager currently thinks they need?
+
+Q3 - Mix of both - It describes what the system should allow the customers do and a solution where it specifies how orders can be cancel which is through mobile phone.
+
+"The system must allow customers to cancel orders through the mobile application."
+
+Look carefully.
+
+Is this:
+
+a requirement,
+a solution,
+or a mixture of both?
+
+Explain your reasoning.
+
+Q4 - Requirement; It describes what the customer be able to do about an eligible order before preparation begins.
+
+"Customers must be able to cancel an eligible order before preparation begins."
+
+Compare this directly with Q3.
+
+What changed? 
