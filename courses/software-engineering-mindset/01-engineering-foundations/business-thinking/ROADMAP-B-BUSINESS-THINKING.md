@@ -9,16 +9,19 @@
 **Phase 8 — Requirements Thinking**
 
 ### Current Topic
-**018 — Requirements vs Solutions**
+**019 — What Belongs Inside the System?**
 
 ### Status
 🚧 Currently Learning
 
 ### Previous Completed Topic
-**017 — Business Rules and Decision Logic** ✅
+**018 — Requirements vs Solutions** ✅
+
+### Topic 018 Mastery
+**Mastered** — Successfully distinguished requirements from solutions, rewrote solution requests into solution-neutral requirements, handled ambiguous and mixed statements, and applied the reasoning to unfamiliar business scenarios.
 
 ### Next Topic
-**019 — What Belongs Inside the System?** ⬜
+**020 — System Boundaries and External Systems** ⬜
 
 ---
 
@@ -31,11 +34,11 @@ Phase 4 — Understanding Processes         ██████████ ✅
 Phase 5 — Modeling Responsibilities       ██████████ ✅  
 Phase 6 — Stakeholder Understanding       ██████████ ✅  
 Phase 7 — Business Rules                  ██████████ ✅  
-Phase 8 — Requirements Thinking           █████░░░░░ 🚧  
+Phase 8 — Requirements Thinking           ██████████ ✅  
 Phase 9 — System Boundaries               ░░░░░░░░░░ ⬜  
 Phase 10 — Preparing for Software Design  ░░░░░░░░░░ ⬜  
 
-> Phase 8 is currently in progress. Topic 018 is being learned.
+> Phase 8 — Requirements Thinking is completed. Topic 018 has been mastered.
 
 ---
 
@@ -50,7 +53,7 @@ Phase 8 — Requirements Thinking
 018 — Requirements vs Solutions
 
 **Current Topic:**  
-018 — Requirements vs Solutions
+019 — What Belongs Inside the System?
 
 **Status:**  
 🚧 Currently Learning
@@ -241,7 +244,8 @@ A business rule should be understood independently from the software feature tha
 
 ### Topics
 
-- 018 — Requirements vs Solutions 🚧
+- 018 — Requirements vs Solutions ✅
+- 019 — What Belongs Inside the System? 🚧
 
 **Phase Status:** 🚧 Currently Learning
 
@@ -317,7 +321,7 @@ This topic connects the earlier business-thinking work to the next stage of syst
 | 016 | Exceptions and Edge Cases | ✅ Completed |
 | 017 | Business Rules and Decision Logic | ✅ Completed |
 | 018 | Requirements vs Solutions | 🚧 Currently Learning |
-| 019 | What Belongs Inside the System? | ⬜ Upcoming |
+| 020 | System Boundaries and External Systems | ⬜ Upcoming |
 | 020 | System Boundaries and External Systems | ⬜ Upcoming |
 | 021 | From Business Process to System Model | ⬜ Upcoming |
 | 022 | From System Model to Solution | ⬜ Upcoming |
@@ -581,9 +585,9 @@ Topic
 For the current topic:
 
 ```text
-018 — Requirements vs Solutions
-    ├── exercises/018-requirements-vs-solutions.md
-    └── references/018-requirements-vs-solutions.md
+019 — What Belongs Inside the System?
+    ├── exercises/019-what-belongs-inside-the-system.md
+    └── references/019-what-belongs-inside-the-system.md
 ```
 
 ---
@@ -687,10 +691,10 @@ Phase 7 — Business Rules
     └── 017 — Business Rules and Decision Logic ✅
 
 Phase 8 — Requirements Thinking
-    └── 018 — Requirements vs Solutions 🚧
+    └── 018 — Requirements vs Solutions ✅
 
 Phase 9 — System Boundaries
-    ├── 019 — What Belongs Inside the System? ⬜
+    ├── 019 — What Belongs Inside the System? 🚧
     └── 020 — System Boundaries and External Systems ⬜
 
 Phase 10 — Preparing for Software Design
@@ -704,8 +708,8 @@ Phase 10 — Preparing for Software Design
 
 The immediate learning milestone is:
 
-**018 — Requirements vs Solutions**
-
-After Topic 018 is explicitly completed and mastered, the roadmap can progress to:
-
 **019 — What Belongs Inside the System?**
+
+After Topic 019 is explicitly completed and mastered, the roadmap can progress to:
+
+**020 — System Boundaries and External Systems**
