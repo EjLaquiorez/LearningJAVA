@@ -111,3 +111,102 @@ Q3: The registrar makes the decision.
 Q4: The system stores the result of that decision.
 
 Don't combine the two responsibilities.
+
+🎯 Q5
+
+Now let's introduce something different: the customer themselves.
+
+"A customer decides whether they want to purchase an item."
+
+Use:
+
+Q5:
+Classification: outside the system
+
+
+Why: Customer decides
+
+
+Who is responsible: Customer
+
+
+Does the software need to perform this responsibility: No
+
+Be careful here.
+
+The question isn't whether the software could help the customer decide.
+
+The question is:
+
+Who owns the actual decision? 
+
+
+🎯 Q6
+
+Now we're going to test whether you can recognize a business rule being executed by the system.
+
+"The system calculates the total price of an order based on defined business rules."
+
+Use:
+
+Q6:
+Classification: inside the system
+
+
+Why: system calculates the total price
+
+
+Who is responsible: The system
+
+
+Does the software need to perform this responsibility: Yes
+Think carefully
+
+There are two clues:
+
+"The system calculates..."
+
+and
+
+"based on defined business rules."
+
+Don't just classify it as inside because it says "system."
+
+Explain what responsibility the system is actually performing.
+
+Q7:
+
+Classification:
+Outside the System
+
+Why:
+The payment processing is performed by the bank's external
+payment system, which is outside the boundary of the system
+we are analyzing.
+
+Who is responsible:
+The bank's external payment system
+
+Does our software need to perform this responsibility:
+No
+
+Our system may:
+Send the payment request
+Receive the payment result
+Record the result
+
+Q8:
+
+Classification:
+Inside the System
+
+Why:
+The external payment system is outside our system boundary,
+but our application is responsible for recording the result
+returned by that external system.
+
+Who is responsible:
+Our application
+
+Does the software need to perform this responsibility:
+Yes
