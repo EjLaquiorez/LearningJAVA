@@ -1,49 +1,75 @@
-Exercise 018.6 — Restaurant Scenario
+🏁 Exercise 018.7 — Final Mastery Challenge
 
-A restaurant owner tells you:
+You are the engineer for a university enrollment system.
 
-"We need a mobile app that sends customers a notification when their food is ready. Right now, customers keep asking the waiters whether their orders are ready."
+The registrar tells you:
 
-Your job is to analyze the statement.
+"We need a new enrollment portal. Students keep coming to the registrar's office because they don't know whether their enrollment has been approved. The new portal should show students their enrollment status and automatically email them whenever the status changes."
 
-Q1 — Identify the solution
+You have not been given any additional information.
 
-What part of the owner's statement is a proposed solution?
-    - We need a mobile app that sends customers a notification when their food is ready
+Analyze this as an engineer.
 
-Q2 — Find the underlying need
+Q1 — Separate the statement
 
-What do you think the underlying requirement might be? Customers must be able to know whether their orders are ready.
+Identify:
 
-Don't assume the mobile app is necessary.
+Observation:
+Stakeholder request:
+Possible requirement:
+Proposed solution:
+Q2 — Identify assumptions
+
+Give me at least 2 things we don't actually know yet.
+
+Don't guess.
 
 Q3 — Investigate
 
-Give me 3 questions you would ask the restaurant owner before accepting the proposed solution.
-    - What kind of notification do you need or planning to have?
-    - What information should the customers be able to see ?
-    - Who are your customers?
+Give me 4 questions you would ask the registrar before accepting the proposed solution.
 
-Q4 — Separate them
+At least one question should investigate the current process, and at least one should investigate the cause.
 
-Put the information into:
+Q4 — Requirement vs. solution
 
-Observation:
-?
-I observed that customers keep asking the waiters whether their orders are ready.
+Classify these individually:
 
-Stakeholder request:
-?
-A mobile app that sends customers a notification when their food is ready.
+A.
 
-Possible requirement:
-?
-Customer must be notified whenever their orders are ready.
+"Students must be able to know the current status of their enrollment."
 
-Proposed solution:
-?
+B.
+
+"The portal should display the enrollment status."
+
+C.
+
+"The system should automatically email students whenever their status changes."
+
+D.
+
+"Students must be informed when their enrollment status changes."
+
+For B and C, explain why they may be solutions rather than pure requirements.
+
 Q5 — Engineering judgment
 
-Would you immediately recommend building the mobile app? No, because creating an immediate solution based on just a client request may not really address the real cause of the problem.
+The registrar says:
 
-Answer yes/no, then explain why.
+"Just build the portal. That's clearly the solution."
+
+Would you agree?
+
+Explain your answer as if you were speaking to the registrar professionally.
+
+Don't just say "No."
+
+Construct the reasoning.
+
+Q6 — Final reasoning
+
+Finish this sentence:
+
+"Before deciding what software to build, I need to understand..."
+
+Give me your own answer.
