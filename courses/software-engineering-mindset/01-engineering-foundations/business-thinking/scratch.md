@@ -1,51 +1,41 @@
+Next — Exercise 019.5: Actor vs. System
+
+This next exercise will address a distinction that caused some of your earlier mistakes:
+
+An actor can interact with the system without becoming part of the system.
+
+And:
+
+An external system can perform software-based work without becoming part of our system.
+
+We'll use a payment example because it connects directly to your Q7/Q8 experience.
+
 Scenario
-
-A pharmacy has this process:
-
-Customer gives prescription
-        ↓
-Pharmacist checks prescription
-        ↓
-Pharmacist verifies medicine availability
-        ↓
-Pharmacist prepares medicine
-        ↓
-Customer pays
-        ↓
-Sale is recorded
-
-
-Your task:
-
+Customer
+   ↓
+Restaurant System
+   ↓
+Bank Payment System
+   ↓
+Payment Result
+   ↓
+Restaurant System
 Q1
 
-Separate the activities into:
+"The customer enters their payment details into the restaurant system."
 
-System Responsibility
----------------------
-1. Pharmacist verifies medicine availability
-2. Sale is recorded
-3.
+Classify it and explain:
+
+Q1:
+Who is the actor: Customer
 
 
-Outside System
----------------
-1. Customer gives prescription
-2. Pharmacist checks prescription
-3. Pharmacist prepares medicine
-4. Customer pays
-You don't necessarily have to put exactly three in each category. Use your reasoning.
+What is the actor responsible for: Entering the payment details
 
-Then answer:
 
-Q2
+Is the responsibility inside or outside our system: Outside
 
-Why should these responsibilities be separated?
 
-Don't focus on what technology you'd build.
+Why: It's the customer who is responsible for entering the payment
 
-Focus on:
-
-Who owns each responsibility?
-
-Take it one activity at a time.
+Focus on who performs the activity, not merely where the information is entered.
