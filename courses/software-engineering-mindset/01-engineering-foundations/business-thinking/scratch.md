@@ -1,206 +1,380 @@
-🎯 Exercise 019.9 — Defending the System Boundary
+🏁 Exercise 019.10 — Final Mastery Challenge
+Scenario — Hospital Appointment System
 
-This exercise changes the skill slightly.
+A hospital currently handles appointments like this:
 
-So far, you've mostly answered:
-
-"Is this inside or outside?"
-
-Now I want you to practice the harder question:
-
-"Why?"
-
-In real engineering work, another person may disagree with your boundary.
-
-For example:
-
-"Why can't the enrollment system approve the student?"
-
-You need to defend your reasoning using responsibility ownership, not just say:
-
-"Because it's outside."
-
-Scenario
-
-Consider this university enrollment process:
-
-Student
+Patient
    ↓
-Submits application
+Requests an appointment
    ↓
-Enrollment System
+Receptionist
    ↓
-Checks whether required documents are present
+Checks doctor availability
    ↓
-Registrar
+Receptionist
    ↓
-Reviews application
+Schedules the appointment
    ↓
-Approves / Rejects
+Appointment System
    ↓
-Enrollment System
+Records appointment
    ↓
-Records decision
+Patient
    ↓
-Student
-   ↓
-Views enrollment status
+Receives appointment information
 
-The university's project manager says:
+The hospital is considering a new system.
 
-"Since the enrollment system already checks the student's documents, I think the system should also decide whether the student gets approved."
+The hospital manager says:
 
-Q1 — Defend the Boundary
+"We want patients to request appointments online. The system should check whether the selected doctor is available. If the doctor is available, the system should schedule the appointment and send the patient a confirmation."
 
-Is the project manager's conclusion justified?
+You are the engineer analyzing the request.
+
+Q1 — Separate the Responsibilities
+
+Break the scenario into individual responsibilities.
+
+Use:
+
+Q1:
+
+
+1.
+Actor:
+Responsibility:
+Inside / Outside:
+Why:
+
+
+2.
+Actor:
+Responsibility:
+Inside / Outside:
+Why:
+
+
+3.
+Actor:
+Responsibility:
+Inside / Outside:
+Why:
+
+
+4.
+Actor:
+Responsibility:
+Inside / Outside:
+Why:
+
+
+5.
+Actor:
+Responsibility:
+Inside / Outside:
+Why:
+
+Don't group everything into:
+
+"The system handles appointments."
+
+Identify the individual responsibilities.
+
+Q2 — Identify the Proposed Responsibility Change
+
+The current process says:
+
+Receptionist
+    ↓
+Checks doctor availability
+
+But the proposed process says:
+
+System
+    ↓
+Checks doctor availability
 
 Answer:
 
-Q1:
+Q2:
+
+
+Current responsibility owner:
+
+
+Proposed responsibility owner:
+
+
+What changed:
+
+
+Why is this important?
+
+Remember our Topic 019 lesson:
+
+A responsibility can be reassigned to the system, but that does not automatically transfer every related responsibility.
+
+Q3 — Who Owns the Scheduling Decision?
+
+The manager says:
+
+"If the doctor is available, the system should schedule the appointment."
+
+Answer:
+
+Q3:
+
+
+Who currently owns the scheduling responsibility?
+
+
+Why?
+
+
+Is this responsibility explicitly being assigned to the system
+in the proposed process?
+
+
+Yes / No:
+
+
+Why?
+
+Be careful here.
+
+Don't confuse:
+
+Check availability
+
+with:
+
+Schedule appointment
+
+They may be related, but they are still different responsibilities.
+
+Q4 — System Boundary
+
+Separate the responsibilities.
+
+INSIDE OUR SYSTEM
+1.
+2.
+3.
+OUTSIDE OUR SYSTEM
+1.
+2.
+3.
+
+For every item, think:
+
+Who actually performs this responsibility?
+
+Q5 — Requirement vs. Responsibility vs. Solution
+
+Consider these statements:
+
+A
+
+"Patients must be able to request appointments online."
+
+B
+
+"The system must check whether the selected doctor is available."
+
+C
+
+"Add an appointment calendar to the patient portal."
+
+Classify each:
+
+Q5:
+
+
+A:
+Requirement / System Responsibility / Solution
+
+
+Why:
+
+
+B:
+Requirement / System Responsibility / Solution
+
+
+Why:
+
+
+C:
+Requirement / System Responsibility / Solution
+
+
+Why:
+
+This connects Topic 018 → Topic 019.
+
+Q6 — Identify Unknowns
+
+Before implementing the system, give me at least four things we still don't know.
+
+Use:
+
+"We don't know whether..."
+
+Think about:
+
+doctor availability
+conflicting appointments
+cancellations
+emergency appointments
+scheduling rules
+receptionist overrides
+appointment types
+unavailable doctors
+
+Don't invent answers.
+
+Q6:
+
+
+1. We don't know whether...
+
+
+2. We don't know whether...
+
+
+3. We don't know whether...
+
+
+4. We don't know whether...
+Q7 — Engineering Judgment
+
+The manager says:
+
+"If the system can see that the doctor is available, it should automatically schedule every appointment."
+
+Would you immediately agree?
+
+Q7:
+
+
 Yes / No:
 
 
 Why:
 
-Don't simply say:
+Your reasoning should distinguish:
 
-"No, because the registrar makes the decision."
+Knowing availability
+        ≠
+Being authorized to schedule
 
-Explain why the two responsibilities are different.
+Ask yourself:
 
-Think:
+Are there other business rules?
 
-Checking documents
-        ↓
-What is being checked?
+Are there exceptions?
 
-versus:
+Can the receptionist override the system?
 
-Approving/rejecting
-        ↓
-What is being decided?
-Q2 — Identify the Responsibility Owner
+Are all appointment types handled the same way?
 
-Consider this statement:
+🧠 Final Mastery Challenge
 
-"Determine whether the student satisfies the enrollment requirements."
+Complete this reasoning chain:
 
-Who currently owns this responsibility?
-
-Q2:
-Actor:
-
-
-Responsibility:
-
-
-Inside / Outside:
-
-
-Why:
-
-Be careful.
-
-Don't answer based on whether software could perform it.
-
-Answer based on the scenario.
-
-Q3 — What Would Need to Change?
-
-Suppose the university eventually decides:
-
-"We want the system to automatically determine whether an application satisfies the enrollment requirements."
-
-What would change?
-
-Complete:
-
-Current:
-
-
-Registrar
-    ↓
-Determines whether requirements are satisfied
-
-
-
-
-Proposed:
-
-
-System
-    ↓
+Patient
+   ↓
+Business activity:
 ?
 
 
 
 
-What changed:
-
-Then answer:
-
-Would this automatically mean the system should also approve or reject the student?
-
-Why or why not?
-
-Q4 — Boundary Defense
-
-The registrar says:
-
-"I don't want the system making the enrollment decision. I want it to check the documents and give me the information I need to make the decision."
-
-Is this a valid system boundary?
-
-Q4:
-Yes / No:
+   ↓
 
 
-Why:
-
-Then separate the responsibilities:
-
-System:
-1.
-2.
 
 
-Registrar:
-1.
-2.
-Q5 — Final Reasoning Challenge
+Hospital System
+   ↓
+System responsibility:
+?
 
-A developer says:
 
-"The system can check whether all documents are complete, so we can just code the approval rules too."
 
-Give the developer a professional engineering response.
 
-Start with:
+   ↓
 
-"We shouldn't assume that yet because..."
 
-Then explain what you would investigate before deciding whether the approval decision belongs inside the system.
 
-🧠 Your mental model for this exercise
 
-Don't think:
+Doctor / Receptionist
+   ↓
+Business responsibility:
+?
 
-Can software do it?
+
+
+
+   ↓
+
+
+
+
+Hospital System
+   ↓
+System responsibility:
+?
+
+
+
+
+   ↓
+
+
+
+
+Patient
+   ↓
+Expected outcome:
+?
+
+Then finish this sentence:
+
+"Before deciding what software should own, I need to understand..."
+
+🎯 What I'm Evaluating
+
+This final exercise is not mainly about getting every classification correct.
+
+I'm evaluating whether you can independently reason through:
+
+Activity
+   ↓
+Actor
+   ↓
+Responsibility
+   ↓
+Current owner
+   ↓
+Proposed owner
+   ↓
+System boundary
+   ↓
+Information crossing boundary
+   ↓
+Unknowns
+   ↓
+Engineering judgment
+
+And especially whether you can avoid this mistake:
+
+"Software can do it"
         ↓
-Put it inside
+"Therefore software should do it"
 
-Think:
+That is not our engineering reasoning model.
 
-Who owns the responsibility?
-        ↓
-What exactly is the responsibility?
-        ↓
-What evidence do we have?
-        ↓
-Has the business decided to assign it to the system?
-        ↓
-What does that change?
-        ↓
-What remains outside?
+Start with Q1 only.
 
-Start with Q1 only. Don't answer all five at once.
+Take each activity one at a time and defend who owns that exact responsibility.
