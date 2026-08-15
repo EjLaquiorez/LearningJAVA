@@ -1,95 +1,130 @@
+Exercise 019.7 — Ambiguous System Boundary
+
+Now we're going to deliberately make the boundary less obvious.
+
 Scenario
 
-A restaurant has this requirement:
+A restaurant uses:
 
-"Customers must be able to cancel an unpaid order before food preparation begins."
+Customer
+    ↓
+Restaurant App
+    ↓
+Restaurant System
+    ↓
+Kitchen System
+    ↓
+Kitchen Staff
 
-We already identified:
+The restaurant owner tells you:
 
-Customer responsibility
+"When the kitchen starts preparing an order, its status changes to Preparing in the restaurant app."
 
-Decide to cancel the order and request cancellation.
+You don't know exactly how the systems communicate.
 
-But now let's focus specifically on our system.
+Q1 — Identify the responsibility
 
-Q1 — Identify the System Responsibility
+Who is responsible for actually starting preparation of the food?
 
-What must the restaurant system be responsible for?
+Q1:
+Actor:
+
+
+Responsibility:
+
+
+Inside or outside our system:
+
+
+Why:
+Q2 — Identify the status update
+
+Who is responsible for changing the order status to Preparing?
+
+Possible answers:
+
+Kitchen Staff
+Kitchen System
+Restaurant System
+Needs More Information
+Q2:
+Actor:
+
+
+Responsibility:
+
+
+Inside or outside our system:
+
+
+Why:
+
+Don't assume the restaurant app itself changes the status.
+
+Q3 — Identify the information flow
+
+We know the customer eventually sees:
+
+Preparing
+
+in the restaurant app.
+
+But we don't know how that information gets there.
+
+What do we know?
+
+And what do we not know yet?
 
 Use:
 
-Q1:
-System responsibility:
-The system must process the customer's cancellation request for an eligible order and update the order accordingly.
+Q3:
 
-Why: The system needs to determine whether the cancellation request can be processed based on the order's current state, then update the order if the cancellation is allowed.
-Don't answer with a solution.
 
-Avoid:
+What we know:
+1.
+2.
 
-"Build a cancel button."
 
-That's an implementation choice.
+What we don't know:
+1.
+2.
+3.
+Q4 — Engineering judgment
 
-Instead ask:
+The owner says:
 
-What does the system actually need to do?
+"Just make the restaurant app update the status when the kitchen starts cooking."
 
-Think about:
-
-Customer
-   ↓
-Requests cancellation
-   ↓
-Restaurant System
-   ↓
-?
-
-What happens inside the system after receiving that request?
-
-Q2 — Identify the Business Conditions
-
-The requirement says:
-
-"unpaid order"
-
-and
-
-"before food preparation begins."
-
-What information does the system therefore need to know before it can process the cancellation?
-
-Give me at least 2.
-
-Q2:
-1. If order is unpaid
-2. If the cancellation is done before food preparation begins
-
-Don't design the database.
-
-Just identify the business information/state the system needs.
-
-Q3 — Requirement vs. Solution
-
-Which one is a requirement and which one is a solution?
-
-A 
-
-"The system must process cancellation requests for eligible orders."
-
-B 
-"Add a cancel button to the customer's order screen."
+Would you immediately implement that?
 
 Answer:
 
-A:
-Requirement or Solution? requirement
-Why? It describes the responsibility the system must fulfill without specifying how that responsibility should be implemented.
+Q4:
+Yes / No:
 
 
-B:
-Requirement or Solution? solution
+Why:
 
-Why? It specifies a particular interface mechanism—a cancel button—for allowing the customer to initiate the cancellation.
+Think back to Topic 018:
 
-This is a direct connection back to Topic 018.
+A stakeholder's proposed solution is not automatically the requirement.
+
+And Topic 019:
+
+A business activity is not automatically our system's responsibility.
+
+Your goal here is to combine both ideas:
+
+Business activity
+       ↓
+Who performs it?
+       ↓
+What system records it?
+       ↓
+Which system owns that responsibility?
+       ↓
+What does OUR system need to do?
+       ↓
+Only then → solution
+
+Start with Q1.
