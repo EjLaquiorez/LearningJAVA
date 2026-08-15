@@ -1,98 +1,95 @@
-Exercise 019.6 — Requirements → System Responsibility
-
-Now we're going to connect Topic 018 and Topic 019.
-
-You already learned:
-
-Requirement: What the system/business needs to accomplish.
-
-Now we ask:
-
-What responsibility does that requirement give to the system?
-
 Scenario
 
-Requirement:
+A restaurant has this requirement:
 
-"Customers must be able to see whether their payment was successful."
+"Customers must be able to cancel an unpaid order before food preparation begins."
 
-We know from 019.5:
+We already identified:
 
-Customer
-   ↓
-Restaurant System
-   ↓
-Bank Payment System
-Q1
+Customer responsibility
 
-What responsibility does this requirement give to the restaurant system?
+Decide to cancel the order and request cancellation.
 
-Use: 
+But now let's focus specifically on our system.
+
+Q1 — Identify the System Responsibility
+
+What must the restaurant system be responsible for?
+
+Use:
 
 Q1:
-System responsibility: The system must provide the customer with the result of their payment, indicating whether it was successful.
+System responsibility:
+The system must process the customer's cancellation request for an eligible order and update the order accordingly.
 
-Why: The system needs to make the payment result available to the customer so they can know whether the payment succeeded.
-Don't say:
+Why: The system needs to determine whether the cancellation request can be processed based on the order's current state, then update the order if the cancellation is allowed.
+Don't answer with a solution.
 
-"Build a payment screen."
+Avoid:
 
-Think about what the system must actually be responsible for doing.
+"Build a cancel button."
 
-Q2
+That's an implementation choice.
 
-Now let's make this slightly harder.
+Instead ask:
 
-Requirement:
+What does the system actually need to do?
 
-"Customers must be able to know when their payment has failed."
-
-The bank payment system is responsible for processing the payment and returning the result.
-
-Your task:
-Q2
-System responsibility: The system must provide the customer with the payment result, including when the payment has failed.
-
-Why: The customer needs to know the outcome of the payment.
-
-Don't say:
-
-"Send an SMS."
-
-Don't say:
-
-"Show a red error message."
-
-Those are solutions.
-
-Identify the system responsibility first.
-
-
-Q3 — Responsibility vs. Actor
-
-Now let's test whether you can separate the customer's responsibility from the system's responsibility.
-
-Requirement:
-
-"Customers must be able to cancel an unpaid order before preparation begins."
-
-Scenario:
+Think about:
 
 Customer
    ↓
+Requests cancellation
+   ↓
 Restaurant System
    ↓
-Order
+?
 
-Question:
+What happens inside the system after receiving that request?
 
-Q3:
-Customer's responsibility: Decide to cancel the unpaid order and request cancellation.
+Q2 — Identify the Business Conditions
 
-Restaurant system's responsibility: Process the cancellation request and update the order according to the cancellation conditions.
+The requirement says:
 
-Why are they different? The customer owns the decision to cancel, while the system is responsible for processing the customer's decision and updating the order.
+"unpaid order"
 
-Think carefully.
+and
 
-The customer performs an action, while the system may be responsible for processing that action.
+"before food preparation begins."
+
+What information does the system therefore need to know before it can process the cancellation?
+
+Give me at least 2.
+
+Q2:
+1. If order is unpaid
+2. If the cancellation is done before food preparation begins
+
+Don't design the database.
+
+Just identify the business information/state the system needs.
+
+Q3 — Requirement vs. Solution
+
+Which one is a requirement and which one is a solution?
+
+A 
+
+"The system must process cancellation requests for eligible orders."
+
+B 
+"Add a cancel button to the customer's order screen."
+
+Answer:
+
+A:
+Requirement or Solution? requirement
+Why? It describes the responsibility the system must fulfill without specifying how that responsibility should be implemented.
+
+
+B:
+Requirement or Solution? solution
+
+Why? It specifies a particular interface mechanism—a cancel button—for allowing the customer to initiate the cancellation.
+
+This is a direct connection back to Topic 018.
