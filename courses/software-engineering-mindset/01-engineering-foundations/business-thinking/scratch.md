@@ -102,3 +102,28 @@ But ask yourself:
 Is it our software?
 
 And then identify exactly what responsibility it performs.
+
+Q4
+
+Now let's bring the result back into our system.
+
+"The restaurant system receives the payment result from the bank payment system and records whether the payment was successful."
+
+Use:
+
+Q4:
+Who is the actor: restaurant system
+
+
+What is the actor responsible for: receiving the payment result and records whether the payment was succesful
+
+
+Is the responsibility inside or outside our system: Inside
+
+
+Why: it is the restaurant system who performs the action which is receiving and recording the payment result
+Pay close attention
+
+The bank is sending the result, but the sentence describes what the restaurant system does with the result.
+
+Don't let the presence of the external bank system make you classify the whole statement as outside.
