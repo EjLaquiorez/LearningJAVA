@@ -27,16 +27,17 @@ Q1 — Identify the responsibility
 Who is responsible for actually starting preparation of the food?
 
 Q1:
-Actor:
+Actor: kitchen staff
 
 
 Responsibility:
+Preparing the food
+
+Inside or outside our system: 
+Outside
 
 
-Inside or outside our system:
-
-
-Why:
+Why: Kitchen staff the responsible for preparing the food
 Q2 — Identify the status update
 
 Who is responsible for changing the order status to Preparing?
@@ -48,16 +49,16 @@ Kitchen System
 Restaurant System
 Needs More Information
 Q2:
-Actor:
+Actor: Kitchen System
 
 
-Responsibility:
+Responsibility: Changing the order status to 'preparing'
 
 
-Inside or outside our system:
+Inside or outside our system: outside
 
 
-Why:
+Why: It's the kitchen system's responsible not OUR system. 
 
 Don't assume the restaurant app itself changes the status.
 
@@ -81,14 +82,15 @@ Q3:
 
 
 What we know:
-1.
-2.
+1. Kitchen staff prepares the food
+2. Kitchen system updates the status
+3. Restaurant app displays the status
 
 
 What we don't know:
-1.
-2.
-3.
+1. How the status information get to the Restaurant app
+2. How the restaurant system records/updates orders inside the system
+3. Who are the external system involved on every process
 Q4 — Engineering judgment
 
 The owner says:
@@ -101,8 +103,7 @@ Answer:
 
 Q4:
 Yes / No:
-
-
+No. Before implementing the proposed solution, we need to understand how the kitchen system, restaurant system, and restaurant app currently interact, which system owns the order status, and how the status information reaches the customer. Otherwise, we may build a solution based on assumptions about responsibilities and system boundaries.
 Why:
 
 Think back to Topic 018:
@@ -128,3 +129,43 @@ What does OUR system need to do?
 Only then → solution
 
 Start with Q1.
+
+Q5 — Boundary Decision
+
+Now let's make the scenario more difficult.
+
+The restaurant owner explains:
+
+"The kitchen system is provided by another company. Our restaurant system receives the kitchen's order-status updates and stores them. The restaurant app gets the status from our restaurant system."
+
+Now we have additional information.
+
+Consider this statement:
+
+"Our restaurant system receives the Preparing status from the external kitchen system and stores it against the order."
+
+Answer:
+
+Q5:
+Classification: Inside
+
+
+Who is responsible: restaurant system
+
+
+What is the responsibility:receiving and storing the order-status update
+
+
+Why: The responsibility is inside our system because the restaurant system owns the responsibility of receiving the status sent by the external kitchen system and storing that status against the order. The kitchen system remains responsible for producing the status update.
+
+There are three systems now:
+
+Kitchen System
+     ↓
+Restaurant System
+     ↓
+Restaurant App
+
+The question is specifically about our restaurant system.
+
+Don't classify the statement based on the external kitchen system being mentioned. Focus on what our system actually does.
