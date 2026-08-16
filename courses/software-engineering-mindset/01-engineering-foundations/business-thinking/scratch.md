@@ -249,3 +249,183 @@ Don't guess
 Investigate
 
 Take Q6.
+
+🎯 Q7 — Don't Invent Information
+
+Now let's test whether you can distinguish possible information from confirmed information.
+
+Scenario
+
+The university says:
+
+"The enrollment system checks whether all required documents have been submitted."
+
+A developer says:
+
+"The system obviously needs the student's birth certificate, transcript, government ID, and recommendation letter."
+
+But the university has never told us that these are the required documents.
+
+Answer:
+
+Q7:
+
+Should we accept the developer's list as confirmed information requirements?
+
+No / Not yet.
+
+Why:
+The university has not confirmed which documents are actually
+required. The developer's list is only an assumption, so we should
+not treat it as a confirmed information requirement.
+
+What should we investigate instead?
+We should investigate which documents are actually required by the
+enrollment process and how the university determines whether all
+required documents have been submitted.
+
+What should we investigate instead?
+🧠 Remember
+
+Don't think:
+
+"Those documents sound reasonable."
+
+Think:
+
+"What evidence do we actually have?"
+
+This is another important engineering habit:
+
+Possible
+   ≠
+Confirmed
+
+Your turn.
+
+🎯 Q8 — Information Ownership
+
+Now we're going to combine what you've learned from Topics 019 and 020.
+
+Scenario
+Kitchen Staff
+      ↓
+Prepares food
+      ↓
+Kitchen System
+      ↓
+Updates status to "Preparing"
+      ↓
+Restaurant System
+      ↓
+Receives status
+
+The restaurant system needs to know:
+
+"Has preparation started?"
+
+Answer:
+
+Q8:
+
+Information needed:
+1. Order preparation status
+
+Who produces this information:
+Kitchen System
+
+Who owns the responsibility of producing/updating it:
+Kitchen System
+
+Is that responsibility inside or outside our system:
+Outside
+
+Why:
+The Kitchen System is responsible for updating the order's
+preparation status, while our Restaurant System only receives
+and uses that information. The Kitchen System is outside our
+system boundary.
+🧠 Important distinction
+
+Don't confuse:
+
+Who produces the information
+
+with:
+
+Who uses the information
+
+For example:
+
+Kitchen System
+      ↓
+Produces status
+      ↓
+Restaurant System
+      ↓
+Uses status
+
+The Restaurant System needs the information, but that doesn't automatically mean it owns the responsibility of producing it.
+
+Take Q8.
+
+🎯 Q9 — Final Exercise Before the Mastery Challenge
+
+Let's test this distinction with the university scenario.
+
+Scenario
+Student
+    ↓
+Submits documents
+    ↓
+Enrollment System
+    ↓
+Records submitted documents
+    ↓
+Registrar
+    ↓
+Reviews documents
+
+The enrollment system needs to know:
+
+Which documents the student submitted.
+
+Answer:
+
+Q9:
+
+Information needed:
+1. Which documents the student submitted.
+
+Who provides/produces this information:
+Student
+
+Who performs the actual business activity:
+Student
+
+What is our system responsible for:
+Recording the submitted documents.
+
+Is the information source inside or outside our system:
+Outside
+
+Why:
+The student is responsible for submitting the documents and
+therefore provides the information about which documents were
+submitted. The Enrollment System is responsible for recording
+that information. The student is outside our system boundary,
+while the Enrollment System is inside.
+Think carefully about the difference between:
+Student
+↓
+Actually submits documents
+
+and:
+
+Enrollment System
+↓
+Records submitted documents
+
+Don't combine those two responsibilities.
+
+Take Q9.
