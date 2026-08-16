@@ -1,122 +1,71 @@
-🎯 Exercise 021.1 — Business Activity → System Responsibility
+Exercise 021.4 — Information Needed by the System
 
-We're going to start very slowly.
+Now we're connecting Topic 020 — Information Thinking directly to Topic 021.
+
+You've already learned:
+
+A responsibility tells us what the system must do.
+
+Now we ask:
+
+What information does the system need in order to perform that responsibility?
 
 Scenario
 
-A restaurant has this process:
+A restaurant system must determine whether an order is eligible for cancellation.
 
-Customer
-   ↓
-Places order
-   ↓
+The known business rule is:
+
+An order can be cancelled only if it is unpaid and preparation has not started.
+
+We can represent that as:
+
+Cancellation request
+        ↓
 Restaurant System
-   ↓
-Records order
-   ↓
-Kitchen Staff
-   ↓
-Prepares food
+        ↓
+Is order unpaid?
+        ↓
+Has preparation NOT started?
+        ↓
+Determine eligibility
 
-Your job is not to model the entire process yet.
+The system therefore needs information about the order.
 
-We're going to isolate one responsibility.
+Q1 — Identify the Information
 
-Q1
+What information does the system need?
 
-Answer these:
-
-Q1:
-
-Business activity:
-Place an order
-
-Who performs the business activity:
-Customer
-
-What is their responsibility:
-Place the order
-
-What is the system responsible for:
-Record the order
-
-Why are the business activity and system responsibility different?
-The customer is responsible for placing the order, while the
-restaurant system is responsible for recording the order. They
-are different responsibilities because they are performed by
-different actors and represent different actions in the business
-process.
-⚠️ Important
-
-Don't answer:
-
-"The system handles the order."
-
-That's too broad.
-
-We want to identify the exact responsibility.
-
-Think:
-
-Customer
-   ↓
-Places order
-   ↓
-What does the customer actually do?
-
-Then:
-
-Restaurant System
-   ↓
-Records order
-   ↓
-What exactly is the system responsible for?
-Your turn: Q1 only.
-
-Q2 — Why Is "Handles the Order" Too Broad?
-
-We have these known responsibilities:
-
-Restaurant System
-   ↓
-Records order
-
-
-Restaurant System
-   ↓
-Receives preparation status
-
-
-Customer
-   ↓
-Views order status
-
-Someone says:
-
-"The restaurant system handles the order."
-
-Your task
-
-Explain why that statement is not precise enough for our system model.
+Give me at least two.
 
 Use:
 
-Q2:
+Q1:
 
-Why is "handles the order" too broad?
 
-"Handles the order" is too broad because it does not identify
-what specific responsibility the system performs.
+1.
+2.
+🧠 Think carefully
 
-What problem does this create when we're trying to understand
-the system's responsibilities?
+Don't give me implementation details such as:
 
-We cannot clearly determine what the system actually owns.
-"Handles" could mean recording the order, receiving information,
-updating information, making decisions, or other activities.
+❌ payment_status column
+❌ order database
+❌ API
+❌ cancellation table
 
-How should we describe the responsibilities instead?
+We're asking:
 
-We should describe each responsibility separately and precisely
-so that different responsibilities are not hidden behind one
-vague phrase.
+What does the system need to know?
+
+Think back to Topic 020.
+
+The business rule says:
+
+Unpaid
+AND
+Preparation has not started
+
+Therefore, what facts must the system know to evaluate that rule?
+
+Your turn — Q1 only.
