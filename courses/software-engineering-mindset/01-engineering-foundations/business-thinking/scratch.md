@@ -1,431 +1,435 @@
-Topic 020.1 — Responsibility → Information
+Next: Exercise 020.10 — Final Mastery Challenge
 
-Let's start with the first exercise.
+You've now worked through:
 
-Scenario
+020.1  Responsibility → Information
+020.2  Information vs Solution
+020.3  Information Sources
+020.4  Information Crossing Boundary
+020.5  Don't Invent Information
+020.6  Information vs Available Information
+020.7  Confirmed vs Assumed Information
+020.8  Information Ownership
+020.9  Full University Scenario
 
-The restaurant system has this responsibility:
+We're ready for the final mastery challenge.
 
-"The restaurant system determines whether an order can be cancelled."
-
-Your task is to identify at least two pieces of information the system may need in order to perform that responsibility.
-
-Use this format:
-
-Q1:
-
-
-Responsibility:
-Determine whether an order can be cancelled.
-
-
-Information needed:
-1. Order state
-2. Payment state
-
-
-Why:
-🧠 Important
-
-Don't think about:
-
-database columns
-tables
-APIs
-Java classes
-UI
-
-Think only:
-
-"What does the system need to know in order to perform this responsibility?"
-
-🎯 Topic 020.1 — Q2
-
-Now let's apply the same reasoning to a different domain.
+I won't give you the answer structure yet beyond the exercise itself. This time I want to see whether you can independently apply the complete model:
 
 Responsibility
+      ↓
+Information needed
+      ↓
+Information source
+      ↓
+Ownership
+      ↓
+System boundary
+      ↓
+Information flow
+      ↓
+Unknowns
+      ↓
+Engineering judgment
+🎯 Exercise 020.10 — Q1
 
-"The enrollment system checks whether all required documents have been submitted."
+Scenario:
 
-Give me at least two pieces of information the system may need.
+A restaurant currently handles cancellation requests like this:
+
+Customer
+   ↓
+Requests cancellation
+   ↓
+Restaurant Staff
+   ↓
+Checks order status
+   ↓
+Restaurant Staff
+   ↓
+Determines whether cancellation is allowed
+   ↓
+Restaurant System
+   ↓
+Records cancellation decision
+
+The owner says:
+
+"We want the system to determine whether the order is eligible for cancellation. It needs to know whether the order has been paid and whether preparation has started."
+
+Q1 — Identify the Responsibility
+Q1:
+
+Current owner:
+Restaurant Staff
+
+Proposed owner:
+Restaurant System
+
+Responsibility:
+Determine whether cancellation is allowed.
+
+Don't move to the information yet.
+
+First identify exactly what responsibility is being transferred from the restaurant staff to the system.
+
+🎯 Q2 — Identify the Information Needed
+
+The owner says:
+
+"It needs to know whether the order has been paid and whether preparation has started."
+
+Now identify the information the system needs.
 
 Use:
 
 Q2:
 
-
 Information needed:
-1. Required documents
-2. Submitted documents
-
+1. Whether the order has been paid
+2. Whether preparation has started
 
 Why:
+The system needs this information to determine whether the
+cancellation is allowed.
+Think carefully
 
-Don't think about databases yet.
+Don't answer with:
 
-Think:
+"Cancellation rules."
 
-What must the system know to perform this responsibility?
+That's the rule, not the information.
 
-🎯 Q3 — Responsibility → Information
+Ask:
 
-Now let's try another one.
+What facts does the system need to know in order to apply the cancellation rule?
 
-Responsibility
+Take Q2.
+🎯 Q3 — Identify the Information Sources
 
-"The hospital system determines whether a selected doctor is available."
+Now we go one level deeper.
 
-What information might the system need?
+We know the system needs:
+
+1. Whether the order has been paid
+2. Whether preparation has started
+
+But where does each piece of information come from?
 
 Use:
 
 Q3:
 
-Information needed:
-1. Doctor schedule / availability
-2. Selected doctor
+Information:
+Whether the order has been paid
 
-Potential additional information:
-3. Type of appointment
+Source:
+Needs investigation
+
+Inside / Outside our system:
+Needs investigation
 
 Why:
-The system needs to know the selected doctor's availability
-in order to determine whether an appointment can be scheduled.
-Other information, such as appointment type, may also affect
-availability, but we would need to investigate whether that
-is actually part of the hospital's scheduling rules.
+The scenario tells us that payment status is needed, but it
+does not tell us where the payment information comes from.
 
-Think carefully about:
 
-What does the system need to know before it can determine whether the doctor is available?
+Information:
+Whether preparation has started
 
-Don't think about how we would store it yet.
+Source:
+Needs investigation
 
-Q4 — Information vs. Business Rule
+Inside / Outside our system:
+Needs investigation
 
-Now we're going to make it slightly harder.
+Why:
+The scenario tells us that preparation status is needed, but it
+does not identify who or what produces that information. We
+should investigate its source instead of assuming that restaurant
+staff provides it.
+🧠 Important
 
-Consider this statement:
+The scenario does not explicitly tell us who produces these pieces of information.
 
-"Students can cancel their enrollment application only before the registrar has approved it."
+So don't automatically say:
 
-Identify:
+"Payment system."
+
+or:
+
+"Kitchen system."
+
+If we don't know, say:
+
+Needs investigation.
+
+This is testing whether you can distinguish:
+
+Information we need
+        ↓
+Source we actually know
+        ↓
+Source we don't know
+
+Take Q3.
+
+🎯 Q4 — Information Ownership
+
+Now let's make the distinction even harder.
+
+Suppose investigation reveals:
+
+The kitchen system updates the order's preparation status whenever food preparation begins.
+
+Our restaurant system needs that information to determine cancellation eligibility.
+
+Answer:
 
 Q4:
 
-Business rule:
-Students can only cancel their enrollment application before
-the registrar has approved it.
+Information:
+Whether preparation has started
 
-Information needed:
-1. Current enrollment application status
-2. Whether the registrar has approved the application
-
-Why:
-The system needs this information to determine whether the
-cancellation request is still allowed under the business rule.
-
-Separate these two:
-
-What is the rule?
-
-from:
-
-What must the system know to apply the rule?
-
-Take your time.
-
-🎯 Q5 — Information Source
-
-Now let's add the next layer.
-
-We know:
-
-Restaurant System
-      ↓
-Needs preparation status
-
-Scenario:
-
-Kitchen Staff
-      ↓
-Prepares food
-      ↓
+Who produces/updates the information:
 Kitchen System
-      ↓
-Updates order status to "Ready"
-      ↓
-Restaurant System
 
-Answer:
+Who owns the responsibility:
+Kitchen System
 
-Q5:
-
-Information needed:
-1. Current food order status
-
-Who provides/produces this information:
-1. Kitchen System
-
-Is the source inside or outside our system:
+Inside / Outside our system:
 Outside
 
 Why:
-The Kitchen System is outside our system boundary and
-produces the order status that the Restaurant System needs
-to receive.
-Think carefully
+The Kitchen System is responsible for updating the preparation
+status, and it is outside our Restaurant System's boundary.
 
-Don't say:
-
-"Restaurant System provides it."
-
-Ask:
-
-Who actually produces the information that our system needs?
-
-This connects Topic 019 (system boundary) with Topic 020 (information).
-
-Take it one step at a time.
-
-🎯 Q6 — Information Needed vs. Information Available
-
-Now let's make this harder.
-
-Scenario:
-
-"The hospital system should check whether the selected doctor is available."
-
-We know the system needs doctor availability information.
-
-But we do not know where that information comes from.
-
-Answer:
-
-Q6:
-
-Information needed:
-1. Doctor availability information
-
-What do we know about where this information comes from?
-We don't know yet.
-
-What do we still need to investigate?
-We need to investigate where the hospital gets the doctor's
-availability or schedule information and who is responsible
-for maintaining it.
-
-Why:
-The system needs reliable doctor availability information to
-determine whether the selected doctor is available, but the
-scenario does not tell us where that information comes from.
-We should investigate this instead of assuming its source.
-🧠 Be careful
-
-Don't invent:
-
-"The receptionist provides it."
-
-Don't invent:
-
-"The doctor's calendar provides it."
-
-Don't invent:
-
-"The hospital database provides it."
-
-The scenario hasn't told us.
-
-Your job is to recognize the gap in our knowledge.
-
-This is another major engineering habit:
-
-Information needed
-        ↓
-Source unknown
-        ↓
-Don't guess
-        ↓
-Investigate
-
-Take Q6.
-
-🎯 Q7 — Don't Invent Information
-
-Now let's test whether you can distinguish possible information from confirmed information.
-
-Scenario
-
-The university says:
-
-"The enrollment system checks whether all required documents have been submitted."
-
-A developer says:
-
-"The system obviously needs the student's birth certificate, transcript, government ID, and recommendation letter."
-
-But the university has never told us that these are the required documents.
-
-Answer:
-
-Q7:
-
-Should we accept the developer's list as confirmed information requirements?
-
-No / Not yet.
-
-Why:
-The university has not confirmed which documents are actually
-required. The developer's list is only an assumption, so we should
-not treat it as a confirmed information requirement.
-
-What should we investigate instead?
-We should investigate which documents are actually required by the
-enrollment process and how the university determines whether all
-required documents have been submitted.
-
-What should we investigate instead?
-🧠 Remember
-
-Don't think:
-
-"Those documents sound reasonable."
-
-Think:
-
-"What evidence do we actually have?"
-
-This is another important engineering habit:
-
-Possible
-   ≠
-Confirmed
-
-Your turn.
-
-🎯 Q8 — Information Ownership
-
-Now we're going to combine what you've learned from Topics 019 and 020.
-
-Scenario
-Kitchen Staff
-      ↓
-Prepares food
-      ↓
-Kitchen System
-      ↓
-Updates status to "Preparing"
-      ↓
-Restaurant System
-      ↓
-Receives status
-
-The restaurant system needs to know:
-
-"Has preparation started?"
-
-Answer:
-
-Q8:
-
-Information needed:
-1. Order preparation status
-
-Who produces this information:
-Kitchen System
-
-Who owns the responsibility of producing/updating it:
-Kitchen System
-
-Is that responsibility inside or outside our system:
-Outside
-
-Why:
-The Kitchen System is responsible for updating the order's
-preparation status, while our Restaurant System only receives
-and uses that information. The Kitchen System is outside our
-system boundary.
-🧠 Important distinction
-
-Don't confuse:
-
-Who produces the information
-
-with:
-
-Who uses the information
-
-For example:
+Think about the difference between:
 
 Kitchen System
-      ↓
-Produces status
-      ↓
-Restaurant System
-      ↓
-Uses status
-
-The Restaurant System needs the information, but that doesn't automatically mean it owns the responsibility of producing it.
-
-Take Q8.
-
-🎯 Q9 — Final Exercise Before the Mastery Challenge
-
-Let's test this distinction with the university scenario.
-
-Scenario
-Student
-    ↓
-Submits documents
-    ↓
-Enrollment System
-    ↓
-Records submitted documents
-    ↓
-Registrar
-    ↓
-Reviews documents
-
-The enrollment system needs to know:
-
-Which documents the student submitted.
-
-Answer:
-
-Q9:
-
-Information needed:
-1. Which documents the student submitted.
-
-Who provides/produces this information:
-Student
-
-Who performs the actual business activity:
-Student
-
-What is our system responsible for:
-Recording the submitted documents.
-
-Is the information source inside or outside our system:
-Outside
-
-Why:
-The student is responsible for submitting the documents and
-therefore provides the information about which documents were
-submitted. The Enrollment System is responsible for recording
-that information. The student is outside our system boundary,
-while the Enrollment System is inside.
-Think carefully about the difference between:
-Student
-↓
-Actually submits documents
+→ owns updating preparation status
 
 and:
 
-Enrollment System
+Restaurant System
+→ needs and uses preparation status
+
+Don't let "our system needs the information" turn into "our system owns the information."
+
+Take Q4.
+
+🎯 Q5 — Information Flow Across the Boundary
+
+Now let's put everything together.
+
+We know:
+
+The Kitchen System updates preparation status.
+The Restaurant System needs preparation status.
+The Restaurant System uses it to determine whether cancellation is allowed.
+
+Complete:
+
+Q5:
+
+Source:
+Kitchen System
+
+Information:
+Preparation status
+
 ↓
-Records submitted documents
 
-Don't combine those two responsibilities.
+Kitchen System sends the preparation status
 
-Take Q9.
+↓
+
+Our system receives:
+Preparation status
+
+↓
+
+Our system uses the information to:
+Determine whether cancellation is allowed.
+Important
+
+Don't jump to implementation.
+
+Don't say:
+
+"API"
+
+"Database"
+
+"Webhook"
+
+"HTTP request"
+
+We haven't established any of those.
+
+We're only describing the information flow, not the technical mechanism.
+
+Think:
+
+Who produces it?
+        ↓
+What information?
+        ↓
+Crosses boundary
+        ↓
+Who receives it?
+        ↓
+What does our system do with it?
+
+Take Q5.
+
+🎯 Q6 — Final Engineering Judgment
+
+Now we combine everything.
+
+The restaurant owner says:
+
+"Since the restaurant system needs the preparation status, let's make the restaurant system responsible for updating it too. That way everything is in one system."
+
+Would you agree?
+
+Q6:
+
+Yes / No:
+No
+
+Why:
+The Restaurant System needing the preparation status does not
+mean it should own the responsibility of producing or updating
+that information. The Kitchen System is responsible for updating
+the preparation status, while our Restaurant System receives and
+uses that information to determine whether cancellation is allowed.
+
+What responsibility currently belongs to the Kitchen System?
+Updating the order's preparation status.
+
+What responsibility belongs to our Restaurant System?
+Receiving and using the preparation status to determine whether
+the cancellation is allowed.
+
+
+What responsibility currently belongs to the Kitchen System?
+
+
+What responsibility belongs to our Restaurant System?
+Think carefully.
+
+Use everything you've learned:
+
+Needs information
+        ≠
+Owns responsibility for producing it
+
+And:
+
+Uses information
+        ≠
+Owns the source responsibility
+
+Don't think about technical difficulty.
+
+Think about responsibility ownership and system boundaries.
+
+🎯 Q7 — Unknowns Before Changing Ownership
+
+The owner now says:
+
+"Fine. But eventually we might want the Restaurant System to update the preparation status itself."
+
+Before deciding whether that responsibility should move into our system, what would we need to investigate?
+
+Give me at least 3.
+
+Q7:
+
+
+1. We don't know whether what causes the status to change
+2. We don't know whether what will affect on moving the responsibilities
+3. We don't know whether the Kitchen System has other responsibilities tied to the status
+
+
+Why:
+
+Think about:
+
+Who currently owns the preparation-status decision
+What causes the status to change
+Whether the Kitchen System has other responsibilities tied to the status
+Whether moving the responsibility would change the business process
+Whether the restaurant has actually decided to transfer that responsibility
+
+Don't design the solution yet.
+
+Q8 — Final Mastery Challenge
+
+Now let's bring the entire exercise together.
+
+The owner says:
+
+"The Restaurant System needs payment status and preparation status to determine whether a cancellation is allowed."
+
+Complete the reasoning chain:
+
+Q8:
+
+Business responsibility:
+Determine whether a cancellation is allowed.
+
+Current responsibility owner:
+Restaurant Staff
+
+Proposed responsibility owner:
+Restaurant System
+
+Information needed:
+1. Payment status
+2. Preparation status
+
+Information source:
+1. Needs investigation
+2. Kitchen System
+
+Which information source is currently unknown?
+The source of the payment status is unknown.
+
+What does our Restaurant System do with the information?
+It uses the payment status and preparation status to determine
+whether the cancellation is allowed.
+
+What still needs to be investigated?
+1. Where the payment status comes from.
+2. How the payment status is produced or updated.
+3. Whether there are other business rules or information needed
+   to determine cancellation eligibility.
+
+What still needs to be investigated?
+🧠 Your complete mental model
+
+Try to reason through:
+
+Business responsibility
+        ↓
+Who currently owns it?
+        ↓
+Who is proposing to own it?
+        ↓
+What information is needed?
+        ↓
+Where does each piece of information come from?
+        ↓
+Does it cross our system boundary?
+        ↓
+What does our system do with it?
+        ↓
+What don't we know yet?
+        ↓
+Engineering judgment
+
+This is the final question of 020.10.
+
+Take it slowly. I care more about your reasoning than getting every sentence perfect.
