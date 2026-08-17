@@ -1,383 +1,475 @@
-🎯 Exercise 021.6 — Responsibility Ownership vs. Information Ownership
+🎯 Exercise 021.7 — Information Flow and Responsibility Mapping
 
 We're continuing Topic 021.
 
-You now understand:
+So far, you've learned to separate:
 
-Business activity
-      ↓
 Responsibility
-      ↓
-Information needed
-      ↓
+        ≠
+Information
+        ≠
 Information source
-      ↓
-System responsibility
+        ≠
+Information user
 
-This exercise focuses on a subtle but important distinction:
-
-Who uses information is not necessarily the same as who owns the responsibility for producing it.
+Now we're going to combine them into an information flow model.
 
 Scenario
 
-A restaurant system determines whether an order can be cancelled.
+A restaurant has this process:
 
-The rule is:
-
-An order can be cancelled only if it is unpaid and preparation has not started.
-
-The Restaurant System needs:
-
-Payment status
-Preparation status
-
-We know:
-
+Customer
+   ↓
+Requests cancellation
+   ↓
 Restaurant System
-    ↓
-Uses payment status
-Uses preparation status
-    ↓
-Determines cancellation eligibility
-
-But the sources of those statuses are not yet established.
-
-Q1 — Identify the Responsibility
-
-Complete:
-
-Q1:
-
-Responsibility:
-Determine whether an order can be cancelled
-        ↓
-Owner:
-Restaurant System
-        ↓
-Needs:
-Payment status
-Preparation status
-        ↓
-User:
-Restaurant System
-🧠 Important
-
-Don't answer:
-
-"The Restaurant System owns everything because it uses the information."
-
-Instead ask:
-
-What exactly is the responsibility?
-        ↓
-Who owns THAT responsibility?
-
-For example:
-
-Determine cancellation eligibility
-        ↓
-Restaurant System
-
-That doesn't tell us who owns:
-
-Produce payment status
-Produce preparation status
-
-Those are separate responsibilities.
-
-Your turn — Q1 only.
-
-Q2 — Information Producer vs. Information User
-
-Consider:
-
-Restaurant System
-        ↓
+   ↓
+Needs payment status
+   ↓
 Needs preparation status
-        ↓
-Uses it to determine cancellation eligibility
-
-Answer:
-
-Q2:
-
-Who uses the preparation status?
-Restaurant System
-
-
-Who produces or updates the preparation status?
-Unknown source / needs investigation
-
-
-Do we know the producer from the scenario?
-
-Yes / No:
-No
-
-
-Why?
-The scenario does not identify who produces or updates the
-preparation status.
-
-
-Does the Restaurant System automatically become the producer just
-because it uses the information?
-
-Yes / No:
-No
-
-
-Why?
-Using information and producing or updating information are
-separate responsibilities. The Restaurant System may use the
-preparation status to determine whether cancellation is allowed,
-but that does not establish that it owns the responsibility of
-producing or updating the status.
-🧠 Remember
-USES information
-      ≠
-PRODUCES information
-
-Don't invent the producer.
-
-If the scenario doesn't tell you, unknown is the correct engineering answer.
-
-Your turn — Q2 only.
-
-Q3 — What If the Producer Is Discovered?
-
-Suppose the restaurant tells you:
-
-"The kitchen staff updates the preparation status whenever food preparation begins."
-
-Now we have new information.
-
-Answer:
-
-Q3:
-
-Who produces/updates the preparation status?
-Kitchen staff
-
-
-Who uses the preparation status?
-Restaurant System
-
-
-Who owns the responsibility of updating it?
-Kitchen staff
-
-
-Who owns the responsibility of determining whether
-cancellation is allowed?
-Restaurant System
-
-
-Are these the same responsibility?
-
-Yes / No:
-No.
-
-
-Why?
-Updating the preparation status and determining whether an order
-can be cancelled are two different responsibilities owned by
-different parties. The kitchen staff is responsible for updating
-the preparation status, while the Restaurant System uses that
-information to determine whether cancellation is allowed.
-
-Think carefully about responsibility ownership, not just information flow.
-
-Exercise 021.6 — Q4: Boundary Defense
-
-Now we test whether you can defend the boundary when someone makes a seemingly reasonable argument.
-
-We now know:
-
-Kitchen Staff
-   ↓
-Updates preparation status
-   ↓
-[Information crosses boundary]
-   ↓
-Restaurant System
-   ↓
-Uses preparation status
-   ↓
-Determines whether cancellation is allowed
-
-A developer says:
-
-"Since the kitchen staff is outside our Restaurant System, the preparation status shouldn't be part of our system model."
-
-Q4 — Defend the System Model
-
-Do you agree?
-
-Q4:
-
-Yes / No:
-No.
-
-Why:
-The preparation status is relevant to our system because the
-Restaurant System needs it to determine whether an order can be
-cancelled. The fact that the Kitchen Staff produces the information
-outside our system does not make the information irrelevant to our
-system.
-
-
-Is preparation status relevant to our Restaurant System?
-
-Yes / No:
-Yes.
-
-Why:
-The Restaurant System uses the preparation status to evaluate the
-cancellation rule and determine whether cancellation is allowed.
-
-
-Does information need to be produced inside our system
-for our system to use it?
-
-Yes / No:
-No.
-
-Why:
-Information can be produced by an external actor or system and then
-used by our system. Producing or updating the preparation status is
-a different responsibility from using that information to determine
-whether cancellation is allowed.
-
-
-What is the Kitchen Staff responsible for?
-Updating the preparation status.
-
-
-What is the Restaurant System responsible for?
-Using the preparation status and payment status to determine whether
-the order is eligible for cancellation.
-🧠 Important distinction
-
-The developer is mixing up:
-
-WHO PRODUCES THE INFORMATION
-
-with:
-
-WHETHER OUR SYSTEM NEEDS THE INFORMATION
-
-These are different questions.
-
-For example:
-
-OUTSIDE OUR SYSTEM
-
-
-Kitchen Staff
-   ↓
-Updates preparation status
-   ↓
-Preparation status
-   │
-   │ crosses boundary
-   ↓
-
-
-INSIDE OUR SYSTEM
-
-
-Restaurant System
-   ↓
-Uses preparation status
-   ↓
-Determines cancellation eligibility
-
-The fact that Kitchen Staff produces the information outside our system does not make the information irrelevant to our system.
-
-Your job is to defend that distinction.
-
-Answer Q4 only.
-
-🏁 Exercise 021.6 — Q5: Final Boundary Challenge
-
-This is the final question for Exercise 021.6.
-
-We've established:
-
-Kitchen Staff
-   ↓
-Updates preparation status
-   ↓
-Preparation status
-   ↓
-Restaurant System
-   ↓
-Uses preparation status
-   +
-Payment status
    ↓
 Evaluates cancellation rule
    ↓
 Determines whether cancellation is allowed
 
-Now I want you to explain the whole model in your own reasoning.
+We later investigated one source:
 
-Q5
+Kitchen Staff
+   ↓
+Updates preparation status
+   ↓
+Restaurant System
+
+The payment-status source is still unknown.
+
+Q1 — Map the Information Flow
+
+Complete the following:
+
+Q1: 
+ 
+Information: 
+Preparation status 
+ 
+Produced by: 
+kitchen staff 
+ 
+Production responsibility: 
+updates preparation status
+ 
+Used by: 
+restaurant system
+ 
+Used for: 
+Determines whether cancellation is allowed
+ 
+Producer inside / outside our system: 
+outside
+ 
+Information user inside / outside our system: 
+inside
+ 
+Why can information produced outside our system 
+still be used by our system? 
+Information produced outside our system can still be used by our system because an external actor or system can provide information that our system needs to perform one of its own responsibilities. The information crosses the system boundary and becomes an input to our system.
+________________________
+🧠 Think carefully
+
+We're separating two boundaries:
+
+Responsibility boundary
+Kitchen Staff
+   ↓
+Updates preparation status
+   ↓
+OUTSIDE OUR SYSTEM
+Information usage
+Preparation status
+   ↓
+Restaurant System
+   ↓
+Uses it
+   ↓
+INSIDE OUR SYSTEM
+
+Don't say:
+
+"Because preparation status belongs to the kitchen."
+
+The information itself isn't necessarily "owned by the kitchen" in the same sense as the responsibility.
+
+We're asking:
+
+Who produces/updates it?
+Who uses it?
+What does the user use it for?
+Your turn — Q1 only.
+
+Now Q2 will make this harder by introducing two pieces of information with different levels of certainty.
+
+Q2:
+
+Information 1:
+Payment status
+
+Produced by:
+Unknown source / needs investigation
+
+Known or unknown:
+Unknown
+
+Used by:
+Restaurant System
+
+Used for:
+Determines whether cancellation is allowed
+
+
+Information 2:
+Preparation status
+
+Produced by:
+Kitchen Staff
+
+Known or unknown:
+Known
+
+Used by:
+Restaurant System
+
+Used for:
+Determines whether cancellation is allowed
+
+
+What is the difference between these two information flows?
+
+The source of the payment status is still unknown and needs
+investigation, while the preparation status is known to be
+produced and updated by the Kitchen Staff. Both pieces of
+information are used by the Restaurant System to determine
+whether cancellation is allowed.
+
+Don't assume the payment-status source.
+
+Q3 — Information Dependency
+
+Now let's go one level deeper.
+
+Suppose the Restaurant System has payment status, but it does not have preparation status.
+
+The system knows:
+
+Payment status = Unpaid
+Preparation status = Unknown
+
+The cancellation rule is:
+
+An order can be cancelled only if it is unpaid and preparation has not started.
+
+Q3
+
+Q3:
+
+Can the Restaurant System confidently determine that cancellation
+is allowed?
+
+Yes / No:
+No.
+
+Why:
+The system cannot confidently determine that cancellation is allowed
+because the preparation status is missing. The business rule requires
+knowing that the order is unpaid AND that preparation has not started.
+We know the order is unpaid, but we do not know the preparation
+status.
+
+
+What required information is missing?
+Preparation status.
+
+
+What should the system do with this situation?
+We need to investigate what the business expects the system to do
+when the required preparation status is unavailable. We should not
+assume that preparation has not started or automatically decide
+whether cancellation should be allowed.
+
+Don't design the technical solution yet.
+Explain the engineering reasoning.
+
+Think carefully about the difference between:
+
+Unpaid
++
+Preparation NOT started
+
+and:
+
+Unpaid
++
+Preparation status UNKNOWN
+
+Answer Q3 only.
+
+🎯 Exercise 021.7 — Q4: Conflicting Information
+
+Now we're going to add another layer of reasoning.
+
+So far, we've handled:
+
+Information available
+        ↓
+Information missing
+        ↓
+Don't assume
+        ↓
+Investigate
+
+Now suppose information is available, but two sources disagree.
+
+Scenario
+
+The Restaurant System receives:
+
+Payment status:
+Unpaid
+
+The Kitchen Staff says:
+
+Preparation status:
+Preparation has started
+
+The Restaurant System also receives another update saying:
+
+Preparation status:
+Preparation has NOT started
+
+Now we have a conflict.
+
+The cancellation rule is:
+
+An order can be cancelled only if it is unpaid and preparation has not started.
+
+Q4 — Analyze the Conflict
+
+Answer:
+
+Q4:
+
+What information do we have?
+
+1. Payment status:
+Unpaid
+
+2. Preparation status:
+Conflicting:
+- Preparation has started
+- Preparation has NOT started
+
+
+Is the information consistent?
+
+Yes / No:
+No.
+
+Why:
+Two sources provide conflicting information about the preparation
+status. One says preparation has started, while the other says
+preparation has not started.
+
+
+Can the Restaurant System confidently determine
+that cancellation is allowed?
+
+Yes / No:
+No.
+
+Why:
+The cancellation rule requires the order to be unpaid and for
+preparation not to have started. Although the payment status is
+unpaid, the preparation status is conflicting, so the system cannot
+confidently determine whether the business rule is satisfied.
+
+
+What should we investigate before deciding how
+the system should handle this conflict?
+
+We should investigate why the information conflicts, which source
+is authoritative, which status should be considered valid, and what
+the business expects the system to do when the sources disagree.
+
+
+Should we simply choose one preparation status
+and ignore the other?
+
+Yes / No:
+No.
+
+Why:
+We do not yet know which source or status is authoritative. Choosing
+one without a defined business rule would be an unsupported
+assumption.
+🧠 Important
+
+Don't immediately decide:
+
+"The latest status must be correct."
+
+or:
+
+"The Kitchen Staff must always be correct."
+
+Those might eventually be valid business rules, but the scenario hasn't established them.
+
+We need to investigate:
+
+Conflicting information
+        ↓
+Why are the values different?
+        ↓
+Which source is authoritative?
+        ↓
+Which update is valid?
+        ↓
+What happens when sources disagree?
+
+This is another example of engineering judgment before implementation.
+
+Your job isn't to invent the conflict-resolution rule.
+
+Your job is to identify that a conflict exists and that the business needs to define how it should be handled.
+
+Answer Q4 only.
+
+🏁 Exercise 021.7 — Q5: Final Information-Flow Judgment
+
+This is the final question of Exercise 021.7.
+
+You've now handled three information states:
+
+KNOWN
+↓
+We have reliable information.
+
+
+UNKNOWN
+↓
+We don't have the required information.
+
+
+CONFLICTING
+↓
+We have information, but the sources disagree.
+
+These states should not be treated the same way.
+
+Q5 — Final Judgment
+
+Imagine you're documenting the Restaurant System's cancellation responsibility.
 
 Complete:
 
 Q5:
 
-Who produces the preparation status? kitchen staff 
+System responsibility:
+Determine whether the order is eligible for cancellation.
 
 
-What is their responsibility? updates the preparation status 
+Required information:
+1. Payment status
+2. Preparation status
 
 
-Who uses the preparation status? restaurant system 
+Case A:
+Payment status = Unpaid
+Preparation status = Not started
+
+Can the system evaluate the cancellation rule?
+
+Yes / No:
+Yes.
+
+Why:
+Both required conditions are known and satisfied: the order is unpaid
+and preparation has not started. Therefore, the cancellation rule can
+be evaluated.
 
 
-What does our Restaurant System use it for? evaluate the cancellation rule/ determines whether the cancellation is allowed 
+Case B:
+Payment status = Unpaid
+Preparation status = Unknown
+
+Can the system confidently determine that cancellation is allowed?
+
+Yes / No:
+No.
+
+Why:
+The preparation status is unknown, so the system cannot determine
+whether the condition that preparation has not started is satisfied.
 
 
-Is the preparation-status responsibility inside or outside
-our system? outside 
+Case C:
+Payment status = Unpaid
+Preparation status = Conflicting
+
+Can the system confidently determine that cancellation is allowed?
+
+Yes / No:
+No.
+
+Why:
+The preparation status is conflicting, so the system does not know
+which value is authoritative and therefore cannot confidently
+evaluate the cancellation rule.
 
 
-Is the preparation status itself relevant to our system?
+What should an engineer document when required information
+is unknown or conflicting?
+
+The engineer should document that the required information is
+unavailable or conflicting, identify the affected business decision,
+and record what needs to be investigated with the business.
 
 
-Why? Yes, It complies an important role on how will the restaurant system evaluates the cancellation rule based on that information 
+Why should we avoid inventing a value for missing or conflicting
+information?
+
+Because inventing a value could cause the system to make an incorrect
+business decision. The value should be based on evidence or an
+explicitly defined business rule.
 
 
-What is the key difference between:
 
-"producing information"
 
-and
 
-"using information"?Producing information means creating or updating a piece of information and therefore owning the responsibility for that information. Using information means consuming that information to perform another responsibility, such as evaluating a business rule.
-🧠 Final challenge
+Why should we avoid inventing a value for missing or conflicting
+information?
+🧠 Your mental model
 
-Then defend this statement:
+Use:
 
-"The preparation status is produced outside our system, but it is still part of our system model."
+Required information
+        ↓
+What is its state?
+        ↓
+ ┌──────┼─────────┐
+ ↓      ↓         ↓
+Known  Unknown  Conflicting
+ ↓      ↓         ↓
+Evaluate  Investigate  Investigate
+rule      missing      conflict
 
-Explain why this statement is correct.
+The important part is not to jump directly into implementation.
 
-Don't just say:
+For example, don't say:
 
-"Because the system needs it."
+"If unknown, set it to false."
 
-Explain the relationship between:
+That is a system behavior decision.
 
-Source
-   ↓
-Information
-   ↓
-System
-   ↓
-Responsibility
+First ask:
 
-Take Q5 only.
+What does the business want the system to do when the information is unavailable or contradictory?
+
+Your turn — Q5 only.
