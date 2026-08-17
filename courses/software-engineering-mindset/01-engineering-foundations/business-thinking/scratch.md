@@ -442,79 +442,62 @@ Now we're going to put everything together.
 Q5 — Complete the Reasoning Chain
 
 Complete this:
-
 Q5:
-
 
 Customer
    ↓
 Business activity:
-____________________________
-
-
+Customer requests cancellation
 
 
    ↓
-
-
 
 
 Restaurant System
    ↓
 System responsibility:
-____________________________
-
-
+Determine whether the order is eligible for cancellation
 
 
    ↓
-
-
 
 
 Information needed:
-1. _________________________
-2. _________________________
-
-
+1. Payment status
+2. Preparation status
 
 
    ↓
-
-
 
 
 Information sources:
-1. _________________________
-2. _________________________
-
-
+1. Payment status → Unknown / needs investigation
+2. Preparation status → Unknown / needs investigation
 
 
    ↓
-
-
 
 
 Business rule:
-____________________________
-
-
+An order can be cancelled only if it is unpaid and preparation
+has not started.
 
 
    ↓
-
-
 
 
 What the system does:
-____________________________
-
-
+The system uses the payment status and preparation status to
+evaluate the business rule and determine whether cancellation
+is allowed.
 
 
    ↓
 
+
+What remains unknown:
+Who produces or provides the payment status and preparation status,
+and how those information sources interact with our system.
 
 
 
@@ -544,3 +527,36 @@ And remember the principle you've been practicing throughout Topic 020 and 021:
 Don't assign a responsibility to our system simply because our system needs the information involved in that responsibility.
 
 Take your time and answer Q5 only.
+
+🎯 Exercise 021.5 — Final Challenge
+
+We need to finish the last question before marking the exercise complete.
+
+Developer says:
+
+“Since the system needs the preparation status, let's make the Restaurant System responsible for updating it too.”
+
+Your turn
+Q5 — Final Challenge:
+
+Yes / No:
+No.
+
+Why:
+Needing preparation status does not mean that the Restaurant System
+should be responsible for producing or updating it. Producing or
+updating the preparation status and using that information to
+determine whether cancellation is allowed are different
+responsibilities. We should first investigate who currently owns
+the responsibility of updating the preparation status before
+assigning it to our system.
+
+Use this principle:
+
+System needs information
+        ≠
+System produces information
+
+Think about responsibility ownership, not whether the system technically could update the status.
+
+Answer this part only.
