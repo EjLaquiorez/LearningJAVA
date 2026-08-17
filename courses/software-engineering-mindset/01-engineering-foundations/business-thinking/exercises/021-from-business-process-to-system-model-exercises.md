@@ -1,53 +1,50 @@
-🎯 Exercise 021.10 — Q5: Dependency vs. Responsibility
+🎯 Topic 021 — Mastery Review Challenge
 
-You've correctly built the flow:
+You've passed the guided exercise. Now we test whether you can transfer the reasoning to a new scenario.
 
-Kitchen Staff
-      ↓
-updates
-      ↓
-Preparation Status
-      ↓
-Restaurant System
-      ↓
-determines
-      ↓
-Cancellation Eligibility
+This time, forget the restaurant example.
 
-Now we're going to test whether you can distinguish depending on information from owning the decision.
+New Scenario: University Enrollment
 
-Choose ONE where applicable
-A. Business Activity
-B. System Responsibility
-C. Information
-D. Information Producer
-E. Information User
-F. Business Rule
-5.1
+A student requests enrollment in a course.
 
-"The Restaurant System cannot evaluate cancellation eligibility without preparation status."
+The Enrollment System is responsible for:
 
-What is the main concept being described?
+Determining whether the student is eligible to enroll.
 
-Type:
-________________________________
+The university has a rule:
+
+A student may enroll only if tuition payment is confirmed and the course still has available seats.
+
+The Enrollment System needs:
+
+1. Payment status
+2. Seat availability
+
+The Finance Office updates payment status.
+
+The Registrar's Office updates seat availability.
+
+Current situation:
+
+Payment status:
+Confirmed
 
 
-Why:
-________________________________
-________________________________
+Seat availability:
+Unknown
+Q1 — Responsibility Ownership
 
-💡 Hint:
+Who owns the responsibility of determining whether the student is eligible to enroll?
 
-Ask:
+Choose one:
 
-Is this describing who produces information, what information is needed, or what the system must accomplish?
+A. Student
+B. Finance Office
+C. Registrar's Office
+D. Enrollment System
 
-5.2
-
-"The Kitchen Staff is responsible for updating preparation status."
-
-What is the main concept?
+Your answer:
 
 Type:
 ________________________________
@@ -56,72 +53,188 @@ ________________________________
 Why:
 ________________________________
 ________________________________
-5.3
+Q2 — Information
 
-"The Restaurant System depends on the Kitchen Staff for preparation-status information."
+Which are the required pieces of information?
 
-What is the main concept?
+Choose all that apply:
 
-Type:
+A. Payment status
+B. Seat availability
+C. Student's favorite subject
+D. Course instructor's name
+
+Your answer:
+
 ________________________________
 
+Why?
 
-Why:
 ________________________________
 ________________________________
+Q3 — Information Producers
+3.1
 
-⚠️ Be careful here.
+Who produces/updates payment status?
 
-The statement does not say:
+A. Student
+B. Finance Office
+C. Registrar's Office
+D. Enrollment System
 
-"Kitchen Staff decides whether cancellation is allowed."
+Your answer:
 
-It says the Restaurant System depends on them for information.
+________________________________
 
-5.4
+Why?
 
-"The Kitchen Staff owns the responsibility of determining whether an order can be cancelled."
+________________________________
+________________________________
+3.2
 
-Is this statement consistent with our scenario?
+Who produces/updates seat availability?
+
+A. Student
+B. Finance Office
+C. Registrar's Office
+D. Enrollment System
+
+Your answer:
+
+________________________________
+
+Why?
+
+________________________________
+________________________________
+Q4 — Information User
+
+Who uses payment status and seat availability to determine enrollment eligibility?
+
+Choose one:
+
+A. Student
+B. Finance Office
+C. Registrar's Office
+D. Enrollment System
+
+Your answer:
+
+________________________________
+
+Why?
+
+________________________________
+________________________________
+Q5 — Dependency
+
+The Enrollment System depends on the Registrar's Office for seat availability.
+
+Does this mean the Registrar's Office owns the responsibility of deciding whether the student is eligible to enroll?
 
 Yes / No:
 ________________________________
 
-
-Why:
-________________________________
-________________________________
-5.5 — Final reasoning
-
-Complete this:
-
-The Restaurant System depends on the Kitchen Staff for __________, but the Restaurant System still owns __________.
+Why?
 
 ________________________________
-🧠 Core distinction
+________________________________
+Q6 — Decision Readiness
 
-Keep these separate:
+The current information is:
 
-Kitchen Staff
-    │
-    └── owns → preparation-status update
-                    │
-                    ↓
-              information
-                    │
-                    ↓
-Restaurant System
-    │
-    ├── depends on → preparation status
-    │
-    └── owns → cancellation decision
+Payment status = Confirmed
+Seat availability = Unknown
 
-The key question is:
+Can the Enrollment System confidently determine that the student is eligible to enroll?
 
-"Who owns the final responsibility?"
+Yes / No:
+________________________________
 
-Not:
+Why?
 
-"Who provides the information needed to perform it?"
+________________________________
+________________________________
+Q7 — Responsibility Transfer
 
-Answer 5.1–5.5.
+Because seat availability is unknown, does the enrollment decision responsibility transfer to the Registrar's Office?
+
+Yes / No:
+________________________________
+
+Why?
+
+________________________________
+________________________________
+Q8 — Build the Model
+
+Complete the flow:
+
+Student
+   ↓
+requests enrollment
+   ↓
+Enrollment System
+   ↓
+needs
+   ↓
+1. ______________________
+2. ______________________
+   ↓
+Payment status produced by
+   ↓
+_________________________
+   
+Seat availability produced by
+   ↓
+_________________________
+   ↓
+Enrollment System uses the information to
+   ↓
+_________________________
+   ↓
+Current decision readiness:
+_________________________
+🧠 Q9 — Most Important Question
+
+Explain this relationship in your own words:
+
+Finance Office → Payment Status → Enrollment System → Enrollment Decision
+
+Your answer:
+
+________________________________
+________________________________
+________________________________
+🔥 Q10 — Transfer Test
+
+Now forget the labels.
+
+Answer this question naturally:
+
+If the Registrar's Office produces seat availability, why doesn't that make the Registrar's Office responsible for deciding whether the student is eligible to enroll?
+
+________________________________
+________________________________
+________________________________
+Your goal
+
+Don't try to make your sentences perfect.
+
+I want to see whether you can reason:
+
+Who produces?
+      ↓
+What information?
+      ↓
+Who uses it?
+      ↓
+What responsibility?
+      ↓
+Who owns that responsibility?
+      ↓
+Does missing information affect readiness?
+      ↓
+Does it transfer responsibility?
+
+Answer Q1–Q10.
