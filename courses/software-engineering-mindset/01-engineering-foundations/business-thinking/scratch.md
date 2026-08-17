@@ -1,475 +1,659 @@
-🎯 Exercise 021.7 — Information Flow and Responsibility Mapping
+🎯 Exercise 021.8 — Information Dependencies and Decision Readiness
 
 We're continuing Topic 021.
 
-So far, you've learned to separate:
+You've now learned to identify:
 
 Responsibility
-        ≠
-Information
-        ≠
+↓
+Information needed
+↓
 Information source
-        ≠
+↓
 Information user
+↓
+Information state
+↓
+Decision
 
-Now we're going to combine them into an information flow model.
+Now we're going to focus on an important engineering question:
+
+Does the system have enough reliable information to perform its responsibility?
 
 Scenario
 
-A restaurant has this process:
+The Restaurant System is responsible for:
 
-Customer
-   ↓
-Requests cancellation
-   ↓
-Restaurant System
-   ↓
-Needs payment status
-   ↓
-Needs preparation status
-   ↓
-Evaluates cancellation rule
-   ↓
-Determines whether cancellation is allowed
+Determining whether an order is eligible for cancellation.
 
-We later investigated one source:
+Business rule:
 
-Kitchen Staff
-   ↓
-Updates preparation status
-   ↓
-Restaurant System
+An order can be cancelled only if it is unpaid and preparation has not started.
 
-The payment-status source is still unknown.
+Required information:
 
-Q1 — Map the Information Flow
-
-Complete the following:
-
-Q1: 
- 
-Information: 
-Preparation status 
- 
-Produced by: 
-kitchen staff 
- 
-Production responsibility: 
-updates preparation status
- 
-Used by: 
-restaurant system
- 
-Used for: 
-Determines whether cancellation is allowed
- 
-Producer inside / outside our system: 
-outside
- 
-Information user inside / outside our system: 
-inside
- 
-Why can information produced outside our system 
-still be used by our system? 
-Information produced outside our system can still be used by our system because an external actor or system can provide information that our system needs to perform one of its own responsibilities. The information crosses the system boundary and becomes an input to our system.
-________________________
-🧠 Think carefully
-
-We're separating two boundaries:
-
-Responsibility boundary
-Kitchen Staff
-   ↓
-Updates preparation status
-   ↓
-OUTSIDE OUR SYSTEM
-Information usage
+Payment status
 Preparation status
-   ↓
-Restaurant System
-   ↓
-Uses it
-   ↓
-INSIDE OUR SYSTEM
 
-Don't say:
+Current situation:
 
-"Because preparation status belongs to the kitchen."
+Payment status:
+Unpaid
 
-The information itself isn't necessarily "owned by the kitchen" in the same sense as the responsibility.
 
-We're asking:
+Preparation status:
+Not started
+Q1 — Is the Decision Ready?
 
-Who produces/updates it?
-Who uses it?
-What does the user use it for?
+Answer:
+
+Q1:
+
+Does the Restaurant System have all the information it needs
+to evaluate the cancellation rule?
+
+Yes / No:
+Yes.
+
+What required information is available?
+1. Payment status = Unpaid
+2. Preparation status = Not started
+
+What required information is missing?
+None.
+
+Is any information conflicting?
+No.
+
+Can the system confidently evaluate the business rule?
+
+Yes.
+
+Why?
+Both required pieces of information are available and consistent.
+The order is unpaid and preparation has not started, so the system
+has enough information to evaluate the cancellation rule.
+
+What does "decision-ready" mean in this scenario?
+Decision-ready means that the system has all the required information,
+the information is sufficiently reliable and non-conflicting, and
+therefore has enough information to evaluate the business rule and
+make the required decision.
+🧠 Think in this order
+
+Don't start with:
+
+"Can the system cancel?"
+
+Start with:
+
+What decision must the system make?
+        ↓
+What information does that decision require?
+        ↓
+Do we have all required information?
+        ↓
+Is the information reliable?
+        ↓
+Can the rule be evaluated?
+
+For this scenario, you should distinguish:
+
+Information exists
+        ≠
+Information is sufficient
+        ≠
+Information is conflicting
+
+Here, the information is:
+
+Payment status = Unpaid
+Preparation status = Not started
+
+But don't simply copy that into the answer. Explain why those facts make the system ready—or not ready—to evaluate the decision.
+
 Your turn — Q1 only.
 
-Now Q2 will make this harder by introducing two pieces of information with different levels of certainty.
+🎯 Exercise 021.8 — Q2: Missing Information and Decision Readiness
+
+Now let's change only the information state.
+
+Scenario
+
+The Restaurant System is still responsible for:
+
+Determining whether an order is eligible for cancellation.
+
+The rule remains:
+
+An order can be cancelled only if it is unpaid and preparation has not started.
+
+But now the system receives:
+
+Payment status:
+Unpaid
+
+
+Preparation status:
+Unknown
+Q2
+
+Answer:
 
 Q2:
 
-Information 1:
-Payment status
+Does the Restaurant System have all the information it needs
+to evaluate the cancellation rule?
 
-Produced by:
-Unknown source / needs investigation
+Yes / No:
+No.
 
-Known or unknown:
-Unknown
+What required information is available?
+Payment status = Unpaid.
 
-Used by:
-Restaurant System
+What required information is unavailable?
+Preparation status.
 
-Used for:
-Determines whether cancellation is allowed
+Is the available information conflicting?
+No. The available payment status is not conflicting. The issue is
+that the preparation status is missing.
 
+Can the system confidently determine that cancellation is allowed?
 
-Information 2:
-Preparation status
+Yes / No:
+No.
 
-Produced by:
-Kitchen Staff
+Why?
+Because the preparation status is unknown, and the business rule
+requires knowing that preparation has not started.
 
-Known or unknown:
-Known
+Is the system decision-ready?
 
-Used by:
-Restaurant System
+Yes / No:
+No.
 
-Used for:
-Determines whether cancellation is allowed
+Why?
+The system is missing the preparation status required to evaluate
+the cancellation rule.
 
+What information or business clarification is needed before the
+decision can be confidently made?
+We need the preparation status. If the preparation status cannot be
+provided, we need to investigate what the business expects the
+system to do when that required information is unavailable.
+🧠 Use the same reasoning sequence
+1. What decision must be made?
+        ↓
+2. What information is required?
+        ↓
+3. What information do we actually have?
+        ↓
+4. Is anything missing?
+        ↓
+5. Is anything conflicting?
+        ↓
+6. Can the business rule be evaluated?
+        ↓
+7. Is the system decision-ready?
 
-What is the difference between these two information flows?
-
-The source of the payment status is still unknown and needs
-investigation, while the preparation status is known to be
-produced and updated by the Kitchen Staff. Both pieces of
-information are used by the Restaurant System to determine
-whether cancellation is allowed.
-
-Don't assume the payment-status source.
-
-Q3 — Information Dependency
-
-Now let's go one level deeper.
-
-Suppose the Restaurant System has payment status, but it does not have preparation status.
-
-The system knows:
+Be careful with this distinction:
 
 Payment status = Unpaid
 Preparation status = Unknown
 
-The cancellation rule is:
+Unknown is not the same as "not started."
+
+Don't decide the system's behavior yet. First identify whether it has enough evidence to make the decision.
+
+Answer Q2 only.
+
+Q2:
+
+Does the Restaurant System have all the information it needs
+to evaluate the cancellation rule?
+
+Yes / No:
+No.
+
+What required information is available?
+Payment status = Unpaid.
+
+What required information is unavailable?
+Preparation status.
+
+Is the available information conflicting?
+No. The available payment status is not conflicting. The issue is
+that the preparation status is missing.
+
+Can the system confidently determine that cancellation is allowed?
+
+Yes / No:
+No.
+
+Why?
+Because the preparation status is unknown, and the business rule
+requires knowing that preparation has not started.
+
+Is the system decision-ready?
+
+Yes / No:
+No.
+
+Why?
+The system is missing the preparation status required to evaluate
+the cancellation rule.
+
+What information or business clarification is needed before the
+decision can be confidently made?
+We need the preparation status. If the preparation status cannot be
+provided, we need to investigate what the business expects the
+system to do when that required information is unavailable.
+
+🎯 Exercise 021.8 — Q3: Conflicting Information and Decision Readiness
+
+Now we make the situation harder.
+
+Scenario
+
+The Restaurant System is responsible for:
+
+Determining whether an order is eligible for cancellation.
+
+Business rule:
 
 An order can be cancelled only if it is unpaid and preparation has not started.
 
+The system receives:
+
+Payment status:
+Unpaid
+
+But preparation information comes from two sources:
+
+Kitchen Staff:
+Preparation has started
+
+
+Another source:
+Preparation has NOT started
+
+So the system has two conflicting values for the same required information.
+
 Q3
+
+Answer:
 
 Q3:
 
-Can the Restaurant System confidently determine that cancellation
-is allowed?
+Does the Restaurant System have all the information it needs
+to evaluate the cancellation rule?
 
 Yes / No:
 No.
 
 Why:
-The system cannot confidently determine that cancellation is allowed
-because the preparation status is missing. The business rule requires
-knowing that the order is unpaid AND that preparation has not started.
-We know the order is unpaid, but we do not know the preparation
-status.
+Although both required information categories are present, the
+preparation status is conflicting. Therefore, the system does not
+have a single reliable value that it can use to confidently
+evaluate the rule.
 
 
-What required information is missing?
+What required information is available?
+1. Payment status = Unpaid
+2. Preparation status = Available, but conflicting
+
+
+What required information is conflicting?
 Preparation status.
 
 
-What should the system do with this situation?
-We need to investigate what the business expects the system to do
-when the required preparation status is unavailable. We should not
-assume that preparation has not started or automatically decide
-whether cancellation should be allowed.
+Is any required information missing?
+No. The required information is present, but the preparation status
+contains conflicting values.
 
-Don't design the technical solution yet.
-Explain the engineering reasoning.
 
-Think carefully about the difference between:
+Can the system confidently determine that cancellation is allowed?
 
-Unpaid
-+
-Preparation NOT started
+Yes / No:
+No.
+
+Why:
+The preparation status has conflicting values, so the system cannot
+determine whether preparation has actually started or not.
+
+
+Is the system decision-ready?
+
+Yes / No:
+No.
+
+Why:
+The system does not have a reliable, non-conflicting preparation
+status with which to evaluate the cancellation rule.
+
+
+What needs to be investigated before the system can confidently
+make the cancellation decision?
+Why the preparation status conflicts, which source is authoritative,
+and what the business expects the system to do when the sources
+disagree.
+🧠 Be precise
+
+There is an important difference between:
+
+UNKNOWN
+Preparation status = ?
 
 and:
 
-Unpaid
-+
-Preparation status UNKNOWN
+CONFLICTING
+Preparation status = Started
+Preparation status = Not started
+
+In this scenario, the information exists, so don't call it simply "missing."
+
+The problem is:
+
+We don't know which information is authoritative/correct.
+
+Think through:
+
+Payment status
+      ↓
+Unpaid ✅
+
+
+Preparation status
+      ↓
+Started ❌
+      OR
+Not started ❓
+      ↓
+Conflict
+      ↓
+Can the rule be confidently evaluated?
+
+Don't invent a conflict-resolution rule such as:
+
+"Always trust the Kitchen Staff."
+
+That would be a business/system assumption unless the scenario establishes it.
 
 Answer Q3 only.
 
-🎯 Exercise 021.7 — Q4: Conflicting Information
+🎯 Exercise 021.8 — Q4: Decision Readiness vs. System Responsibility
 
-Now we're going to add another layer of reasoning.
+Now we separate two ideas that can easily get mixed together:
 
-So far, we've handled:
+"The system cannot make a decision yet."
 
-Information available
-        ↓
-Information missing
-        ↓
-Don't assume
-        ↓
-Investigate
+does not mean:
 
-Now suppose information is available, but two sources disagree.
+"The system is not responsible for making the decision."
 
 Scenario
 
-The Restaurant System receives:
+The Restaurant System is responsible for:
 
-Payment status:
-Unpaid
+Determining whether an order is eligible for cancellation.
 
-The Kitchen Staff says:
+Required information:
 
-Preparation status:
-Preparation has started
+Payment status
+Preparation status
 
-The Restaurant System also receives another update saying:
+Current situation:
 
-Preparation status:
-Preparation has NOT started
+Payment status
+→ Unpaid ✅
 
-Now we have a conflict.
 
-The cancellation rule is:
-
-An order can be cancelled only if it is unpaid and preparation has not started.
-
-Q4 — Analyze the Conflict
+Preparation status
+→ Unknown ❓
+Q4
 
 Answer:
 
 Q4:
 
-What information do we have?
+What is the Restaurant System's responsibility?
 
-1. Payment status:
-Unpaid
-
-2. Preparation status:
-Conflicting:
-- Preparation has started
-- Preparation has NOT started
+Determining whether an order is eligible for cancellation.
 
 
-Is the information consistent?
+Does the Restaurant System still own this responsibility
+when preparation status is unknown?
 
-Yes / No:
+Yes.
+
+Why?
+
+The Restaurant System still owns the cancellation decision
+responsibility. The missing preparation status only prevents the
+system from confidently completing that responsibility; it does
+not transfer ownership of the responsibility to another actor.
+
+
+Does the missing preparation status transfer the
+cancellation decision responsibility to the Kitchen Staff?
+
 No.
 
-Why:
-Two sources provide conflicting information about the preparation
-status. One says preparation has started, while the other says
-preparation has not started.
+Why?
+
+The Kitchen Staff is responsible for updating the preparation
+status. That does not make the Kitchen Staff responsible for
+determining whether cancellation is allowed.
 
 
-Can the Restaurant System confidently determine
-that cancellation is allowed?
+What is the Restaurant System missing?
 
-Yes / No:
+Preparation status.
+
+
+What responsibility does the Kitchen Staff have?
+
+Updating the preparation status.
+
+
+What responsibility does the Restaurant System have?
+
+Determining whether the order is eligible for cancellation.
+
+
+Are "not having enough information" and "not owning
+the responsibility" the same thing?
+
 No.
 
-Why:
-The cancellation rule requires the order to be unpaid and for
-preparation not to have started. Although the payment status is
-unpaid, the preparation status is conflicting, so the system cannot
-confidently determine whether the business rule is satisfied.
+Why?
 
+Not having enough information means the system lacks information
+required to perform its responsibility. Not owning the responsibility
+means another actor or system is responsible for performing that
+responsibility. Missing information does not automatically change
+responsibility ownership.
+🧠 The trap
 
-What should we investigate before deciding how
-the system should handle this conflict?
+Be careful here:
 
-We should investigate why the information conflicts, which source
-is authoritative, which status should be considered valid, and what
-the business expects the system to do when the sources disagree.
-
-
-Should we simply choose one preparation status
-and ignore the other?
-
-Yes / No:
-No.
-
-Why:
-We do not yet know which source or status is authoritative. Choosing
-one without a defined business rule would be an unsupported
-assumption.
-🧠 Important
-
-Don't immediately decide:
-
-"The latest status must be correct."
-
-or:
-
-"The Kitchen Staff must always be correct."
-
-Those might eventually be valid business rules, but the scenario hasn't established them.
-
-We need to investigate:
-
-Conflicting information
+Preparation status is unknown
         ↓
-Why are the values different?
-        ↓
-Which source is authoritative?
-        ↓
-Which update is valid?
-        ↓
-What happens when sources disagree?
+Restaurant System cannot confidently evaluate rule
 
-This is another example of engineering judgment before implementation.
+That does NOT automatically mean:
 
-Your job isn't to invent the conflict-resolution rule.
+Restaurant System
+        ↓
+no longer responsible
 
-Your job is to identify that a conflict exists and that the business needs to define how it should be handled.
+And it also does NOT mean:
+
+Kitchen Staff
+        ↓
+now responsible for cancellation decision
+
+We need to keep these separate:
+
+KITCHEN STAFF
+→ Updates preparation status
+
+
+RESTAURANT SYSTEM
+→ Determines cancellation eligibility
+
+The system may be blocked by missing information while still owning the decision responsibility.
 
 Answer Q4 only.
 
-🏁 Exercise 021.7 — Q5: Final Information-Flow Judgment
+🏁 Exercise 021.8 — Q5: Final Responsibility & Dependency Challenge
 
-This is the final question of Exercise 021.7.
+This is the final question of Exercise 021.8.
 
-You've now handled three information states:
+We've now separated four concepts:
 
-KNOWN
-↓
-We have reliable information.
-
-
-UNKNOWN
-↓
-We don't have the required information.
+RESPONSIBILITY
+What must the system/actor do?
 
 
-CONFLICTING
-↓
-We have information, but the sources disagree.
+INFORMATION
+What facts are needed?
 
-These states should not be treated the same way.
 
-Q5 — Final Judgment
+SOURCE
+Who produces/updates those facts?
 
-Imagine you're documenting the Restaurant System's cancellation responsibility.
 
-Complete:
+DECISION READINESS
+Does the system have enough reliable information to perform the responsibility?
+Scenario
 
-Q5:
+The Restaurant System owns this responsibility:
 
-System responsibility:
-Determine whether the order is eligible for cancellation.
+Determine whether an order is eligible for cancellation.
 
+Business rule:
+
+An order can be cancelled only if it is unpaid and preparation has not started.
 
 Required information:
+
 1. Payment status
 2. Preparation status
 
+Current situation:
 
-Case A:
-Payment status = Unpaid
-Preparation status = Not started
-
-Can the system evaluate the cancellation rule?
-
-Yes / No:
-Yes.
-
-Why:
-Both required conditions are known and satisfied: the order is unpaid
-and preparation has not started. Therefore, the cancellation rule can
-be evaluated.
+Payment status:
+Unpaid
 
 
-Case B:
-Payment status = Unpaid
-Preparation status = Unknown
+Preparation status:
+Unknown
 
-Can the system confidently determine that cancellation is allowed?
+We know:
+
+Kitchen Staff
+→ Updates preparation status
+Q5 — Build the Complete Model
+
+Complete this without changing the scenario:
+
+Business responsibility:
+Determine whether an order is eligible for cancellation.
+
+Responsibility owner:
+Restaurant System
+
+Information needed:
+1. Payment status
+2. Preparation status
+
+Information source:
+
+Payment status:
+Unpaid
+
+Preparation status:
+Unknown
+
+Which responsibility belongs to the Kitchen Staff?
+Updates preparation status.
+
+Which responsibility belongs to the Restaurant System?
+Determines whether an order is eligible for cancellation.
+
+Is the Restaurant System currently decision-ready?
 
 Yes / No:
 No.
 
-Why:
-The preparation status is unknown, so the system cannot determine
-whether the condition that preparation has not started is satisfied.
+Why?
+The preparation status is unknown, so the Restaurant System does not
+have all the reliable information required to evaluate the
+cancellation rule.
 
-
-Case C:
-Payment status = Unpaid
-Preparation status = Conflicting
-
-Can the system confidently determine that cancellation is allowed?
+Does the missing preparation status change who owns the cancellation
+decision?
 
 Yes / No:
 No.
 
-Why:
-The preparation status is conflicting, so the system does not know
-which value is authoritative and therefore cannot confidently
-evaluate the cancellation rule.
+Why?
+The Restaurant System still owns the responsibility of determining
+whether cancellation is allowed. Missing information prevents it
+from confidently completing that responsibility but does not
+transfer ownership to another actor.
 
+What is the dependency between the Kitchen Staff and the Restaurant
+System?
 
-What should an engineer document when required information
-is unknown or conflicting?
+The Restaurant System depends on the preparation status produced by
+the Kitchen Staff because it needs that information to perform its
+cancellation-decision responsibility.
 
-The engineer should document that the required information is
-unavailable or conflicting, identify the affected business decision,
-and record what needs to be investigated with the business.
+What should an engineer investigate before defining system behavior
+for the missing preparation status?
 
+The engineer should investigate why the preparation status is
+unavailable, how it is normally produced or provided, what the
+business expects when it is unavailable, whether cancellation is
+allowed in that situation, and whether there are exceptions or
+alternative sources of the information.
+🧠 Final reasoning challenge
 
-Why should we avoid inventing a value for missing or conflicting
-information?
+Try to explain this in your own words:
 
-Because inventing a value could cause the system to make an incorrect
-business decision. The value should be based on evidence or an
-explicitly defined business rule.
+The Restaurant System owns the cancellation decision, but it depends on information produced by another responsibility.
 
+Don't just repeat the sentence.
 
+Explain why this is possible.
 
+Your reasoning should connect:
 
+Kitchen Staff
+    ↓
+Produces/updates information
+    ↓
+Preparation status
+    ↓
+Dependency
+    ↓
+Restaurant System
+    ↓
+Uses information
+    ↓
+Cancellation decision
+One important constraint
 
-Why should we avoid inventing a value for missing or conflicting
-information?
-🧠 Your mental model
+Don't invent:
 
-Use:
+a new business rule
+a new system responsibility
+a technical solution
+who owns payment status
+what the system should do when preparation status is unavailable
 
-Required information
-        ↓
-What is its state?
-        ↓
- ┌──────┼─────────┐
- ↓      ↓         ↓
-Known  Unknown  Conflicting
- ↓      ↓         ↓
-Evaluate  Investigate  Investigate
-rule      missing      conflict
+If something is unknown, mark it as unknown and identify what needs investigation.
 
-The important part is not to jump directly into implementation.
-
-For example, don't say:
-
-"If unknown, set it to false."
-
-That is a system behavior decision.
-
-First ask:
-
-What does the business want the system to do when the information is unavailable or contradictory?
-
-Your turn — Q5 only.
+Answer Q5 only.
